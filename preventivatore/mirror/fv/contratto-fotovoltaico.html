@@ -62,6 +62,22 @@
 .selection-mode-toggle.active{background:#d32f2f}
 </style></head>
 <body class="Contratto fv lang_it">
+<script>(function(){
+  try{
+    var p = location.pathname;
+    // Normalize any share.unionenergia.it residue under mirror
+    if(p.indexOf('/preventivatore/mirror/share.unionenergia.it/')===0){
+      var newPath = p.replace('/preventivatore/mirror/share.unionenergia.it/','/preventivatore/mirror/');
+      location.replace(newPath + location.search + location.hash);
+      return;
+    }
+    // Ensure .html on contratto path
+    if(p==='/preventivatore/mirror/fv/contratto-fotovoltaico'){
+      location.replace(p + '.html' + location.search + location.hash);
+      return;
+    }
+  }catch(e){}
+})();</script>
 <div id="overlay"><div class="preloader-wrapper big active">
 <div class="spinner-layer spinner-blue">
 <div class="circle-clipper left">

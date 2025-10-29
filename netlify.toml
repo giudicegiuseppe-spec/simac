@@ -22,3 +22,8 @@
   from = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"
   to = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico.html"
   status = 200
+
+[[redirects]]
+  from = "/preventivatore/mirror/fv/contratto-fotovoltaico"
+  to = "/preventivatore/mirror/fv/contratto-fotovoltaico.html"
+  status = 200
