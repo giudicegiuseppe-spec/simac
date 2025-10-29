@@ -1,0 +1,203 @@
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Mon, 22 Jul 2002 11:12:01 GMT" http-equiv="expires"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIMAC</title>
+<link href="/preventivatore/assets/fonts/css/fonts-4615247307143386908.css" rel="stylesheet"/>
+<style>
+	body.cms-admin{background: #fff; background-size: cover; color: rgba(0,0,0,.87);}
+body.cms-admin #loginform{ width: 420px; min-height: 200px;     padding: 3px;background: #fff;
+    border: none; color: #777; border-radius: 0;  margin: 0 auto;  position: fixed;
+    left: 0; right: 0; top: 10%;
+    position: initial;
+    margin-top: 30px;
+}
+body.cms-admin #loginform #login-container{ border: 1px solid rgba(188, 188, 180, 0.7);    padding: 15px;}
+body.cms-admin #loginform .login_heading{    margin-bottom: 10px;}
+body.cms-admin #loginform .login_heading img{width: 45%; display: block; margin: 0 auto;}
+body.cms-admin #loginform form{    margin-bottom: 0;}
+body.cms-admin #loginform form ul{margin-top: 10px;}
+body.cms-admin #loginform form input.input{    border: 1px solid rgba(188, 188,180, 0.34);
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: none;
+    padding: 0 3%;
+    width: 94%;
+    margin-bottom: 10px; }
+body.cms-admin #loginform form .btn{ background-color: #2196F3;    width: 100%;
+    margin-top: 10px; }
+body.cms-admin #loginform .logerror{background: #FFCDD2; border: 1px solid #E57373; padding: 0.2em 0.6em; color: rgba(0,0,0,0.87);}
+body.cms-admin #loginform .logwarning{background: #ffeb3b45; border: 1px solid #ff98007a; padding: 0.2em 0.6em; color: rgba(0,0,0,0.87);}
+body.cms-admin #loginform .logcorrect{ background: #4caf5040; border: 1px solid #4CAF50; padding: 0.2em 0.6em; color: rgba(0,0,0,0.87);}
+#cover{background-repeat: repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999!important;
+       background: rgba(0, 0, 0, 0.6);}
+#pwd-dimenticata,
+#torna-al-login{display: block; margin-top: 10px;}
+#recoverform{display: none;}
+.show-pwd{cursor: pointer;    height: 3rem; display: inline-flex; vertical-align: middle; align-items: center;}
+
+.store_otp_wrap{    text-align: center;
+    background: #cbe1ef;
+    padding: 20px 20px;
+    margin: 20px auto;}
+#otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#otp-container .otp-input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#otp-container .otp-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Rimuovi le freccette in tutti i browser */
+#otp-container .otp-input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    appearance: none; /* Standard */
+}
+
+/* Per evitare che Firefox mostri ulteriori stili */
+#otp-container .otp-input[type="number"]::-webkit-inner-spin-button,
+#otp-container .otp-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.require-new-otp{color: #004da1; font-size: 1.2rem;}
+@media screen and (max-width: 600px){
+	body.cms-admin #loginform{width: 92%; top: 100px; position: initial; margin-top: 50px; }
+}
+</style>
+<script language="javascript" type="text/javascript">
+ $(document).ready(function(){
+    $("#pwd-dimenticata").click(function(){
+        $("#logok").hide();
+        $("#recoverform").show("slide");
+    });
+    $("#torna-al-login").click(function(){
+        $("#recoverform").hide();
+        $("#logok").show("slide");
+    });
+    
+    $("input[name=new_password]").on("keyup",function(){
+        validatePassword();
+    });
+
+    $("input[name=type]").on("click",function(){
+        $(this).attr("disabled", "disabled");
+    });
+
+    $("input[name=new_password],input[name=new_password_confirm]").on("keyup",function(){
+        if( $("input[name=new_password]").val() != $("input[name=new_password_confirm]").val() )
+            $("#pwd_same").show();
+        else
+            $("#pwd_same").hide();
+    });
+    $(".show-pwd").click(function(){
+        if( $(this).parent().find("input").attr("type") == "password" ){
+            $(this).parent().find("input").attr("type", "text");
+            $(this).html("visibility_off");
+        }
+        else{
+            $(this).parent().find("input").attr("type", "password");
+            $(this).html("visibility");
+        }
+    });
+
+ });
+
+ function validatePassword() {
+    $("#logok input[type=submit]").addClass("disabled");
+
+    var password = $("input[name=new_password]").val();
+    var lowercaseRegex = /[a-z]/;
+    var uppercaseRegex = /[A-Z]/;
+    var numberRegex = /[0-9]/;
+    var specialCharRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
+
+    var isLowercase = lowercaseRegex.test(password);
+    var isUppercase = uppercaseRegex.test(password);
+    var isNumber = numberRegex.test(password);
+    var isSpecialChar = specialCharRegex.test(password);
+    var araSame =  $("input[name=new_password]").val() != $("input[name=new_password_confirm]").val();
+    var isLengtotto = $("input[name=new_password]").val().length >= 8;
+    var isValid = isLowercase && isUppercase && isNumber && isSpecialChar && araSame && isLengtotto;
+
+    isLowercase ? $("#pwd_lowercase").removeClass("logcorrect").removeClass("logerror").addClass("logcorrect") : "";
+    isUppercase ? $("#pwd_uppercase").removeClass("logcorrect").removeClass("logerror").addClass("logcorrect") : "";
+    isNumber ? $("#pwd_number").removeClass("logcorrect").removeClass("logerror").addClass("logcorrect"): "";
+    isSpecialChar ? $("#pwd_special").removeClass("logcorrect").removeClass("logerror").addClass("logcorrect"): "";
+    isLengtotto ? $("#pwd_length").removeClass("logcorrect").removeClass("logerror").addClass("logcorrect"): "";
+
+    isValid ? $("#logok input[type=submit]").removeClass("disabled") : $("#logok input[type=submit]").addClass("disabled");
+
+}
+
+</script>
+</head>
+<body class="cms-admin">
+<div id="cover"></div>
+<div id="loginform">
+<div id="login-container">
+<div class="login_heading">
+<img src="/mirror/share.unionenergia.it/i/logo.jpg"/>
+</div>
+<form action="https://share.unionenergia.it/login" id="logok" method="post" name="accessoform">
+<input name="red" type="hidden" value="/fv/contratto-fotovoltaico"/>
+<input name="apri-ticket" type="hidden" value=""/>
+<input name="mostra_errore" type="hidden" value="0"/>
+<ul>
+<input name="op" type="hidden" value="entra"/>
+<input name="otp_token" type="hidden" value=""/>
+<li>
+<input class="input" name="email" placeholder="Email" size="25" type="email" value=""/>
+</li>
+<li>
+<input class="input" name="asc" placeholder="Password" size="25" style="width: calc(94% - 32px);" type="password"/>
+<i class="material-icons show-pwd">visibility</i>
+</li>
+<li class="subl"><input class="btn waves-effect waves-light" name="Submit" type="submit" value="Accedi"/></li>
+<a href="#" id="pwd-dimenticata">Password dimenticata?</a>
+</ul>
+</form>
+<form action="https://share.unionenergia.it/pwdrecover" id="recoverform" method="post" name="recoverform">
+<input name="op" type="hidden" value="recover"/>
+<p style="text-align: center;font-size: 1.2rem;">Inserisci la tua email e richiedi l'invio di una nuova Password</p>
+<ul>
+<li>
+<input class="input" name="email" placeholder="Email" required="" size="25" type="email" value=""/>
+</li>
+<li class="subl"><input class="btn waves-effect waves-light" name="Submit" type="submit" value="Invia"/></li>
+<a href="#" id="torna-al-login">Torna al login</a>
+</ul>
+</form>
+</div>
+</div>
+</body>
+</html>

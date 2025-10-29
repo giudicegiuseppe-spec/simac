@@ -1,0 +1,2686 @@
+
+<!DOCTYPE html>
+
+<html class="" lang="it" xmlns:fb="http://ogp.me/ns/fb#">
+<meta charset="utf-8"/>
+<head>
+<title>Nuovo Contratto Simac</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<meta content="#004da1" name="theme-color"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TSK09LKTYN"></script>
+<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-TSK09LKTYN');
+        </script>
+<link href="https://share.unionenergia.it/css/wizard.css" rel="stylesheet"/>
+<!-- Compiled and minified CSS -->
+<link href="https://share.unionenergia.it/js/nouislider/nouislider.min.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/css/materialize.min.css" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/materialize-fix.css?v=1761217427" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/bootstrap-scope.css?v=1761217427" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<!--Datatable-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.css"/>-->
+<link href="https://share.unionenergia.it/include/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/include/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/css/fixedHeader.dataTables.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js" type="text/javascript"></script>
+<!--<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.js"></script>-->
+<script src="https://share.unionenergia.it/include/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://share.unionenergia.it/include/datatables/datatables.min.js" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://share.unionenergia.it/js/materialize.min.js"></script>
+<script src="https://share.unionenergia.it/js/select.js"></script>
+<script src="https://share.unionenergia.it/js/nouislider/nouislider.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" media="all" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/Chart.min.css" media="all" rel="stylesheet"/>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet" media="all" />-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/b.css?v=1761217427" media="all" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/f.css?v=1761217427" media="all" rel="stylesheet"/>
+<!--<link href="https://share.unionenergia.it/style6.css?v=1.3" type="text/css" rel="stylesheet" media="screen" />-->
+<!--<link href="https://share.unionenergia.it/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" media="screen" />-->
+<link href="https://share.unionenergia.it/css/media-queries.css?v=1761217427" media="all" rel="stylesheet"/>
+<script src="https://share.unionenergia.it/js/global-utils.js?v=1761217427" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/fc-admin/fc-admin_ready.js?v=1761217427" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/ricarica.js?v=1761217427" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/note.js?v=1761217427" type="text/javascript"></script>
+<script type="text/javascript">
+        home_url = "https://share.unionenergia.it";
+        ajax_url = "https://share.unionenergia.it/ajax";
+        show_review = false;        $(document).ready(function(){
+            $("#sidenav li.Contratto").addClass("active");
+        });
+        role = "7";
+    </script>
+<script referrerpolicy="origin" src="https://cdn.tiny.cloud/1/2les3lkob41251x51q8127r447v02h45jbmz58ecckof4e5e /tinymce/5/tinymce.min.js"></script>
+<!--<script src="https://cdn.tiny.cloud/1/2les3lkob41251x51q8127r447v02h45jbmz58ecckof4e5e/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<!--<script src="https://cdn.tiny.cloud/1/pktnwk7yochtu0e9dhaswzxgbjjifqn3fwoxgn080uv2skm3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<!--<script src="https://cdn.tiny.cloud/1/qlca83t019cfirtwhd9a4pqhrlel48zu8z23fxgrlbiyjjtn/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<script>tinymce.init({
+  selector: 'textarea.editor',
+  menubar: 'edit view',
+  plugins: 'image code imagetools link lists paste table wordcount spellchecker',
+  toolbar: 'undo redo | copy paste pastetext| image | spellchecker | styleselect | bold italic | link | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | forecolor backcolor | code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol',
+  spellchecker_languages: 'English=en,German=de,Italian=it,Polish=pl,Portuguese=pt_BR,Spanish=es,Swedish=sv',
+  paste_as_text: true,
+  paste_word_valid_elements: 'b,strong,i,em,h1,h2',
+  paste_webkit_styles: 'color font-size',
+  a11y_advanced_options: true,
+  link_assume_external_targets: true,
+  relative_urls: false,
+  remove_script_host: false,
+  convert_urls: true,
+  width: "80%",
+  height: 500,
+  menubar: false,
+  /* enable title field in the Image dialog*/
+  image_title: true,
+  /* enable automatic uploads of images represented by blob or data URIs*/
+  automatic_uploads: true,
+  init_instance_callback: function (editor) {
+      $(editor.getContainer()).find('button.tox-statusbar__wordcount').click();  // if you use jQuery
+   },
+  /*
+    URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+    images_upload_url: 'postAcceptor.php',
+    here we add custom filepicker only to Image dialog
+  */
+  //images_upload_url: ajax_url + '/postAcceptor.php',
+  //images_upload_base_path: '/archivio/istituti',
+  file_picker_types: 'image, file',
+  /* and here's our custom image picker*/
+  file_picker_callback: function (cb, value, meta) {
+    console.log("cb", cb);
+    console.log("value", value);
+    console.log("meta", meta);
+    
+    var input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*, application/pdf, pdf, application/zip, application/x-zip-compressed, application/ms-excel, application/msexcel, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel.sheet.macroEnabled.12');
+
+    /*
+      Note: In modern browsers input[type="file"] is functional without
+      even adding it to the DOM, but that might not be the case in some older
+      or quirky browsers like IE, so you might want to add it to the DOM
+      just in case, and visually hide it. And do not forget do remove it
+      once you do not need it anymore.
+    */
+
+    input.onchange = function () {
+      //tinymce.get($("textarea[name=pagina]").attr("id")).uploadImages();  
+      var file = this.files[0];
+      console.log("file", file);  
+        
+      var reader = new FileReader();
+      reader.onload = function () { 
+        
+        var id = 'blobid' + (new Date()).getTime();
+        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+        var base64 = reader.result.split(',')[1];
+        var blobInfo = blobCache.create(id, file, base64);
+        blobCache.add(blobInfo);
+        
+        cb(blobInfo.blobUri(), { title: file.name });
+        
+          
+      };
+      reader.readAsDataURL(file);
+      console.log(file.type);
+      
+      if( file.type == 'application/pdf' || file.type == 'image/png' || file.type == 'image/jpg' || file.type == 'image/jpeg' || file.type == 'application/zip' || file.type == 'application/x-zip-compressed' || file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || file.type == "application/ms-excel" || file.type == "application/msexcel" || file.type == "application/vnd.ms-excel" || file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || file.type == 'application/vnd.ms-excel.sheet.macroEnabled.12'){
+          console.log("custom POST");
+          formData = new FormData();
+          formData.append('file', file, file.name );
+          $("button[title=Save]").attr("disabled", "disabled").text("Loading...");
+          $.ajax({
+            type: "POST",
+            data: formData,
+            dataType : 'json',          
+            contentType: false,
+            processData: false, 
+            url: ajax_url + '/postAcceptor.php',
+            //async: false,
+            success: function(json){
+                 console.log(json.location);
+                 console.log(input);
+                 $("input[type=url]").val( "https://share.unionenergia.it" + json.location);
+                 $("button[title=Save]").removeAttr("disabled").text("Save");
+            }
+        });
+        /*
+              xhr = new XMLHttpRequest();
+              xhr.withCredentials = false;
+              xhr.open('POST', '/cms-admin/postAcceptor.php');
+              formData = new FormData();
+              formData.append('file', file, file.name );
+            
+              xhr.send(formData);*/
+          }//end pdf
+          else{
+              
+          }
+    };
+    
+    input.click();
+  },
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                     });
+  </script>
+<!--
+    <script type="text/javascript" src="https://share.unionenergia.it/fc-admin/tiny_mce/jscripts/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            // General options
+            mode : "specific_textareas",
+            editor_selector : "mceEditor",
+            theme : "advanced",
+            plugins : "imagemanager,safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+    
+            // Theme options
+            theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+            theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+            theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+            theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+            theme_advanced_toolbar_location : "top",
+            theme_advanced_toolbar_align : "left",
+            theme_advanced_statusbar_location : "bottom",
+            theme_advanced_resizing : true,
+            theme_advanced_source_editor_width  : 1090,
+            theme_advanced_source_editor_height  : 1050,
+            relative_urls: false,
+    
+            // Example content CSS (should be your site CSS)
+            content_css : "css/content.css",
+            extended_valid_elements  : "iframe[width|height|src|frameborder|allowfullscreen], p[style]",
+            // Drop lists for link/image/media/template dialogs
+            template_external_list_url : "lists/template_list.js",
+            external_link_list_url : "lists/link_list.js",
+            external_image_list_url : "lists/image_list.js",
+            media_external_list_url : "lists/media_list.js",
+    
+            // Replace values for the template plugin
+            template_replace_values : {
+                username : "Some User",
+                staffid : "991234"
+            }
+        });
+    </script>
+    -->
+<script src="https://share.unionenergia.it/js/contratto_fotovoltaico.js?v=1761217427" type="text/javascript"></script>
+</head>
+<body class="Contratto fv lang_it">
+<div id="overlay"><div class="preloader-wrapper big active">
+<div class="spinner-layer spinner-blue">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-red">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-yellow">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-green">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+</div></div>
+<div class="overlay" id="overlay_basic"></div>
+<!--
+<div id="mob_page_title" class="hide_please">
+    <img src="https://share.unionenergia.it/i/logo-backoffice.png" alt="" title="" class="" />
+    <div class="mob-page-title-wrapper">
+        <h1></h1>
+    </div>
+</div>   
+-->
+<header class="r7">
+<nav class="top-nav">
+<div class="padding-container">
+<div class="nav-wrapper">
+<ul class="left" id="top_nav" style="width: 100%;">
+<!--<li><a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons menu-icon">menu</i><span>Menu</span></a></li>-->
+<li class="highlight" style="float: left;"><a href="/mirror/fv/contratto-fotovoltaico.html" target="_blank"><i class="material-icons">solar_power</i><span>Rinnovabili</span></a></li>
+<li class="" style="float: left;"><a href="/corporate/dashboard"><i class="material-icons">electric_meter</i><span>Corporate</span></a></li>
+<li class="hide-mobile esci right-li" style="float: right;"><a href="/logout"><i class="material-icons">logout</i><span>Esci</span></a></li>
+<!--
+                    <li style="float: right; width: 1px; height: 22px; vertical-align: middle; margin-top: 13px; background: #fff;"><span></span></li>
+                    <li style="float: right; color: #fff;" class="welcome"><a href="#" style="cursor: normal;">Benvenuto SAMANTHA (Agente)</a></li>-->
+<!--<li style="float: right; width: 1px; height: 22px; vertical-align: middle; margin-top: 13px; background: #fff; margin-left: 1%;"><span></span></li>-->
+<!--<li style="float: right; color: #fff;" id="top_search"><div id="search-wrapper"> 
+                        <form action="#" method="POST" onsubmit="javascript: return null;">
+                            <div>
+                            <input type="text" class="text autocomplete" id="megasearch" name="find" placeholder="Cerca nel portale" />
+                            <button type="submit" class="submit"><i class="material-icons">search</i></button>
+                            <br class="clr" />
+                            </div>
+                        </form>
+                        <div class="progress" id="mega-progress">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </li>-->
+<br class="clr"/>
+</ul>
+</div>
+</div>
+</nav>
+<!--
+    <div id="top_search">
+                <div id="search-wrapper"> 
+                    <form action="https://share.unionenergia.it/search.html" method="POST">
+                        <div>
+                        <input type="text" class="text autocomplete" id="megasearch" name="find" placeholder="Ricerca" />
+                        <button type="submit" class="submit"><i class="material-icons">search</i></button>
+                        <br class="clr" />
+                        </div>
+                    </form>
+                    <div class="progress" id="mega-progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+            </div>
+    -->
+</header>
+<ul class="sidenav" id="sidenav">
+<div class="sidenav-profile-wrap">
+<img alt="" class="logo" src="/logo.png" title=""/>
+<!--<li><div class="divider"></div></li>-->
+<!--<li><a class="subheader">Subheader</a></li>-->
+<div class="avatar-wrap">
+<div class="avatar-circle">
+<img alt="" class="avatar" src="https://share.unionenergia.it/i/avatar-placeholder.png" title=""/>
+</div>
+</div>
+<span class="nome">SAMANTHA (<a href="/logout">Esci</a>)</span>
+<span class="sottotitolo">SALES AGENT</span>
+<div class="profile-link-wrap">
+<a class="profile-link btn btn-small waves-effect waves-light" href="/corporate/agente-corporate?id=98156">Il mio profilo</a>
+</div>
+</div>
+<li class="nome_menu_top">Rinnovabili</li>
+<li class="dashboard"><a href="/mirror/fv/contratto-fotovoltaico.html"><img class="u-icon" src="/i/dashboard.png"/>Dashboard</a></li>
+<!--<li class=""><a href="/fv/union-smart"><i class="material-icons left">roofing</i>Union Smart</a></li>-->
+<li class=""><a href="/mirror/"><i class="material-icons left">roofing</i>Contratti Union Smart</a></li>
+<li><div class="divider"></div></li>
+<li class=""><a href="/mirror/share.unionenergia.it/fv/union-park"><i class="material-icons left">solar_power</i>Union Park</a></li>
+<li class=""><a href="/mirror/share.unionenergia.it/fv/contratti-union-park"><img class="u-icon" src="/i/contratti.png"/>Contratti Union Park</a></li>
+<li class=""><a href="/mirror/share.unionenergia.it/fv/produzione-pannelli-park"><i class="material-icons left material-symbols-outlined">energy_program_time_used</i>Produzione Panneli</a></li>
+<hr/>
+<li class="documenti-utili-union-smart-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"><img class="u-icon" src="/documenti.png"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"><img class="u-icon" src="/documenti.png"/> Schede Prodotti</a></li>
+<li class="documenti-utili-reddito-energetico"><a href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"><img class="u-icon" src="/documenti.png"/> Incentivi</a></li>
+<li class="documenti-utili-cer"><a href="https://share.unionenergia.it/pagina/documenti-utili-cer"><img class="u-icon" src="/documenti.png"/>SMART - CER (Comunità Energetiche)</a></li>
+<li class="documenti-utili-union-smart-finanziamenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"><img class="u-icon" src="/documenti.png"/> Finanziamenti</a></li>
+<li class="documenti-utili-union-smart-formazione-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"><img class="u-icon" src="/documenti.png"/> Formazione Agenti</a></li>
+<li class="documenti-utili-union-smart-marketing-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"><img class="u-icon" src="/documenti.png"/> Marketing</a></li>
+<li class="documenti-utili-union-park-Agenzie"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-park-Agenzie"><img class="u-icon" src="/documenti.png"/>PARK360 - Documenti Utili Agenti</a></li>
+</ul>
+<span id="sidenav-resize">
+<i class="material-icons left">keyboard_arrow_left</i>
+<i class="material-icons right">keyboard_arrow_right</i>
+</span>
+<div id="delta-fixed"></div>
+<!-- Modal Structure -->
+<div class="modal" id="modal1">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Ok</a>
+</div>
+</div>
+<div class="modal modal-fixed-footer" id="modal_fast_check">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Chiudi</a>
+</div>
+</div>
+<div class="modal" id="modal_review">
+<div class="modal-content">
+<h4>Sei soddisfatto del servizio offerto e della sharing economy di Union Energia?</h4>
+<div class="modal-msg">
+<div class="row">
+<p class="col s12">Lascia anche tu una recensione.</p>
+<div class="col s12 m6"><a class="review-btn review-google btn waves-effect waves-light" href="https://g.page/r/Cc8Zhb6FtAvnEAE/review" rel="35" style=" background-color: #3578E5;" target="_blank">Scrivi una recensione su Google</a></div>
+<div class="col s12 m6"><a class="review-btn review-fb btn waves-effect waves-light" href="https://it.trustpilot.com/evaluate/www.unionenergia.it" rel="35" style=" background-color: #24b67d;" target="_blank">Scrivi una recensione su Trustpilot</a></div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico" id="review_left">Ho già lasciato una recensione, grazie</a>
+</div>
+</div>
+<div class="modal" id="modal_video">
+<div class="modal-content">
+<h4></h4>
+<p>
+<div class="video-container" style="max-height: 80%;">
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/DW15TfbdeHw" width="560"></iframe>
+</div>
+</p>
+</div>
+<div class="modal-footer">
+<a class="modal-action modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Chiudi</a>
+</div>
+</div>
+<div class="modal" id="modal_posa">
+<div class="modal-content">
+<h4>Attenzione</h4>
+<p>La richiesta di posa contatore va effettuata se non è presente l'impianto, in caso contrario, anche in assenza di contatore, bisogna richiedere un subentro</p>
+</div>
+<div class="modal-footer">
+<a class="btn waves-effect waves-light btn-posa" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico" rel="posa">Confermo che l'impianto non è presente e voglio procedere con la richiesta di posa contatore</a>
+<a class="btn waves-effect waves-light btn-posa" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico" rel="subentro">L'impianto è presente (con o senza contatore) e voglio procedere con la richiesta di subentro. Per inserire la pratica è necessario conoscere il pod (per fornitura luce) o il pdr (per fornitura gas), nel caso in cui non abbia a disposizione questi dati la invitiamo a richiederli al distributore di energia prima di inserire la pratica.</a>
+<br class="clr"/>
+</div>
+</div>
+<div class="modal" id="modal_notifica">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Chiudi</a>
+</div>
+</div>
+<div class="modal" id="modal_tree">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Chiudi</a>
+</div>
+</div>
+<div id="wrap">
+<section class="section-bg title">
+<div class="title-wrap">
+<a class="sidenav-trigger hide_please" data-target="sidenav" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"><i class="material-icons menu-icon">menu</i></a>
+<a class="hide_please home-link" href="/mirror/fv/contratto-fotovoltaico.html">
+<img alt="" class="page-title-logo" src="/logo.png" title=""/>
+</a>
+<a class="app_mode_on hide_please back_app" href="myunionapp://share.unionenergia.it/deeplink"><i class="material-icons">arrow_back_ios</i></a>
+<a class="app_mode_on hide_please back_carrello" href="/carrello?canale=app"><i class="material-icons">arrow_back_ios</i></a>
+<h1 class="padding-container">Nuovo Contratto</h1>
+</div>
+<div style="    display: inline-flex;">
+<a class="assistenza-trigger-top only-mobile" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"><i class="material-icons">live_help</i></a>
+</div>
+</section>
+<section class="section padding-container white-bg" id="main-section-contratto">
+<form action="./contratti-fotovoltaico.php" autocomplete="off" class="contratto" enctype="multipart/form-data" id="contratto_fotovoltaico_form" method="post" validate="">
+<input name="op" type="hidden" value="new"/>
+<input name="e" type="hidden" value="contratti_fotovoltaico"/>
+<input name="id" type="hidden" value=""/>
+<input name="fk_stato_js" type="hidden" value=""/>
+<input id="_r" name="r" type="hidden" value="7"/>
+<input id="jumpto" name="jumpto" type="hidden" value=""/>
+<div class="row">
+<input id="" name="is_ramo_360" type="hidden" value="1"/>
+<section class="sponsor col s12 form-section" id="">
+<br class="clr"/>
+<div class="input-field col m4 s12 autocomplete c_agente_autocomplete">
+<label class="nowrap active" for="fk_agente">Area Manager</label><select class="material-select form-select" id="fk_agente" name="fk_agente"><option selected="selected" value="Giuseppe Giudice">Giuseppe Giudice</option></select>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<input id="fk_agente_hidden" name="fk_agente_hidden" type="hidden" value="98156"/>
+<div class="input-field col m4 s12 autocomplete c_agente_autocomplete">
+<label class="nowrap active" for="fk_edp">Agente</label><input autocomplete="new-password" class="autocomplete c_agente_autocomplete" id="fk_edp" maxlenght="" maxlength="" name="fk_edp" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<input id="fk_edp_hidden" name="fk_edp_hidden" type="hidden" value="98156"/>
+<div class="input-field col m4 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="hashtag" placeholder="" type="text" value=""/>
+<label class="nowrap" for="hashtag">Hashtag            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="_fk_studio" placeholder="" readonly="" type="text" value=""/>
+<label class="nowrap" for="_fk_studio">Studio tecnico            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Lo studio viene assegnato successivamente alla firma del contratto.</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/> </section>
+<div class="col s12 fv_tabs" style="margin-top: 20px;">
+<ul class="tabs">
+<li class="tab col s6"><a href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Consulenza</a></li>
+<li class="tab col m3 s6 contrattuale hide_please"><a href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Check up pre contrattuale</a></li>
+<li class="tab col m3 s6 documenti-e-contratto hide_please"><a href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Documenti &amp; Contratto</a></li>
+<li class="tab col s6 assistenza"><a class="active" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico">Assistenza</a></li>
+</ul>
+</div>
+<br class="clr"/>
+<div class="fv_tab_wrap col s12" id="pre_fattibilita">
+<div class="section-wrapper">
+<section class="dati-cliente-obbligatori col s12 form-section" id="">
+<h2 class="">Dati cliente persona fisica o del rappresentante legale o delegato (per Aziende, Enti e Condominii)</h2>
+<div class="section-wrapper">
+<div class="col m6 s12 fk_soggetto_fotovoltaico input-field">
+<select class="material-select form-select" id="fk_soggetto_fotovoltaico" name="fk_soggetto_fotovoltaico">
+<option value=""></option>
+<option value="2">Persona fisica</option>
+<option value="3">Azienda</option>
+<option value="4">Ente</option>
+<option value="5">Condominio</option>
+</select>
+<label>Tipologia cliente</label>
+</div>
+<div class="input-field checkbox-field col s6">
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="nome" placeholder="" required="" type="text" value=""/>
+<label class="nowrap" for="nome">Nome*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cognome" placeholder="" required="" type="text" value=""/>
+<label class="nowrap" for="cognome">Cognome*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="email" placeholder="" required="" type="email" value=""/>
+<label class="nowrap" for="email">Email*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12 no-paste">
+<input autocomplete="new-password" class="no-paste" id="" maxlenght="" maxlength="" name="email_confirm" placeholder="" required="" type="email" value=""/>
+<label class="nowrap" for="email_confirm">Conferma Email*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="col m1 s4 cellulare_prefisso mobile_prefix input-field">
+<select autocomplete="off" class="material-select form-select mobile_prefix" id="cellulare_prefisso" name="cellulare_prefisso">
+<option data-icon="https://flagcdn.com/it.svg" selected="selected" value="105">+39 Italia</option>
+<option data-icon="https://flagcdn.com/es.svg" value="203">+34 Spain</option>
+<option data-icon="https://flagcdn.com/ch.svg" value="210">+41 Switzerland</option>
+<option data-icon="https://flagcdn.com/de.svg" value="80">+49 Germany</option>
+<option data-icon="https://flagcdn.com/at.svg" value="13">+43 Austria </option>
+<option data-icon="https://flagcdn.com/af.svg" value="1">+93 Afghanistan</option>
+<option data-icon="https://flagcdn.com/al.svg" value="2">+355 Albania</option>
+<option data-icon="https://flagcdn.com/dz.svg" value="3">+213 Algeria</option>
+<option data-icon="https://flagcdn.com/as.svg" value="4">+1684 American Samoa</option>
+<option data-icon="https://flagcdn.com/ad.svg" value="5">+376 Andorra</option>
+<option data-icon="https://flagcdn.com/ao.svg" value="6">+244 Angola</option>
+<option data-icon="https://flagcdn.com/ai.svg" value="7">+1264 Anguilla</option>
+<option data-icon="https://flagcdn.com/ag.svg" value="8">+1268 Antigua and Barbuda</option>
+<option data-icon="https://flagcdn.com/ar.svg" value="9">+54 Argentina</option>
+<option data-icon="https://flagcdn.com/am.svg" value="10">+374 Armenia</option>
+<option data-icon="https://flagcdn.com/aw.svg" value="11">+297 Aruba</option>
+<option data-icon="https://flagcdn.com/au.svg" value="12">+61 Australia</option>
+<option data-icon="https://flagcdn.com/az.svg" value="14">+994 Azerbaijan</option>
+<option data-icon="https://flagcdn.com/bs.svg" value="15">+1242 Bahamas</option>
+<option data-icon="https://flagcdn.com/bh.svg" value="16">+973 Bahrain</option>
+<option data-icon="https://flagcdn.com/bd.svg" value="17">+880 Bangladesh</option>
+<option data-icon="https://flagcdn.com/bb.svg" value="18">+1246 Barbados</option>
+<option data-icon="https://flagcdn.com/by.svg" value="19">+375 Belarus</option>
+<option data-icon="https://flagcdn.com/be.svg" value="20">+32 Belgium</option>
+<option data-icon="https://flagcdn.com/bz.svg" value="21">+501 Belize</option>
+<option data-icon="https://flagcdn.com/bj.svg" value="22">+229 Benin</option>
+<option data-icon="https://flagcdn.com/bm.svg" value="23">+1441 Bermuda</option>
+<option data-icon="https://flagcdn.com/bt.svg" value="24">+975 Bhutan</option>
+<option data-icon="https://flagcdn.com/bo.svg" value="25">+591 Bolivia</option>
+<option data-icon="https://flagcdn.com/ba.svg" value="26">+387 Bosnia and Herzegovina</option>
+<option data-icon="https://flagcdn.com/bw.svg" value="27">+267 Botswana</option>
+<option data-icon="https://flagcdn.com/br.svg" value="28">+55 Brazil</option>
+<option data-icon="https://flagcdn.com/io.svg" value="29">+246 British Indian Ocean Territory</option>
+<option data-icon="https://flagcdn.com/vg.svg" value="30">+1284 British Virgin Islands</option>
+<option data-icon="https://flagcdn.com/bn.svg" value="31">+673 Brunei</option>
+<option data-icon="https://flagcdn.com/bg.svg" value="32">+359 Bulgaria</option>
+<option data-icon="https://flagcdn.com/bf.svg" value="33">+226 Burkina Faso</option>
+<option data-icon="https://flagcdn.com/bi.svg" value="34">+257 Burundi </option>
+<option data-icon="https://flagcdn.com/kh.svg" value="35">+855 Cambodia </option>
+<option data-icon="https://flagcdn.com/cm.svg" value="36">+237 Cameroon </option>
+<option data-icon="https://flagcdn.com/ca.svg" value="37">+1 Canada</option>
+<option data-icon="https://flagcdn.com/cv.svg" value="38">+238 Cape Verde</option>
+<option data-icon="https://flagcdn.com/ky.svg" value="40">+1345 Cayman Islands</option>
+<option data-icon="https://flagcdn.com/cf.svg" value="41">+236 Central African Republic</option>
+<option data-icon="https://flagcdn.com/td.svg" value="42">+235 Chad</option>
+<option data-icon="https://flagcdn.com/cl.svg" value="43">+56 Chile</option>
+<option data-icon="https://flagcdn.com/cn.svg" value="44">+86 China </option>
+<option data-icon="https://flagcdn.com/cx.svg" value="45">+61 Christmas Island</option>
+<option data-icon="https://flagcdn.com/cc.svg" value="46">+61 Cocos (Keeling) Islands</option>
+<option data-icon="https://flagcdn.com/co.svg" value="47">+57 Colombia</option>
+<option data-icon="https://flagcdn.com/km.svg" value="48">+269 Comoros</option>
+<option data-icon="https://flagcdn.com/cg.svg" value="50">+242 Congo (Republic) (Congo-Brazzaville)</option>
+<option data-icon="https://flagcdn.com/cd.svg" value="49">+243 Congo DCR</option>
+<option data-icon="https://flagcdn.com/ck.svg" value="51">+682 Cook Islands</option>
+<option data-icon="https://flagcdn.com/cr.svg" value="52">+506 Costa Rica</option>
+<option data-icon="https://flagcdn.com/ci.svg" value="53">+225 Côte d’Ivoire</option>
+<option data-icon="https://flagcdn.com/hr.svg" value="54">+385 Croatia</option>
+<option data-icon="https://flagcdn.com/cu.svg" value="55">+53 Cuba</option>
+<option data-icon="https://flagcdn.com/cw.svg" value="56">+599 Curaçao</option>
+<option data-icon="https://flagcdn.com/cy.svg" value="57">+357 Cyprus </option>
+<option data-icon="https://flagcdn.com/cz.svg" value="58">+420 Czech Republic</option>
+<option data-icon="https://flagcdn.com/dk.svg" value="59">+45 Denmark</option>
+<option data-icon="https://flagcdn.com/dj.svg" value="60">+253 Djibouti</option>
+<option data-icon="https://flagcdn.com/dm.svg" value="61">+1767 Dominica</option>
+<option data-icon="https://flagcdn.com/do.svg" value="62">+1 Dominican Republic</option>
+<option data-icon="https://flagcdn.com/ec.svg" value="63">+593 Ecuador</option>
+<option data-icon="https://flagcdn.com/eg.svg" value="64">+20 Egypt</option>
+<option data-icon="https://flagcdn.com/sv.svg" value="65">+503 El Salvador</option>
+<option data-icon="https://flagcdn.com/gq.svg" value="66">+240 Equatorial Guinea</option>
+<option data-icon="https://flagcdn.com/er.svg" value="67">+291 Eritrea</option>
+<option data-icon="https://flagcdn.com/ee.svg" value="68">+372 Estonia</option>
+<option data-icon="https://flagcdn.com/et.svg" value="69">+251 Ethiopia</option>
+<option data-icon="https://flagcdn.com/fk.svg" value="70">+500 Falkland Islands (Islas Malvinas)</option>
+<option data-icon="https://flagcdn.com/fo.svg" value="71">+298 Faroe Islands (Føroyar)</option>
+<option data-icon="https://flagcdn.com/fj.svg" value="72">+679 Fiji</option>
+<option data-icon="https://flagcdn.com/fi.svg" value="73">+358 Finland (Suomi)</option>
+<option data-icon="https://flagcdn.com/fr.svg" value="74">+33 France</option>
+<option data-icon="https://flagcdn.com/gf.svg" value="75">+594 French Guiana (Guyane française)</option>
+<option data-icon="https://flagcdn.com/pf.svg" value="76">+689 French Polynesia (Polynésie française)</option>
+<option data-icon="https://flagcdn.com/ga.svg" value="77">+241 Gabon</option>
+<option data-icon="https://flagcdn.com/gm.svg" value="78">+220 Gambia</option>
+<option data-icon="https://flagcdn.com/ge.svg" value="79">+995 Georgia </option>
+<option data-icon="https://flagcdn.com/gh.svg" value="81">+233 Ghana (Gaana)</option>
+<option data-icon="https://flagcdn.com/gi.svg" value="82">+350 Gibraltar</option>
+<option data-icon="https://flagcdn.com/gr.svg" value="83">+30 Greece </option>
+<option data-icon="https://flagcdn.com/gl.svg" value="84">+299 Greenland (Kalaallit Nunaat)</option>
+<option data-icon="https://flagcdn.com/gd.svg" value="85">+1473 Grenada</option>
+<option data-icon="https://flagcdn.com/gp.svg" value="86">+590 Guadeloupe</option>
+<option data-icon="https://flagcdn.com/gu.svg" value="87">+1671 Guam</option>
+<option data-icon="https://flagcdn.com/gt.svg" value="88">+502 Guatemala</option>
+<option data-icon="https://flagcdn.com/gg.svg" value="89">+44 Guernsey</option>
+<option data-icon="https://flagcdn.com/gn.svg" value="90">+224 Guinea (Guinée)</option>
+<option data-icon="https://flagcdn.com/gw.svg" value="91">+245 Guinea-Bissau (Guiné Bissau)</option>
+<option data-icon="https://flagcdn.com/gy.svg" value="92">+592 Guyana</option>
+<option data-icon="https://flagcdn.com/ht.svg" value="93">+509 Haiti</option>
+<option data-icon="https://flagcdn.com/hn.svg" value="94">+504 Honduras</option>
+<option data-icon="https://flagcdn.com/hk.svg" value="95">+852 Hong Kong</option>
+<option data-icon="https://flagcdn.com/hu.svg" value="96">+36 Hungary</option>
+<option data-icon="https://flagcdn.com/is.svg" value="97">+354 Iceland</option>
+<option data-icon="https://flagcdn.com/in.svg" value="98">+91 India</option>
+<option data-icon="https://flagcdn.com/id.svg" value="99">+62 Indonesia</option>
+<option data-icon="https://flagcdn.com/ir.svg" value="100">+98 Iran</option>
+<option data-icon="https://flagcdn.com/iq.svg" value="101">+964 Iraq </option>
+<option data-icon="https://flagcdn.com/ie.svg" value="102">+353 Ireland</option>
+<option data-icon="https://flagcdn.com/im.svg" value="103">+44 Isle of Man</option>
+<option data-icon="https://flagcdn.com/il.svg" value="104">+972 Israel</option>
+<option data-icon="https://flagcdn.com/jm.svg" value="106">+1 Jamaica</option>
+<option data-icon="https://flagcdn.com/jp.svg" value="107">+81 Japan </option>
+<option data-icon="https://flagcdn.com/je.svg" value="108">+44 Jersey</option>
+<option data-icon="https://flagcdn.com/jo.svg" value="109">+962 Jordan</option>
+<option data-icon="https://flagcdn.com/kz.svg" value="110">+7 Kazakhstan </option>
+<option data-icon="https://flagcdn.com/ke.svg" value="111">+254 Kenya</option>
+<option data-icon="https://flagcdn.com/ki.svg" value="112">+686 Kiribati</option>
+<option data-icon="https://flagcdn.com/xk.svg" value="113">+383 Kosovo</option>
+<option data-icon="https://flagcdn.com/kw.svg" value="114">+965 Kuwait </option>
+<option data-icon="https://flagcdn.com/kg.svg" value="115">+996 Kyrgyzstan </option>
+<option data-icon="https://flagcdn.com/la.svg" value="116">+856 Laos </option>
+<option data-icon="https://flagcdn.com/lv.svg" value="117">+371 Latvia</option>
+<option data-icon="https://flagcdn.com/lb.svg" value="118">+961 Lebanon</option>
+<option data-icon="https://flagcdn.com/ls.svg" value="119">+266 Lesotho</option>
+<option data-icon="https://flagcdn.com/lr.svg" value="120">+231 Liberia</option>
+<option data-icon="https://flagcdn.com/ly.svg" value="121">+218 Libya </option>
+<option data-icon="https://flagcdn.com/li.svg" value="122">+423 Liechtenstein</option>
+<option data-icon="https://flagcdn.com/lt.svg" value="123">+370 Lithuania</option>
+<option data-icon="https://flagcdn.com/lu.svg" value="124">+352 Luxembourg</option>
+<option data-icon="https://flagcdn.com/mo.svg" value="125">+853 Macau</option>
+<option data-icon="https://flagcdn.com/mk.svg" value="126">+389 Macedonia</option>
+<option data-icon="https://flagcdn.com/mg.svg" value="127">+261 Madagascar</option>
+<option data-icon="https://flagcdn.com/mw.svg" value="128">+265 Malawi</option>
+<option data-icon="https://flagcdn.com/my.svg" value="129">+60 Malaysia</option>
+<option data-icon="https://flagcdn.com/mv.svg" value="130">+960 Maldives</option>
+<option data-icon="https://flagcdn.com/ml.svg" value="131">+223 Mali</option>
+<option data-icon="https://flagcdn.com/mt.svg" value="132">+356 Malta</option>
+<option data-icon="https://flagcdn.com/mh.svg" value="133">+692 Marshall Islands</option>
+<option data-icon="https://flagcdn.com/mq.svg" value="134">+596 Martinique</option>
+<option data-icon="https://flagcdn.com/mr.svg" value="135">+222 Mauritania </option>
+<option data-icon="https://flagcdn.com/mu.svg" value="136">+230 Mauritius (Moris)</option>
+<option data-icon="https://flagcdn.com/yt.svg" value="137">+262 Mayotte</option>
+<option data-icon="https://flagcdn.com/mx.svg" value="138">+52 Mexico (México)</option>
+<option data-icon="https://flagcdn.com/fm.svg" value="139">+691 Micronesia</option>
+<option data-icon="https://flagcdn.com/md.svg" value="140">+373 Moldova</option>
+<option data-icon="https://flagcdn.com/mc.svg" value="141">+377 Monaco</option>
+<option data-icon="https://flagcdn.com/mn.svg" value="142">+976 Mongolia </option>
+<option data-icon="https://flagcdn.com/me.svg" value="143">+382 Montenegro</option>
+<option data-icon="https://flagcdn.com/ms.svg" value="144">+1664 Montserrat</option>
+<option data-icon="https://flagcdn.com/ma.svg" value="145">+212 Morocco</option>
+<option data-icon="https://flagcdn.com/mz.svg" value="146">+258 Mozambique (Moçambique)</option>
+<option data-icon="https://flagcdn.com/mm.svg" value="147">+95 Myanmar (Burma) </option>
+<option data-icon="https://flagcdn.com/na.svg" value="148">+264 Namibia (Namibië)</option>
+<option data-icon="https://flagcdn.com/nr.svg" value="149">+674 Nauru</option>
+<option data-icon="https://flagcdn.com/np.svg" value="150">+977 Nepal </option>
+<option data-icon="https://flagcdn.com/nl.svg" value="151">+31 Netherlands</option>
+<option data-icon="https://flagcdn.com/nc.svg" value="152">+687 New Caledonia (Nouvelle-Calédonie)</option>
+<option data-icon="https://flagcdn.com/nz.svg" value="153">+64 New Zealand</option>
+<option data-icon="https://flagcdn.com/ni.svg" value="154">+505 Nicaragua</option>
+<option data-icon="https://flagcdn.com/ne.svg" value="155">+227 Niger (Nijar)</option>
+<option data-icon="https://flagcdn.com/ng.svg" value="156">+234 Nigeria</option>
+<option data-icon="https://flagcdn.com/nu.svg" value="157">+683 Niue</option>
+<option data-icon="https://flagcdn.com/nf.svg" value="158">+672 Norfolk Island</option>
+<option data-icon="https://flagcdn.com/kp.svg" value="159">+850 North Korea</option>
+<option data-icon="https://flagcdn.com/mp.svg" value="160">+1670 Northern Mariana Islands</option>
+<option data-icon="https://flagcdn.com/no.svg" value="161">+47 Norway</option>
+<option data-icon="https://flagcdn.com/om.svg" value="162">+968 Oman </option>
+<option data-icon="https://flagcdn.com/pk.svg" value="163">+92 Pakistan</option>
+<option data-icon="https://flagcdn.com/pw.svg" value="164">+680 Palau</option>
+<option data-icon="https://flagcdn.com/ps.svg" value="165">+970 Palestine</option>
+<option data-icon="https://flagcdn.com/pa.svg" value="166">+507 Panama</option>
+<option data-icon="https://flagcdn.com/pg.svg" value="167">+675 Papua New Guinea</option>
+<option data-icon="https://flagcdn.com/py.svg" value="168">+595 Paraguay</option>
+<option data-icon="https://flagcdn.com/pe.svg" value="169">+51 Peru</option>
+<option data-icon="https://flagcdn.com/ph.svg" value="170">+63 Philippines</option>
+<option data-icon="https://flagcdn.com/pl.svg" value="171">+48 Poland</option>
+<option data-icon="https://flagcdn.com/pt.svg" value="172">+351 Portugal</option>
+<option data-icon="https://flagcdn.com/pr.svg" value="173">+1 Puerto Rico</option>
+<option data-icon="https://flagcdn.com/qa.svg" value="174">+974 Qatar</option>
+<option data-icon="https://flagcdn.com/re.svg" value="175">+262 Réunion</option>
+<option data-icon="https://flagcdn.com/ro.svg" value="176">+40 Romania</option>
+<option data-icon="https://flagcdn.com/ru.svg" value="177">+7 Russia</option>
+<option data-icon="https://flagcdn.com/rw.svg" value="178">+250 Rwanda</option>
+<option data-icon="https://flagcdn.com/bl.svg" value="179">+590 Saint Barthélemy</option>
+<option data-icon="https://flagcdn.com/sh.svg" value="180">+290 Saint Helena</option>
+<option data-icon="https://flagcdn.com/kn.svg" value="181">+1869 Saint Kitts and Nevis</option>
+<option data-icon="https://flagcdn.com/lc.svg" value="182">+1758 Saint Lucia</option>
+<option data-icon="https://flagcdn.com/mf.svg" value="183">+590 Saint Martin </option>
+<option data-icon="https://flagcdn.com/pm.svg" value="184">+508 Saint Pierre and Miquelon</option>
+<option data-icon="https://flagcdn.com/vc.svg" value="185">+1784 Saint Vincent and the Grenadines</option>
+<option data-icon="https://flagcdn.com/ws.svg" value="186">+685 Samoa</option>
+<option data-icon="https://flagcdn.com/sm.svg" value="187">+378 San Marino</option>
+<option data-icon="https://flagcdn.com/st.svg" value="188">+239 São Tomé and Príncipe </option>
+<option data-icon="https://flagcdn.com/sa.svg" value="189">+966 Saudi Arabia </option>
+<option data-icon="https://flagcdn.com/sn.svg" value="190">+221 Senegal</option>
+<option data-icon="https://flagcdn.com/rs.svg" value="191">+381 Serbia</option>
+<option data-icon="https://flagcdn.com/sc.svg" value="192">+248 Seychelles</option>
+<option data-icon="https://flagcdn.com/sl.svg" value="193">+232 Sierra Leone</option>
+<option data-icon="https://flagcdn.com/sg.svg" value="194">+65 Singapore</option>
+<option data-icon="https://flagcdn.com/sx.svg" value="195">+1721 Sint Maarten</option>
+<option data-icon="https://flagcdn.com/sk.svg" value="196">+421 Slovakia </option>
+<option data-icon="https://flagcdn.com/si.svg" value="197">+386 Slovenia</option>
+<option data-icon="https://flagcdn.com/sb.svg" value="198">+677 Solomon Islands</option>
+<option data-icon="https://flagcdn.com/so.svg" value="199">+252 Somalia </option>
+<option data-icon="https://flagcdn.com/za.svg" value="200">+27 South Africa</option>
+<option data-icon="https://flagcdn.com/kr.svg" value="201">+82 South Korea</option>
+<option data-icon="https://flagcdn.com/ss.svg" value="202">+211 South Sudan </option>
+<option data-icon="https://flagcdn.com/lk.svg" value="204">+94 Sri Lanka</option>
+<option data-icon="https://flagcdn.com/sd.svg" value="205">+249 Sudan</option>
+<option data-icon="https://flagcdn.com/sr.svg" value="206">+597 Suriname</option>
+<option data-icon="https://flagcdn.com/sj.svg" value="207">+47 Svalbard and Jan Mayen</option>
+<option data-icon="https://flagcdn.com/sz.svg" value="208">+268 Swaziland</option>
+<option data-icon="https://flagcdn.com/se.svg" value="209">+46 Sweden</option>
+<option data-icon="https://flagcdn.com/sy.svg" value="211">+963 Syria</option>
+<option data-icon="https://flagcdn.com/tw.svg" value="212">+886 Taiwan</option>
+<option data-icon="https://flagcdn.com/tj.svg" value="213">+992 Tajikistan</option>
+<option data-icon="https://flagcdn.com/tz.svg" value="214">+255 Tanzania</option>
+<option data-icon="https://flagcdn.com/th.svg" value="215">+66 Thailand</option>
+<option data-icon="https://flagcdn.com/tl.svg" value="216">+670 Timor-Leste</option>
+<option data-icon="https://flagcdn.com/tg.svg" value="217">+228 Togo</option>
+<option data-icon="https://flagcdn.com/tk.svg" value="218">+690 Tokelau</option>
+<option data-icon="https://flagcdn.com/to.svg" value="219">+676 Tonga</option>
+<option data-icon="https://flagcdn.com/tt.svg" value="220">+1868 Trinidad and Tobago</option>
+<option data-icon="https://flagcdn.com/tn.svg" value="221">+216 Tunisia </option>
+<option data-icon="https://flagcdn.com/tr.svg" value="222">+90 Turkey</option>
+<option data-icon="https://flagcdn.com/tm.svg" value="223">+993 Turkmenistan</option>
+<option data-icon="https://flagcdn.com/tc.svg" value="224">+1649 Turks and Caicos Islands</option>
+<option data-icon="https://flagcdn.com/tv.svg" value="225">+688 Tuvalu</option>
+<option data-icon="https://flagcdn.com/vi.svg" value="226">+1340 U.S. Virgin Islands</option>
+<option data-icon="https://flagcdn.com/ug.svg" value="227">+256 Uganda</option>
+<option data-icon="https://flagcdn.com/ua.svg" value="228">+380 Ukraine</option>
+<option data-icon="https://flagcdn.com/ae.svg" value="229">+971 United Arab Emirates </option>
+<option data-icon="https://flagcdn.com/gb.svg" value="230">+44 United Kingdom</option>
+<option data-icon="https://flagcdn.com/us.svg" value="231">+1 United States</option>
+<option data-icon="https://flagcdn.com/uy.svg" value="232">+598 Uruguay</option>
+<option data-icon="https://flagcdn.com/uz.svg" value="233">+998 Uzbekistan</option>
+<option data-icon="https://flagcdn.com/vu.svg" value="234">+678 Vanuatu</option>
+<option data-icon="https://flagcdn.com/ve.svg" value="236">+58 Venezuela</option>
+<option data-icon="https://flagcdn.com/vn.svg" value="237">+84 Vietnam </option>
+<option data-icon="https://flagcdn.com/wf.svg" value="238">+681 Wallis and Futuna (Wallis-et-Futuna)</option>
+<option data-icon="https://flagcdn.com/eh.svg" value="239">+212 Western Sahara</option>
+<option data-icon="https://flagcdn.com/ye.svg" value="240">+967 Yemen </option>
+<option data-icon="https://flagcdn.com/zm.svg" value="241">+260 Zambia</option>
+<option data-icon="https://flagcdn.com/zw.svg" value="242">+263 Zimbabwe</option>
+<option data-icon="https://flagcdn.com/ax.svg" value="243">+358 Åland Islands</option>
+</select>
+<label>Cellulare*</label>
+</div>
+<div class="input-field col m5 s8">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cellulare" placeholder="" required="" type="number" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="dati-cliente col s12 form-section" id="">
+<h2 class="">Dati cliente anagrafici obbligatori per contrattualizzazione</h2>
+<div class="section-wrapper">
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cf" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cf">CF            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="col m6 s12 sesso input-field">
+<select class="material-select form-select" id="sesso" name="sesso">
+<option value=""></option>
+<option value="M">M</option>
+<option value="F">F</option>
+</select>
+<label>Sesso</label>
+</div>
+<br class="clr"/>
+<div class="input-field col m10 s12 autocomplete citta_autocomplete">
+<input autocomplete="new-password" id="comune_nascita" maxlenght="" maxlength="" name="comune_nascita" placeholder="Inizia a scrivere per cercare..." type="text" value=""/>
+<label class="nowrap" for="comune_nascita">Comune nascita            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Selezionare 'Estero' per comuni non italiani. Se il comune di nascita è soppresso, selezionare la denominazione attuale e spuntare la casella "Comune di nascita soppresso"?</span>
+</div>
+<div class="input-field checkbox-field col m2 s12">
+<p>
+<label>
+<input class="filled-in" name="comune_nascita_soppresso" type="checkbox"/>
+<span>Comune di nascita soppresso?                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<input id="comune_nascita_hidden" name="comune_nascita_hidden" type="hidden" value=""/>
+<div class="input-field col m6 s12 date-field">
+<label for="data_nascita">Data nascita</label>
+<input class="datepart giorno" max="31" min="1" name="data_nascita_d" placeholder="giorno" size="2" type="number" value=""/>
+<span>/</span>
+<input class="datepart mese" max="12" min="1" name="data_nascita_m" placeholder="mese" size="2" type="number" value=""/>
+<span>/</span>
+<input class="datepart anno" max="" min="" name="data_nascita_y" placeholder="anno" size="4" type="number" value=""/>
+<!--<input type="text" class="datepicker" class="" value="" name="data_nascita" placeholder="" >-->
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12 autocomplete citta_autocomplete">
+<input autocomplete="new-password" id="comune_residenza" maxlenght="" maxlength="" name="comune_residenza" placeholder="Inizia a scrivere per cercare..." type="text" value=""/>
+<label class="nowrap" for="comune_residenza">Comune residenza            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Selezionare 'Estero' per comuni non italiani. </span>
+</div>
+<input id="comune_residenza_hidden" name="comune_residenza_hidden" type="hidden" value=""/>
+<div class="input-field address-field col m6 s12">
+<input autocomplete="off" class="col s4 col-4 m4" id="top_residenza" name="top_residenza" placeholder="Ad es. Via, Piazza,..." type="text" value=""/>
+<span class="sep col m1 s1"> </span>
+<input autocomplete="new-password" class="col m7 s7 col-7 indirizzopart" name="via_residenza" placeholder="Ad es. Garibaldi..." type="text" value=""/>
+<label for="top_residenza">Indirizzo residenza            </label>
+</div>
+<br class="clr"/>
+<div class="input-field col m2 s6">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="civico_residenza" placeholder="" type="text" value=""/>
+<label class="nowrap" for="civico_residenza">Civico residenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m3 s6">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cap_residenza" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cap_residenza">CAP residenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="dati-societari col s12 form-section" id="">
+<h2 class="">Dati societari</h2>
+<div class="section-wrapper">
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="rag_sociale" placeholder="" type="text" value=""/>
+<label class="nowrap" for="rag_sociale">Ragione sociale            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="piva" placeholder="" type="text" value=""/>
+<label class="nowrap" for="piva">PIVA            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Inserire almeno uno tra PIVA e CF (per DI obbligatori entrambi, per condomini e associazioni non a scopo di lucro solo CF numerico, per associazioni a scopo di lucro solo piva)</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cf_sede" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cf_sede">CF Soggetto (Numerico se non DI)            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Inserire almeno uno tra PIVA e CF (per DI obbligatori entrambi, per condomini e associazioni non a scopo di lucro solo CF numerico, per associazioni a scopo di lucro solo piva)</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="pec" placeholder="" type="email" value=""/>
+<label class="nowrap" for="pec">PEC            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Indicare la PEC registrata l'indice nazionale degli indirizzi di Posta Elettronica Certificata INIPEC</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="sdi" placeholder="" type="text" value=""/>
+<label class="nowrap" for="sdi">Cod. destinatario SDI            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12 autocomplete citta_autocomplete">
+<input autocomplete="new-password" class="autocomplete citta_autocomplete" id="comune_sede" maxlenght="" maxlength="" name="comune_sede" placeholder="Inizia a scrivere per cercare..." type="text" value=""/>
+<label class="nowrap" for="comune_sede">Comune sede legale            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Selezionare 'Estero' per comuni non italiani. </span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<input id="comune_sede_hidden" name="comune_sede_hidden" type="hidden" value=""/>
+<div class="input-field address-field col m6 s12">
+<input id="top_sede_hidden" name="top_sede_hidden" type="hidden" value=""/>
+<input autocomplete="new-password" class="col m4 s4 col-4 topart autocomplete toponimo_autocomplete" id="top_sede" name="top_sede" placeholder="Ad es. Via, Piazza,..." type="text" value=""/>
+<span class="sep col m1 s1"> </span>
+<input autocomplete="new-password" class="col m7 s7 col-7 indirizzopart" name="via_sede" placeholder="Ad es. Garibaldi..." type="text" value=""/>
+<label for="top_sede">Indirizzo sede legale            </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m2 s6">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="civico_sede" placeholder="" type="text" value=""/>
+<label class="nowrap" for="civico_sede">Civico sede legale            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cap_sede" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cap_sede">CAP sede legale            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="possesso col s12 form-section" id="">
+<h2 class="">Email recapito fatture</h2>
+<div class="section-wrapper">
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="email_recapito_fatture" placeholder="" type="email" value=""/>
+<label class="nowrap" for="email_recapito_fatture">Email per recapito fatture            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Compilare solo se diversa dalla email di registrazione</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="dati-referente col s12 form-section" id="">
+<h2 class="">Dati referente contrattuale</h2>
+<div class="section-wrapper">
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="referente_nome" placeholder="" type="text" value=""/>
+<label class="nowrap" for="referente_nome">Nome referente            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="referente_cognome" placeholder="" type="text" value=""/>
+<label class="nowrap" for="referente_cognome">Cognome referente            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="referente_cellulare" placeholder="" type="text" value=""/>
+<label class="nowrap" for="referente_cellulare">Cellulare referente            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="referente_email" placeholder="" type="email" value=""/>
+<label class="nowrap" for="referente_email">Email referente            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="possesso col s12 form-section" id="">
+<h2 class="">Possesso e Detrazioni fiscali</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12 detrazione_50_pf">
+<p>
+<label>
+<input class="filled-in detrazione_50_pf" name="detrazione_50_pf" type="checkbox"/>
+<span>Detrazione fiscale per persone fisiche                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="detrazione_cf" placeholder="" type="text" value=""/>
+<label class="nowrap" for="detrazione_cf">Codice fiscale della persona fisica beneficiaria della detrazione (se diversa dal cliente)            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="detrazione_nome" placeholder="" type="text" value=""/>
+<label class="nowrap" for="detrazione_nome">Nome della persona fisica beneficiaria della detrazione (se diversa dal cliente)            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="detrazione_cognome" placeholder="" type="text" value=""/>
+<label class="nowrap" for="detrazione_cognome">Cognome della persona fisica beneficiaria della detrazione (se diversa dal cliente)            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<p class="p">In caso di aziende è possibile digitare un valore libero in base al tipo di detrazione fiscale prevista.<br/>In caso di soggetti privati è obbligatorio digitare uno dei valori previsti in base alla normativa vigente; a titolo informativo si riportano le detrazioni previste per i privati nella tabella seguente.</p>
+<img src="/detrazioni_fiscali_smart.jpg" style="display: block; width: 100%; max-width: 600px; height: auto; margin-top: 10px; margin-bottom: 10px;"/>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="detrazione_azienda" placeholder="" type="number" value=""/>
+<label class="nowrap" for="detrazione_azienda">Detrazione fiscale            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Se prevista, percentuale di detrazione fiscale</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="sito_di_installazione col s12 form-section" id="">
+<h2 class="">Sito di installazione</h2>
+<div class="section-wrapper">
+<div class="col m6 s12 fk_tipologia_possesso input-field">
+<select class="material-select form-select" id="fk_tipologia_possesso" name="fk_tipologia_possesso">
+<option value=""></option>
+<option value="2">Proprietario</option>
+<option value="3">Comproprietario</option>
+<option value="4">Utilizzatore</option>
+</select>
+<label>Diritto su immobile</label>
+</div>
+<br class="clr"/>
+<div class="input-field col m6 s12 autocomplete citta_autocomplete">
+<input autocomplete="off" id="comune_installazione" maxlenght="" maxlength="" name="comune_installazione" placeholder="Inizia a scrivere per cercare..." required="" type="text" value=""/>
+<label class="nowrap" for="comune_installazione">Comune*            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Selezionare 'Estero' per comuni non italiani. </span>
+</div>
+<div class="input-field address-field col m6 s12">
+<input autocomplete="off" class="col m4 s4 col-4" id="top_installazione" name="top_installazione" placeholder="Ad es. Via, Piazza,..." type="text" value=""/>
+<span class="sep col m1 s1"> </span>
+<input autocomplete="new-password" class="col m7 s7 col-7 indirizzopart" name="via_installazione" placeholder="Ad es. Garibaldi..." type="text" value=""/>
+<label for="top_installazione">Indirizzo             </label>
+</div>
+<br class="clr"/>
+<div class="input-field col m2 s6">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="civico_installazione" placeholder="" required="" type="text" value=""/>
+<label class="nowrap" for="civico_installazione">Civico*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m3 s6">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cap_installazione" placeholder="" required="" type="text" value=""/>
+<label class="nowrap" for="cap_installazione">CAP*            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="col m6 s12 fk_realizzazione_stato input-field">
+<select class="material-select form-select" id="fk_realizzazione_stato" name="fk_realizzazione_stato">
+<option value=""></option>
+<option value="2">Edificio già realizzato</option>
+<option value="3">Edificio in corso di realizzazione</option>
+<option value="4">Edificio da realizzare</option>
+</select>
+<label>Stato realizzazione</label>
+</div>
+<div class="col m6 s12 fk_realizzazione_autorizzazione input-field">
+<select class="material-select form-select" id="fk_realizzazione_autorizzazione" name="fk_realizzazione_autorizzazione">
+<option value=""></option>
+<option value="2">Licenza edilizia</option>
+<option value="3">Concessione edilizia</option>
+<option value="4">Permesso di costruire</option>
+<option value="5">DIA</option>
+<option value="6">Altro</option>
+</select>
+<label>Realizzato con</label>
+</div>
+<div class="col m6 s12 fk_tipologia_edificio input-field">
+<select class="material-select form-select" id="fk_tipologia_edificio" name="fk_tipologia_edificio">
+<option value=""></option>
+<option value="2">Abitazione singola</option>
+<option value="3">Plurifamiliare</option>
+<option value="5">Capannone</option>
+<option value="6">Abitazione in condominio o condominio</option>
+</select>
+<label>Tipologia di edificio</label>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col s12 condoni_in_esecuzione">
+<p>
+<label>
+<input class="filled-in condoni_in_esecuzione" name="condoni_in_esecuzione" type="checkbox"/>
+<span>Sanatorie in esecuzione                    
+                </span>
+</label>
+</p>
+<span class="helper-text" data-error="wrong" data-success="right">Indicare se sono presenti sanatorie in esecuzione</span>
+</div>
+<div class="input-field checkbox-field col s12 condoni_da_verificare">
+<p>
+<label>
+<input class="filled-in condoni_da_verificare" name="condoni_da_verificare" type="checkbox"/>
+<span>Richiesta verifica su sanatorie                    
+                </span>
+</label>
+</p>
+<span class="helper-text" data-error="wrong" data-success="right">Richiesta verifica sul sanatorie in fase di verifica pratica</span>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="impianto col s12 form-section" id="">
+<h2 class="no-mb">Utenza energetica e impianto elettrico</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12 impianto_gia_presente">
+<p>
+<label>
+<input class="filled-in impianto_gia_presente" name="impianto_gia_presente" type="checkbox"/>
+<span>Impianto fotovoltaico già presente sul POD                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<div class="col m6 s12 potenza_contatore input-field">
+<select class="material-select form-select" id="potenza_contatore" name="potenza_contatore">
+<option value=""></option>
+<option value="1.7">1,7</option>
+<option value="2.2">2,2</option>
+<option value="3.3">3,3</option>
+<option value="5">5</option>
+<option value="6.6">6,6</option>
+<option value="8.8">8,8</option>
+<option value="11">11</option>
+<option value="16.5">16,5</option>
+<option value="22">22</option>
+<option value="27.5">27,5</option>
+<option value="33">33</option>
+<option value="-1">Altro</option>
+</select>
+<input autocomplete="new-password" class="" id="potenza_contatore_custom" maxlength="" name="potenza_contatore_custom" placeholder="es. 1 – 1,7 – 3,3 – 5 – 6,6 ecc" type="text" value=""/>
+<label>Potenza in kw del contatore</label>
+</div>
+<div class="col m6 s12 fk_tipo_fase input-field">
+<select class="material-select form-select" id="fk_tipo_fase" name="fk_tipo_fase">
+<option value=""></option>
+<option value="1">Monofase</option>
+<option value="2">Trifase</option>
+<option value="3">Media tensione</option>
+</select>
+<label>Tensione</label>
+</div>
+<div class="input-field radio-field col m12 s12">
+<label class="active" for="contatore_vecchio">Tipologia contatore</label>
+<p>
+<label>
+<input class="" name="contatore_vecchio" type="radio" value="1"/>
+<span style="display: flex; align-items: center;">Vecchia generazione                                                    </span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="contatore_vecchio" type="radio" value="0"/>
+<span style="display: flex; align-items: center;">Nuova generazione (Open meter 2.0)                                                    </span>
+<span class="descr"><img src="/i/fotovoltaico/contatore_open_meter2.png"/></span>
+</label>
+</p>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Consenso al trattamento dei dati personali</h2>
+<div class="section-wrapper">
+<div id="privacy"></div>
+<p style="margin-bottom: 0;"><b>Letta l'Informativa di Simac, disponibile su Simacsolar.com</b>:</p>
+<div class="input-field checkbox-field col s12">
+<p>
+<label>
+<input class="filled-in" name="consenso_dati" required="" type="checkbox"/>
+<span>Acconsento al trattamento dei miei dati personali ai sensi dell'articolo 13 del Regolamento (UE) 2016/679.                    
+                </span>
+</label>
+</p>
+</div>
+<p style="margin-bottom: 0;">
+<b>Consenso per l'utilizzo dei dati per finalita' promozionali e di marketing (facoltativo):</b><br/>
+                                Presa visione dell’informativa, delle finalità e delle modalità di trattamento, selezionando “accetto” presti il consenso all’utilizzo dei dati personali per l’invio di materiale pubblicitario rivolto alla vendita o per il compimento di ricerche di mercato o sondaggi di opinione, per comunicazioni promozionali e commerciali o per proporre informazioni e/o l’acquisizione dei servizi del Titolare mediante e-mail; sms; contatto telefonico con o senza operatore; posta ordinaria.
+                            </p>
+<div class="input-field radio-field col m4 s12">
+<label class="active" for="consenso_marketing_union_cell"></label>
+<p>
+<label>
+<input class="" name="consenso_marketing_union_cell" required="" type="radio" value="1"/>
+<span style="display: flex; align-items: center;">Sì, acconsento                                                    </span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="consenso_marketing_union_cell" required="" type="radio" value="0"/>
+<span style="display: flex; align-items: center;">No, non acconsento                                                    </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<br class="clr"/>
+</div>
+<br class="clr"/>
+</div><!--pre_fattibilita-->
+<div class="fv_tab_wrap col s12 hide_please" id="checkup_pre_contrattuale">
+<div class="section-wrapper">
+<section class="modalita_di_pagamento col s12 form-section" id="">
+<h2 class="no-mb">Sostenibilità economica</h2>
+<div class="section-wrapper">
+<div class="input-field radio-field col m12 s12">
+<label class="active" for="fk_modalita_pagamento_fotovoltaico"></label>
+<p>
+<label>
+<input class="" name="fk_modalita_pagamento_fotovoltaico" type="radio" value="2"/>
+<span style="display: flex; align-items: center;">Finanziamento e/o pagamento anticipato                                                    </span>
+<span class="descr">Evidenzia la volontà di effettuare un finanziamento con istituto convenzionato UNION</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_modalita_pagamento_fotovoltaico" type="radio" value="4"/>
+<span style="display: flex; align-items: center;">Pagamento diretto del cliente                                                    </span>
+<span class="descr">Il cliente pagherà anticipatamente prima della consegna del materiale per l'installazione, ovvero a progetto ed autorizzazioni già effettuati</span>
+</label>
+</p>
+</div>
+<div class="col m6 s12 fk_finanziaria input-field">
+<select class="material-select form-select" id="fk_finanziaria" name="fk_finanziaria">
+<option value=""></option>
+<option value="1">BCC Lease</option>
+<option value="2">Deutsche Bank</option>
+<option value="4">Noleggio Operativo</option>
+<option value="5">Reddito energetico</option>
+<option value="6">Leasing</option>
+</select>
+<label>Finanziaria convenzionata e/o pagamento anticipato</label>
+<span class="helper-text" data-error="wrong" data-success="right">Obbligatorio in caso di pagamento finanziato</span>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="acconto_diretto_non_finanziato" placeholder="" type="text" value=""/>
+<label class="nowrap" for="acconto_diretto_non_finanziato">Importo non finanziato e da saldare direttamente (al netto del corrispettivo)            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="dicitura_righe_fattura" placeholder="" type="text" value=""/>
+<label class="nowrap" for="dicitura_righe_fattura">Dicitura per incentivi e bandi da inserire in fattura            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Autorizzazione del proprietario diverso dal cliente</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col s12">
+<p>
+<label>
+<input class="filled-in" name="autorizzazione_installazione_proprietario" type="checkbox"/>
+<span>Autorizzazione all'installazione del proprietario                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Tipo di copertura</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="tetto_lastricato_solare" type="checkbox"/>
+<span>Il tetto è un lastrico solare                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="tetto_curvo" type="checkbox"/>
+<span>Il tetto è curvo                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="tetto_nr_falde" placeholder="" type="number" value=""/>
+<label class="nowrap" for="tetto_nr_falde">Quante falde ci sono sul tetto di proprietà            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Indicare solo se non è un lastrico solare</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field checkbox-field col m6s12">
+<p>
+<label>
+<input class="filled-in" name="tetto_falda_est_sud_ovest" type="checkbox"/>
+<span>E' presente almeno una falda tra EST-SUD ed OVEST?                    
+                </span>
+</label>
+</p>
+<span class="helper-text" data-error="wrong" data-success="right">Indicare solo se non è un lastrico solare</span>
+</div>
+<br class="clr"/>
+<div class="input-field radio-field col m6 s12">
+<label class="active" for="fk_tipo_tetto">Tipologia di copertura</label>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="1"/>
+<span style="display: flex; align-items: center;">Coppo                                                            <img src="/i/f/coppo.png" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="2"/>
+<span style="display: flex; align-items: center;">Coppo e tegola                                                            <img src="/i/f/coppo_tegola.jpeg" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="3"/>
+<span style="display: flex; align-items: center;">Tegola portoghese                                                            <img src="/i/f/portoghese.jpeg" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="4"/>
+<span style="display: flex; align-items: center;">Tegola marsigliese                                                            <img src="/i/f/marsigliese.png" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="5"/>
+<span style="display: flex; align-items: center;">Lamiera gregata                                                            <img src="/i/f/gregata.jpg" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="6"/>
+<span style="display: flex; align-items: center;">Canadese                                                            <img src="/i/f/canadese.jpg" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="8"/>
+<span style="display: flex; align-items: center;">Olandese                                                            <img src="/i/f/olandese.jpg" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="9"/>
+<span style="display: flex; align-items: center;">Plastica                                                            <img src="/i/f/plastica.PNG" style="height: 38px; width: auto; display: inline-block;"/>
+</span>
+</label>
+</p>
+<p>
+<label>
+<input class="" name="fk_tipo_tetto" type="radio" value="10"/>
+<span style="display: flex; align-items: center;">Superficie pergolata                                                    </span>
+</label>
+</p>
+</div>
+<div class="col m6 s12 fk_copertura_tetto_piano input-field">
+<select class="material-select form-select" id="fk_copertura_tetto_piano" name="fk_copertura_tetto_piano">
+<option value=""></option>
+<option value="1">Mattonato</option>
+<option value="2">Cemento</option>
+<option value="3">Isolante</option>
+<option value="4">Pergolato</option>
+</select>
+<label>Copertura tetto piano</label>
+</div>
+<div class="col m6 s12 linea_sicurezza input-field">
+<select class="material-select form-select" id="linea_sicurezza" name="linea_sicurezza">
+<option value=""></option>
+<option value="1">Sì</option>
+<option value="0">No</option>
+</select>
+<label>E' presente la linea di Sicurezza</label>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="altezza_da_terra_tetto" placeholder="" type="number" value=""/>
+<label class="nowrap" for="altezza_da_terra_tetto">Altezza da terra del tetto (inizio tetto dalla parete) <b>in metri</b>
+</label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="balaustra" type="checkbox"/>
+<span>E' presente una balaustra?                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="balaustra_altezza" placeholder="" type="number" value=""/>
+<label class="nowrap" for="balaustra_altezza">Altezza balaustra <b>in centimetri</b>
+</label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="col m6 s12 fk_struttura_tetto input-field">
+<select class="material-select form-select" id="fk_struttura_tetto" name="fk_struttura_tetto">
+<option value=""></option>
+<option value="1">A travi</option>
+<option value="2">Legno</option>
+<option value="3">Calcestruzzo</option>
+<option value="4">Travetto accaio</option>
+<option value="5">A travi orizzontali</option>
+<option value="6">A travi verticali</option>
+</select>
+<label>Struttura portante tetto</label>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<br class="clr"/>
+<section class="col s12 form-section" id="">
+<h2 class="">Verifica di ostacoli ombreggianti</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_comignolo" type="checkbox"/>
+<span>Comignolo                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_alberi" type="checkbox"/>
+<span>Alberi                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_antenna" type="checkbox"/>
+<span>Antenna                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_abbaino" type="checkbox"/>
+<span>Abbaino                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_balaustra" type="checkbox"/>
+<span>Balaustra                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_edificio_adiacente_ombreggiante" type="checkbox"/>
+<span>Edificio adiacente ombreggiante                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_ombreggiatura_da_terreno" type="checkbox"/>
+<span>Ombreggiatura da coonformità terreno                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_pali_etc" type="checkbox"/>
+<span>Pali/tralicci/insegne/macchinari                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_accettazione_riduzione_prod" type="checkbox"/>
+<span>Accettazione riduzione producibilità in caso di ombreggiamenti                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col s12">
+<p>
+<label>
+<input class="filled-in" name="ostacolo_da_verificare_riduzione" type="checkbox"/>
+<span>Da verificare riduzione                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Area geografica</h2>
+<div class="section-wrapper">
+<div class="col m6 s12 zona_regionale input-field">
+<select class="material-select form-select" id="zona_regionale" name="zona_regionale">
+<option value=""></option>
+<option value="1">1 - Valle d'Aosta, Piemonte, Lombardia, Trentino Alto Adige, Veneto, Friuli Venezia Giulia (escluso la provincia di Trieste)</option>
+<option value="2">2 - Emilia Romagna</option>
+<option value="3">3 - Toscana, Marche, Umbria, Lazio, Abruzzo, Molise, Campania, Puglia, Basilicata, Calabria (escluso la provincia di Reggio Calabria)</option>
+<option value="4">4 - Sicilia e provincia di Reggio Calabria</option>
+<option value="5">5 - Sardegna (zona ad oriente della retta congiungente Capi Teulada con l'Isola di Maddalena)</option>
+<option value="6">6 - Sardegna (zona ad occidente della retta congiungente Capi Teulada con l'Isola di Maddalena)</option>
+<option value="7">7 - Liguria</option>
+<option value="8">8 - Provincia di Trieste</option>
+<option value="9">9 - Isole (escluso Sicilia e Sardegna) e mare aperto</option>
+</select>
+<label>Zona regionale</label>
+</div>
+<div class="col m6 s12 zona_carico_neve input-field">
+<select class="material-select form-select" id="zona_carico_neve" name="zona_carico_neve">
+<option value=""></option>
+<option value="1">1 - Aosta, Belluno, Bergamo, Biella, Bolzano, Brescia, Como, Cuneo, Lecco, Pordenone, Sondrio, Torino, Trento, Udine, Verbania, Vercelli, Vicenza </option>
+<option value="2">2 - Alessandria, Ancona, Asti, Bologna, Cremona, Forlì-Cesena, Lodi, Milano, Modena, Novara, Parma, Pavia, Pesaro e Urbino, Piacenza, Ravenna, Reggio Emilia, Rimini, Treviso, Varese Arezzo, Ascoli Piceno, Bari, Campobasso, Chieti, Ferrara, Firenze, Foggia, Genova, Gorizia, Imperia, Isernia, La Spezia, Lucca, Macerata, Mantova, Massa Carrara, Padova, Perugia, Pescara, Pistoia, Prato, Rovigo, Savona, Teramo, Trieste, Venezia, Verona </option>
+<option value="3">3 - Agrigento, Avellino, Benevento, Brindisi, Cagliari, Caltanisetta, Carbonia-Iglesias, Caserta, Catania, Catanzaro, Cosenza, Crotone, Enna, Frosinone, Grosseto, L’Aquila, Latina, Lecce, Livorno, Matera, Medio Campidano, Messina, Napoli, Nuoro, Ogliastra, Olbia Tempio, Oristano, Palermo, Pisa, Potenza, Ragusa, Reggio Calabria, Rieti, Roma, Salerno, Sassari, Siena, Siracusa, Taranto, Terni, Trapani, Vibo Valentia, Viterbo </option>
+</select>
+<label>Zona carico di neve</label>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Vincoli ostativi all'installazione dell'impianto</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="vincolo_paesaggistico" type="checkbox"/>
+<span>Vincolo paesaggistico                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="vincolo_architettonico" type="checkbox"/>
+<span>Vincolo architettonico                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="vincolo_storico" type="checkbox"/>
+<span>Vincolo storico                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="vincolo_altro" type="checkbox"/>
+<span>Altro vincolo                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<div class="col m6 s12 cat_categoria input-field">
+<select class="material-select form-select" id="cat_categoria" name="cat_categoria">
+<option value=""></option>
+<option value="A/1">A/1 Abitazioni di tipo signorile - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/2">A/2 Abitazioni di tipo civile - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/3">A/3 Abitazioni di tipo economico - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/4">A/4 Abitazioni di tipo popolare - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/5">A/5 Abitazioni di tipo ultrapopolare - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/6">A/6 Abitazioni di tipo rurale - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/7">A/7 Abitazioni in villini - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/8">A/8 Abitazioni in ville - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/9">A/9 Castelli, palazzi di eminenti pregi artistici o storici - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/10">A/10 Uffici e studi privati - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="A/11">A/11 Abitazioni ed alloggi tipici dei luoghi - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo A</option>
+<option value="B/1">B/1 Collegi e convitti, educandati; ricoveri; orfanotrofi; ospizi; conventi; seminari; caserme - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/2">B/2 Case di cura ed ospedali (senza fine di lucro) - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/3">B/3 Prigioni e riformatori - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/4">B/4 Uffici pubblici - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/5">B/5 Scuole e laboratori scientifici - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/6">B/6 Biblioteche, pinacoteche, musei, gallerie, accademie che non hanno sede in edifici della categoria A/9 - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/7">B/7 Cappelle ed oratori non destinati all’esercizio pubblico del culto - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="B/8">B/8 Magazzini sotterranei per depositi di derrate - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo B</option>
+<option value="C/1">C/1 Negozi e botteghe - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/2">C/2 Magazzini e locali di deposito - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/3">C/3 Laboratori per arti e mestieri - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/4">C/4 Fabbricati e locali per esercizi sportivi (senza fine di lucro) - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/5">C/5 Stabilimenti balneari e di acque curative (senza fine di lucro) - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/6">C/6 Stalle, scuderie, rimesse, autorimesse (senza fine di lucro) - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="C/7">C/7 Tettoie chiuse od aperte - IMMOBILI A DESTINAZIONE ORDINARIA - Gruppo C</option>
+<option value="D/1">D/1 Opifici - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/2">D/2 Alberghi e pensioni (con fine di lucro) - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/3">D/3 Teatri, cinematografi, sale per concerti e spettacoli e simili (con fine di lucro) - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/4">D/4 Case di cura ed ospedali (con fine di lucro) - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/5">D/5 Istituto di credito, cambio e assicurazione (con fine di lucro) - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/6">D/6 Fabbricati e locali per esercizi sportivi (con fine di lucro) - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/7">D/7 Fabbricati costruiti o adattati per le speciali esigenze di un’attività industriale e non suscettibili di destinazione diversa senza radicali trasformazioni. - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/8">D/8 Fabbricati costruiti o adattati per le speciali esigenze di un’attività commerciale e non suscettibili di destinazione diversa senza radicali trasformazioni. - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/9">D/9 Edifici galleggianti o sospesi assicurati a punti fissi del suolo, ponti privati soggetti a pedaggio. - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="D/10">D/10 Fabbricati per funzioni produttive connesse alle attività agricole. - IMMOBILI A DESTINAZIONE SPECIALE - Gruppo D</option>
+<option value="E/1">E/1 Stazioni per servizi di trasporto, terrestri, marittimi ed aerei. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/2">E/2 Ponti comunali e provinciali soggetti a pedaggio. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/3">E/3 Costruzioni e fabbricati per speciali esigenze pubbliche - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/4">E/4 Recinti chiusi per speciali esigenze pubbliche. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/5">E/5 Fabbricati costituenti fortificazioni e loro dipendenze. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/6">E/6 Fari, semafori, torri per rendere d’uso pubblico l’orologio comunale - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/7">E/7 Fabbricati destinati all’esercizio pubblico dei culti. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/8">E/8 Fabbricati e costruzioni nei cimiteri, esclusi i colombari, i sepolcri e le tombe di famiglia. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="E/9">E/9 Edifici a destinazione particolare non compresi nelle categorie precedenti del gruppo E. - IMMOBILI A DESTINAZIONE PARTICOLARE - Gruppo E</option>
+<option value="F/1">F/1 Area urbana - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/2">F/2 Unità collabenti - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/3">F/3 Unità in corso di costruzione - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/4">F/4 Unità in corso di definizione - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/5">F/5 Lastrico solare - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/6">F/6 Fabbricato in attesa di dichiarazione - ENTITA’ URBANE - Gruppo F</option>
+<option value="F/7">F/7 Infrastrutture di reti pubbliche di comunicazione - ENTITA’ URBANE - Gruppo F</option>
+</select>
+<label>Categoria catastale</label>
+</div>
+<br class="clr"/>
+<div class="input-field col m3 s12 celled celled3">
+<input autocomplete="new-password" class="celled celled3" id="" maxlenght="3" maxlength="3" name="cat_sez_urbana" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cat_sez_urbana">Sezione urbana            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m3 s12 celled celled5">
+<input autocomplete="new-password" class="celled celled5" id="" maxlenght="5" maxlength="5" name="cat_foglio" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cat_foglio">Foglio            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m3 s12 celled celled5">
+<input autocomplete="new-password" class="celled celled5" id="" maxlenght="5" maxlength="5" name="cat_particella" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cat_particella">Particella            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m3 s12 celled celled4">
+<input autocomplete="new-password" class="celled celled4" id="" maxlenght="4" maxlength="4" name="cat_subalterno" placeholder="" type="text" value=""/>
+<label class="nowrap" for="cat_subalterno">Subalterno            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Utenza energia e impianto elettrico</h2>
+<div class="section-wrapper">
+<div class="input-field col m6 s12">
+<span class="pod-helper it">IT</span>
+<input autocomplete="new-password" class="" id="" maxlength="3" name="pod_first_part" placeholder="" type="text" value=""/>
+<span class="pod-helper e">E</span>
+<input autocomplete="new-password" class="" id="" maxlength="8" name="pod_second_part" placeholder="" type="text" value=""/>
+<label class="nowrap" for="pod">Codice POD            
+        </label>
+<span class="helper-text" data-error="wrong" data-success="right">Il codice POD è di 14 cifre complessive. Per i contatori da 15 cifre eliminare l'ultimo numero.</span>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="pod_intestatario" placeholder="" type="text" value=""/>
+<label class="nowrap" for="pod_intestatario">Intestatario dell'utenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="pod_cf" placeholder="" type="text" value=""/>
+<label class="nowrap" for="pod_cf">Codice fiscale del titolare dell'utenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="pod_iban" placeholder="" type="text" value=""/>
+<label class="nowrap" for="pod_iban">IBAN del titolare dell'utenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<div class="col m6 s12 fk_tipo_fornitura input-field">
+<select class="material-select form-select" id="fk_tipo_fornitura" name="fk_tipo_fornitura">
+<option value=""></option>
+<option value="1">Temporanea</option>
+<option value="2">Cantiere</option>
+<option value="3">Definitiva</option>
+</select>
+<label>Fornitura</label>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="piano_quadro_elettrico" placeholder="" type="text" value=""/>
+<label class="nowrap" for="piano_quadro_elettrico">Piano abitazione quadro elettrico            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="intestatario_utenza_uguale_acquirente" type="checkbox"/>
+<span>L'intestatario utenza è lo stesso Acquirente                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="intestatario_intestazione" placeholder="" type="text" value=""/>
+<label class="nowrap" for="intestatario_intestazione">Nome e Cognome (o ragione sociale) dell'intestatario dell'utenza            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="cambio_fornitore_in_corso" type="checkbox"/>
+<span>E' in corso un cambio fornitore                    
+                </span>
+</label>
+</p>
+</div>
+<div class="input-field col m6 s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="cambio_fornitore_data" placeholder="" type="date" value=""/>
+<label class="nowrap" for="cambio_fornitore_data">Data cambio fornitore            
+        </label>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="col s12 form-section" id="">
+<h2 class="">Utenza energia e impianto elettrico - Varie</h2>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="impianto_elettrico_conformita_al_dm_37_08" type="checkbox"/>
+<span>La messa a terra è assente                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="vano_tecnico_presente" type="checkbox"/>
+<span>Vano tecnico esistente                    
+                </span>
+</label>
+</p>
+</div>
+<div class="col m6 s12 fk_obbligo_officina_elettrica input-field">
+<select class="material-select form-select" id="fk_obbligo_officina_elettrica" name="fk_obbligo_officina_elettrica">
+<option value=""></option>
+<option value="1">Sì</option>
+<option value="0">No</option>
+<option value="2">Da verificare</option>
+    1        </select>
+<label>Obbligo officina elettrica</label>
+</div>
+<br class="clr"/>
+<div class="col m6 s12 fk_edificio_con_obbligo_prevenzione_incendi input-field">
+<select class="material-select form-select" id="fk_edificio_con_obbligo_prevenzione_incendi" name="fk_edificio_con_obbligo_prevenzione_incendi">
+<option value=""></option>
+<option value="1">Sì</option>
+<option value="0">No</option>
+<option value="2">Da verificare</option>
+    1        </select>
+<label>Edificio con obbligo prevenzione incendi</label>
+<span class="helper-text" data-error="wrong" data-success="right">Obbligatorio per aziende</span>
+</div>
+<div class="input-field checkbox-field col m6 s12">
+<p>
+<label>
+<input class="filled-in" name="edificio_con_obbligo_prevenzione_incendi_in_verifica" type="checkbox"/>
+<span>In verifica                    
+                </span>
+</label>
+</p>
+</div>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<br class="clr"/>
+</div>
+</div><!--checkup_pre_contrattuale-->
+<div class="fv_tab_wrap col s12" hide_please="" id="fotovoltaico_documenti">
+<div class="section-wrapper">
+<section class="col s12 form-section" id="">
+<h2 class="no-mb">Documenti necessari per la firma del contratto</h2>
+<div class="section-wrapper">
+<p class="no-mt helper">Per ogni documento è possibile allegare più file. <b>Si prega di verificare che gli allegati siano completamente LEGGIBILI</b>.</p>
+<div class="doc_wrapper col s12 redalert" rel="doc_documento_identita">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Documento di identità (Carta di identità, patente o passaporto)                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_cf">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Codice Fiscale                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_visura_camerale">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Visura Camerale (obbligatorio per Aziende) o Certificato di attribuzione del Codice Fiscale (obbligatorio per Condomini e Associazioni)                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_fattura">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        fattura utenza elettrica recente dell'attuale fornitore di energia                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_foto_pareti">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        FOTO 4 Lati (almeno una per ogni parete esterna dell'immobile da tetto a terreno, nitide)                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_foto_contatore">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Foto Contatore con indicazione del Codice Cliente (nitida)                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_foto_vano_tecnico">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Foto Vano tecnico dove si presume verrà installato Inverter, Batteria se richiesta, quadro elettrico e contatore di scambio)                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_foto_gmaps">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        FOTO da google map del sito di installazione dove è ben visibile il tetto/lastrico solare dell'edificio                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_documento_identita_intestatario_utenza">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Documento di identità (Carta di identità, patente o passaporto) - INTESTATARIO UTENZA                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_cf_intestatario_utenza">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Codice Fiscale - INTESTATARIO UTENZA                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_foto_tetto">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        FOTO tetto/lastrico solare per identificare tipologia di copertura, balaustra, elementi ombreggianti                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_preventivo">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                                        Preventivo                                                                            </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>ACCESSORI</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_delega_generica">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Delega generica                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_autorizzazione_installazione_impianto">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Autorizzazione all’installazione dell’impianto indicato in Proposta di ogni comproprietario (segue modulo integrativo) - con firma leggibile e con allegato Documento Identità/patente/passaporto FRONTE/RETRO ben leggibile di ogni conproprietario firmatario                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_autorizzazione_leasing">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Se immobile in leasing immobiliare, allegare autorizzazione all'instalalzione da parte della società di Leasing                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_delibera_condominio">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Per installazioni in un condominio, allegare delibera autorizzativa condominiale                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_sospensione_lavori">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Modulo di sospensione lavori nr. 8 / fine sospensione lavori (semplice dichiarazione firmata)                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>FACOLTATIVI</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_modulo_sospensione_lavori">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Documenti di autorizzazione ENTI esterni”                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_visura_catastale">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Visura catastale aggiornata all'ultima variazione effettuata sui dati                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_progetto_immobile">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Progetto immobilee depositato al comune                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_esito_ko_finanziaria_esterna">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Esito OK/KO finanziaria esterna                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_connessione_gse">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Modulo connessione GSE <b>deve firmare l'intestatario della fattura del POD</b> (non obbligatorio perchè incluso nel precompilato)                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>OBBLIGATORI PER FINANZIAMENTO</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_privacy_db_easy_Aziende">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Privacy DB Easy per fotovoltaico                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_identita_lr_richiedente_finanziaria">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Documento identità legale rappresentante                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_tessera_sanitaria_lr_richiedente">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Tessera sanitaria legale rappresentante                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_f_visura_camerale">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Visura camerale entro i 6 mesi                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_f_bilancio">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Bilancio ufficiale anno precedente completo di nota integrativa                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_f_snc">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Per SNC, SS: Documento, codice fiscale e modello unico personale di tutti i soci a prescindere dai ruoli e dalle quote                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_f_sas">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Per SAS: Documento, codice fiscale e modello unico di tutti isoci accomandatari che hanno quote pari o superiori al 25%                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_f_capitali">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Per SRL,SRLS,SPA: Documento, codice fiscale e modello unico personale di tutti i  soci con quote pari o superiori al 25%                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>PRODOTTI DALLA FINANZIARIA</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_esito_finanziaria">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            CONTRATTO FINANZIARIA O KO FINANZIARIO                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_copia_bonifici">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            COPIA BONIFICI FINANZIARIA AD UNION PER C/CLIENTE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_finanziaria_firmato">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Contratto finanziaria firmato                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>PRODOTTI DALLO STUDIO TECNICO</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_richiesta_connessione">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            RICHIESTA DI CONNESSIONE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_pratica_comunale">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PRATICA COMUNALE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_preventivo_enel">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PREVENTIVO ENEL DI CONNESSIONE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_verbali_connessione">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            VERBALI DI CONNESSIONE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_spese_pre_opere">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PREVENTIVO SPESE EXTRA PRE-OPERE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_prev_paesagistica">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PREVENTIVO PAESAGGISTICA                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_prev_opere_post_paeseggistica">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PREVENTIVO OPERE POST PESAGGISTICA                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_prev_registro_dogane">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PREVENTIVO REGISTRO DOGANE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_campo_ftv">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            FOTO CAMPO FTV                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_foto_vano_tecnico">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            FOTO VANO TECNICO CON IMPIANTO INSTLLATO                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_verbale_constatazione_opere">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            SLOT LIBERO                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_comunicazione_enea">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            COMUNICAZIONE ENEA PER CERTIFICAZIONE DETRAIBILITA'                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_richiesta_gse">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            RICHIESTA GSE RITIRO DEDICATO/SCAMBIO SUL POSTO                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_pratica_gse">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            PRATICA GSE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_credenziali_terna">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            CREDENZIALI TERNA - GSE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_progetto_impianto">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Progetto impianto                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_schema_unifiliare">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Schema unifilare                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_relazione_tecnica">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            Relazione tecnica                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<p class=""><b>PRODOTTI DALLO STUDIO TECNICO (OBBLIGATORI PER CHIUDERE IL COLLAUDO)</b></p>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_dich_conformita">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            DICHIARAZIONE DI CONFORMITA'                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_st_collaudo">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            VERBALE CONSTATAZIONE OPERE REALIZZATE                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<div class="doc_wrapper col s12 redalert" rel="doc_pos">
+<div style="display: flex;align-items: center;justify-content: space-between;">
+<label>
+                            POS - Piano Operativo di Sicurezza                        </label>
+<button class="btn waves-effect waves-light add-file-fields" name="action" style="margin-left: 5px; background:#004da1; margin-top: 5px;" type="button">Aggiungi allegato                            <i class="material-icons right">add</i> </button>
+</div>
+<div class="dynamic-add-allegati-wrap"></div>
+</div>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<br class="clr"/>
+<div id="approvazione-anchor" style="    position: relative; top: -70px;"></div>
+<div class="row" id="approvazione_contratto" style="display: none;">
+<h2 class="no-mb helper">Accettazione e Firma Contratto</h2>
+</div><!--row approvazione_contratto-->
+<br class="clr"/>
+</div>
+</div><!--fotovoltaico_documenti-->
+<div class="fv_tab_wrap col s12" id="fotovoltaico_assistenza">
+<div class="section-wrapper">
+<p>Per ricevere assistenza su Union Smart contatta il tuo Esperto di Prodotto Union Smart <b>PAOLA MATTEUCCI - PAOLA.MATTEUCCI.COM@GMAIL.COM - +393279522562</b></p>
+<p>OPPURE</p>
+<p>invia una email all'assistenza dedicata su <a href="mailto:unionsmart@unionenergia.it" target="_blank"><b>unionsmart@unionenergia.</b></a>.</p>
+<section class="note form-section" id="">
+<h2 class="">Note Studio Tecnico</h2>
+<div class="section-wrapper">
+<div class="note-wrapper"> <div class="nota-msg-bg">
+<span>Nessuna nota trovata.</span> </div>
+<div class="nota-reply">
+<button class="btn waves-effect waves-light add_nota" id="add_nota" name="action" style="float: right;" type="button">Aggiungi nota
+                    <i class="material-icons right">add</i>
+</button>
+<div class="add_nota_wrap" id="add_nota_wrap" style="display:none;">
+<input id="" name="nota_entita" type="hidden" value="contratti_fotovoltaico_studi"/>
+<input id="" name="nota_record" type="hidden" value=""/>
+<div class="row">
+<div class="input-field textarea-field col s12">
+<textarea class="materialize-textarea" id="" maxlength="1000" name="nota_nota" placeholder="Scrivi una nota"></textarea>
+<label for="">Aggiungi nota</label>
+</div>
+</div> <div class="doc_wrapper col s12 img_wrapper">
+<label>Allegati:</label>
+<div class="file-field col m4 s12">
+<div class="btn">
+<span>Carica allegato</span>
+<i class="material-icons right">attach_file</i>
+<input name="file_immagine_nota_1" type="file"/>
+</div>
+<div class="file-path-wrapper">
+<input class="file-path validate" id="" name="immagine_nota_1" placeholder="" type="text" value=""/>
+</div>
+</div>
+<div class="file-field col m4 s12">
+<div class="btn">
+<span>Carica allegato</span>
+<i class="material-icons right">attach_file</i>
+<input name="file_immagine_nota_2" type="file"/>
+</div>
+<div class="file-path-wrapper">
+<input class="file-path validate" id="" name="immagine_nota_2" placeholder="" type="text" value=""/>
+</div>
+</div>
+<div class="file-field col m4 s12">
+<div class="btn">
+<span>Carica allegato</span>
+<i class="material-icons right">attach_file</i>
+<input name="file_immagine_nota_3" type="file"/>
+</div>
+<div class="file-path-wrapper">
+<input class="file-path validate" id="" name="immagine_nota_3" placeholder="" type="text" value=""/>
+</div>
+</div>
+<br class="clr"/>
+</div>
+<button class="btn waves-effect waves-light send_button salva_nota" id="salva_nota" name="action" style="float: right;" type="button">Salva
+                                    <i class="material-icons right">save</i>
+</button>
+<br class="clr"/>
+</div>
+</div>
+</div> <br class="clr"/>
+<br class="clr"/>
+<script>
+                                $("#invia-notifica-aggiornamento-preventivo").live("click", function(){
+                                    if( !confirm("Sei sicuro di voler inviare la notifica?") )
+                                        return false;
+
+                                    $(this).css("visibility", "hidden");
+                                    $("#overlay").show();
+                                    var formData = new FormData();
+                                    formData.append("op", "invia_notifica_aggiornamento_preventivo");
+                                    formData.append("e", "contratti_fotovoltaico");
+                                    formData.append("id", $("input[name=id]").val());
+                                    $.ajax({
+                                        type: "POST",
+                                        data: formData,
+                                        dataType : 'json',			
+                                        contentType: false,
+                                        processData: false, 
+                                        url: ajax_url +  "/fc-ajax.php?",
+                                        //async: false,
+                                        success: function(json){
+                                            if( json.error == 0 ){
+                                                $("#overlay").hide();
+                                                M.toast({html: json.msg});
+                                            }
+                                            else{
+                                                $("#overlay").hide();
+                                                $("#invia-notifica-aggiornamento-preventivo").css("visibility", "visible");
+                                                fcalert(json.msg);
+                                            }
+                                        }
+                                    });
+                                    
+                                    return false;
+                                    });
+                            </script>
+<button class="btn waves-effect waves-light invia-notifica-aggiornamento-preventivo" id="invia-notifica-aggiornamento-preventivo" name="action" style="float: right;" type="button">Invia notifica su aggiornamento Preventivo                            <i class="material-icons right">send</i> </button>
+<br class="clr"/>
+<br class="clr"/></div><!--section-wrapper--> </section>
+<section class="fuori_taglia form-section" id="">
+<h2 class="">Note per Ufficio Tecnico</h2><div class="editable-h2-like" contenteditable="true">Scrivi qui le note per Ufficio Tecnico</div>
+<div class="section-wrapper">
+<div class="input-field checkbox-field col s12">
+<p>
+</p>
+</div>
+<div id="fv_fuori_taglia_wrap" style="display: none;">
+<p>Indica le caratteristiche dei pannelli ed eventual batterie ed accessori per la formulazione del preventivo</p>
+<div class="row">
+<div class="input-field textarea-field col s12 force-small-height">
+<textarea class="materialize-textarea force-small-height" disabled="disabled" id="" name="fuori_taglia_descrizione" placeholder=""></textarea>
+<label for="">Specifiche Fuori Taglia</label>
+</div>
+</div> <table class="table responsive highlights preventivo-smart">
+<thead>
+<tr>
+<th> </th>
+<th>Descrizione</th>
+<th>Dato tecnico (potenza)</th>
+<th>Nr. Pannelli</th>
+<th>Costo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dettaglio componente primario</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_primario_descrizione" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_primario_dato_tecnico" placeholder="" readonly="readonly" type="number" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td><span> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_primario_qta" placeholder="" readonly="readonly" type="number" value="1"/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</span></td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_primario_costo" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>Dettaglio componente secondario</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_secondario_descrizione" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_secondario_dato_tecnico" placeholder="" readonly="readonly" type="number" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td><span style="display: none;"> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_secondario_qta" placeholder="" readonly="readonly" type="number" value="1"/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</span></td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="componente_secondario_costo" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>Dettaglio accessori</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="accessori_descrizione" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="accessori_dato_tecnico" placeholder="" readonly="readonly" type="number" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+<td><span style="display: none;"> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="accessori_qta" placeholder="" readonly="readonly" type="number" value="1"/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</span></td>
+<td> <div class="input-field col s12">
+<input autocomplete="new-password" class="" id="" maxlenght="" maxlength="" name="accessori_costo" placeholder="" readonly="readonly" type="text" value=""/>
+<div class="progress" style="display: none;">
+<div class="indeterminate"></div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td style="padding: 20px !important;">0,00€</td>
+</tr>
+</tbody>
+</table>
+<br class="clr"/>
+<br class="clr"/>
+<div class="row">
+<div class="input-field textarea-field col s12 force-small-height">
+<textarea class="materialize-textarea force-small-height" id="" name="fuori_taglia_note_studio" placeholder="" readonly="readonly"></textarea>
+<label for="">Note Studio Tecnico</label>
+</div>
+</div> <br class="clr"/>
+<br class="clr"/>
+<a class="btn waves-effect waves-light blue" href="/fc-admin/contratto-fotovoltaico-stream.php?c=&amp;preventivo=yes&amp;download=yes&amp;ft=yes" style="float: right; position: relative; top: -20px;" target="_blank">
+<i class="material-icons right">request_quote</i>Scarica il preventivo fuori taglia</a>
+<br class="clr"/>
+<br class="clr"/>
+</div>
+<br class="clr"/> </div></section>
+</div>
+</div>
+</div>
+<div class="col s12">
+<button class="btn waves-effect waves-light" name="action" style="float: right;" type="submit">Salva
+                        <i class="material-icons right">save</i>
+</button>
+<br class="clr"/>
+<br class="clr"/>
+<!--</div>-->
+</div></form>
+</section>
+<br class="clr"/>
+<footer class="page-footer">
+<div class="row">
+<div class="col m4 s12">
+<h5 class="white-text">UNION S.r.l.</h5>
+<p class="grey-text text-lighten-4">Capitale sociale: 5.000.000,00 euro i.v.</p>
+<p class="grey-text text-lighten-4">Numero REA PE – 161070</p>
+<p class="grey-text text-lighten-4">C.F. e numero d’iscrizione al Reg. Imprese 02195350687</p>
+</div>
+<div class="col m4 s12">
+<h5 class="white-text">Sedi</h5>
+<p class="grey-text text-lighten-4">Sede operativa: Via Enzo Ferrari 2/D - 65010 – Cappelle sul Tavo (PE)</p>
+<p class="grey-text text-lighten-4">Sede legale: Via Salvo D’Acquisto, 20 - 65015 – Montesilvano (PE)</p>
+</div>
+<div class="col m4 s12">
+<h5 class="white-text">Contatti</h5>
+<p class="grey-text text-lighten-4"><button class="assistenza-trigger-footer btn waves-effect waves-light" type="button"><i class="material-icons left">support_agent</i><span>Serve aiuto?</span></button></p>
+<p class="grey-text text-lighten-4"><a class="" href="https://www.unionenergia.it/privacy/" target="_blank">Informativa sulla Privacy</a></p>
+</div>
+</div>
+</footer>
+</div><!--wrap-->
+<script id="lockTopResidenza">(function(){
+  var el=document.getElementById('top_residenza');
+  if(!el) return;
+  var last=el.value||'';
+  function save(){ last=el.value; }
+  function ensure(){ if(el.value!==last && document.activeElement===el){ /* do not override while typing */ last=el.value; return; } if(el.value!==last){ el.value=last; } }
+  el.addEventListener('input', save, true);
+  el.addEventListener('change', save, true);
+  // Guard timer to restore any unwanted external changes
+  setInterval(ensure, 200);
+})();</script><script id="lockTopInstallazione">(function(){
+  var el=document.getElementById('top_installazione');
+  if(!el) return;
+  var last=el.value||'';
+  function save(){ last=el.value; }
+  function ensure(){ if(el.value!==last && document.activeElement===el){ last=el.value; return; } if(el.value!==last){ el.value=last; } }
+  el.addEventListener('input', save, true);
+  el.addEventListener('change', save, true);
+  setInterval(ensure, 200);
+})();</script><script id="removeNotesEverywhere">(function(){
+  function removeNode(n){ if(n && n.parentNode){ n.parentNode.removeChild(n); } }
+  function sweep(root){
+    root = root || document;
+    // remove section.note blocks
+    root.querySelectorAll('section.note').forEach(removeNode);
+    // remove h2 'Note Studio Tecnico' and its parent section if any
+    root.querySelectorAll('h2').forEach(function(h){
+      if((h.textContent||'').trim().toLowerCase()==='note studio tecnico'){
+        var sec = h.closest('section');
+        removeNode(sec || h);
+      }
+    });
+    // remove common widgets
+    ['.note-wrapper', '.nota-reply', '.add_nota', '#add_nota_wrap'].forEach(function(sel){
+      root.querySelectorAll(sel).forEach(removeNode);
+    });
+  }
+  function wire(){ sweep(document); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', wire); else wire();
+  try{
+    var obs = new MutationObserver(function(){ sweep(document); });
+    obs.observe(document.body, {childList:true, subtree:true});
+  }catch(e){}
+})();
+</script></body>
+</html>

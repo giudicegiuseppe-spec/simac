@@ -1,0 +1,269 @@
+@media only screen and (min-width: 1200px) {
+    html,
+    input::placeholder {
+        font-size: 12px;
+    }
+
+    nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i{
+        height: 48px !important;
+        line-height: 48px !important;
+    }
+    body{margin-top: 48px;}
+    nav .nav-wrapper img, nav a.sidenav-trigger img{height: 20px !important;line-height: 20px !important; margin-right: 5px;}
+
+    body.sticky #wrap section.title{top: 48px;}
+    nav a.sidenav-trigger i{font-size: 20px;}
+    #sidenav li>a{font-size: 1rem;}
+    .btn, .btn-large, .btn-small, .btn-flat{height: 2.5rem; line-height: 2.5rem;        font-size: 1rem;}
+
+    #sidenav li{line-height: 36px;}
+    #sidenav li>a{height: 36px; min-height: 36px;}
+    img.u-icon {width: 22px;}
+
+    input[type=text], input[type=password], input[type=email], input[type=url], input[type=number], input[type=search], input[type=date], input[type=month], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=file], textarea, select, input[type=text]:not(.browser-default), input[type=date]:not(.browser-default), input[type=number]:not(.browser-default), input[type=email]:not(.browser-default), input[type=search]:not(.browser-default){
+        height: 2.5rem;font-size: 1rem;
+    }
+
+    .input-field>label:not(.label-icon).active {
+        -webkit-transform: translateY(-14px) scale(0.8);
+        transform: translateY(-14px) scale(0.8);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    .select-wrapper+label{top: -24px;}
+
+    .dropdown-content li{min-height: 40px;}
+    .dropdown-content li>a, .dropdown-content li>span{  line-height: 1.5rem;
+        padding: 10px 16px;
+        font-size: 1rem;}
+        [type="checkbox"]+span:not(.lever){    font-size: 1rem;
+            padding-left: 28px;}
+}
+
+@media only screen and (min-width: 1200px) and (min-device-pixel-ratio: 0.75) and (max-device-pixel-ratio: 1.25){
+    html,
+    input::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1800px){
+	/*nav.top-nav,*/
+    body.sticky #wrap section.title {overflow: hidden;    }
+}
+@media only screen and (max-width: 1800px) and (min-width: 1025px){
+	.mega-search{}
+    #mega_search { margin-left: 15px; min-width: 100px; width: 120px; }
+    /*header.r1 .assistenza-trigger-top span,*/
+    header.r1 .faq-trigger-top span,
+    /*header.r3 .assistenza-trigger-top span,*/
+    header.r3 .faq-trigger-top span{display: none;}
+
+    nav.top-nav ul a{padding: 0 16px;}
+    header.r1 nav.top-nav ul a span,
+    header.r3 nav.top-nav ul a span{font-size: 14px;}
+}
+@media only screen and (max-width: 1366px){
+	.mega-search{}
+}
+@media only screen and (max-width: 1280px){
+	.mega-search{}
+}
+@media only screen and (max-width: 1024px){
+	nav a.sidenav-trigger {  display: block !important; cursor: pointer; margin: 0;}
+	nav.top-nav {overflow: hidden;    }
+}
+
+@media screen and (max-width: 1024px){
+	/*#wrap{width: 100%; background: #eee;}
+	#sidenav{width: 40%; -webkit-transform: translateX(-105%); transform: translateX(-105%); overflow: hidden; overflow-y: scroll;}
+	#sidenav-resize{display: none;}	
+	.m-wizard.m-wizard--1 .m-wizard__head .m-wizard__nav .m-wizard__steps{    width: 100%;}
+	.m-wizard.m-wizard--1 .m-wizard__head .m-wizard__nav .m-wizard__steps .m-wizard__step{    display: table-cell;}
+	body.sticky #wrap section.title h1{width: 100%;}
+	
+	#approvazione_contratto i{font-size: 1.1rem;}
+	
+	#tree-wrap{ max-width: 100%; overflow: scroll; }*/
+		
+}
+
+@media screen and (max-width: 800px){
+	.dashwall .widget.deposito .kpi .value{width: 40%;    font-size: 1.2rem;}
+	
+}
+
+@media screen and (max-width: 1600px) and (min-width: 1025px){
+    nav.top-nav ul a{padding: 0 12px;}
+}
+
+@media screen and (min-width: 1025px){
+    .only-mobile{display: none !important;}
+    nav.top-nav ul a{    display: inline-flex;}
+    #top_nav i:not(.menu-icon){display: inline-block; margin-right: 5px;}
+    #wrap{padding-bottom: 50px;}
+    body.sticky #wrap section.title h1{position: relative;}
+}
+
+@media screen and (max-width: 1024px){
+    #ancore_wrap{display: none;}
+    body.dashboard,
+    body.dashboard #wrap{ overflow-x: hidden; max-width: 100%;}
+    .hide-mobile{display: none !important;}
+    body{margin-top: 0;}
+    nav.top-nav{width: 100%; bottom: 0;left: 0; top: auto;    height: 48px !important;}
+    
+    #cash_wallet{top: 20px;overflow: scroll;    max-height: 600px;    }
+    .assistenza-trigger{bottom: 70px;}
+    
+    body{margin-top: 48px;}
+    #mob_page_title{height: 48px; position:fixed; top:0; width: 100%;}
+    #mob_page_title > img{}
+    #mob_page_title .mob-page-title-wrapper{}
+    #mob_page_title .mob-page-title-wrapper h1{}
+    
+    #top_nav{display: flex;}
+    #top_nav li{flex: 1 1 0px; text-align: center;}
+    #top_nav i{ display: block !important; height: 26px !important; line-height: 28px !important; text-align: center; font-size: 20px;}
+    #top_nav li span{display: block;height: 22px; line-height: 19px;}
+    #top_nav li a{    padding: 0 6px; display: block; width: 100%;}
+    
+	#sidenav{    width: 80%; margin-top: 0; /* margin-bottom: 60px; */ height: calc(100% - 48px); padding-bottom: 0;    box-shadow: none;    padding-top: 5px; max-width: 400px;}
+	.sidenav-profile-wrap .avatar-wrap img.avatar{/*width: 25%;*/}
+	.sidenav-profile-wrap .avatar-wrap #nr_notifiche{top: 0; right: 34%;}
+	#sidenav-resize{display: none;}
+	#sidenav .logo{width: 50%;}
+	
+	body.sticky,body{margin-top:53px;}
+	body.sticky #wrap section.title,
+	body #wrap section.title{position: fixed; top: 0; background: #fff; margin: 0 auto; height: 48px; z-index: 20;display: flex; justify-content: space-between;    box-shadow: 0px 3px 9px #ccc;}
+	body #wrap section.title .title-wrap{    display: inline-flex;}
+	
+	section.title, 
+	#wrap > section{margin-top: 0;}
+	#dashwall{    padding: 0;}
+	body #wrap section.title .sidenav-trigger{   height: 48px; display: inline-block; margin-right: 5px; margin-left: 5px; height: 48px; }
+	body #wrap section.title .sidenav-trigger i{font-size: 32px; line-height: 48px;}
+	body #wrap section.title .home-link{display: inline-block; height: 48px; margin: 0; top: 0;}
+	body #wrap section.title .page-title-logo{display: inline-block;height: 18px; vertical-align: middle; margin: 15px 0;}
+	body.sticky #wrap section.title h1,
+    body #wrap section.title h1 { line-height: 14px; font-size: 1.3rem; padding: 0; margin-left: 5px;    vertical-align: middle; overflow: hidden;
+    display: inline-flex;
+    align-items: center;margin: 0;
+    margin-left: 10px; max-width: 60%;border: none;}
+	#store_menu_mobile{margin-right: 0px; border-right: 1px solid #004da1; padding-right: 5px;position: relative;}
+	#store_menu_mobile a{display: block;width: 40px;}
+	.assistenza-trigger-top{line-height: 48px; display: inline-flex; align-items: center; padding: 0 5px;}
+	#store_menu_mobile .cart-count{    background-color: #004da1; color: #fff;position: absolute; top: -11px; left: 20px;    border-radius: 50px;  padding: 5px;
+    font-size: 0.8rem;
+    line-height: initial;}
+	#store_menu_mobile i{ color: #004da1;}
+	#wrap{float: none; width: 100%;}
+	
+	section.form-section > h2{padding: 8px 4%;}
+	
+	.prodotto a.buy{font-size: 1.25rem;}
+	/*body.sticky #wrap section.title h1:before,
+	body #wrap section.title h1:before{display: inline-block;
+    width: 72px;
+    height: 20px;
+    background-size: contain;
+    content: "";
+    vertical-align: middle;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-image: url(/i/logo-backoffice.png);}
+	*/
+	.dashwall .widget > div.row { padding: 0 4% 10px; } 
+	
+	.dashwall .widget.totale-wallet-dashboard .kpi .value {width: 40%}
+    
+    .dashwall .carriera .pbar-livelli .tacca:after{font-size: 0.8rem;}
+	.m-wizard__step-label{display: block; position: absolute;}
+	.m-wizard__step:last-child{margin-bottom: initial;}
+	.m-wizard__step:last-child .m-wizard__step-line{display: none !important;}
+	.m-wizard__step:last-child .m-wizard__step-info{}
+	
+	.profile-progress-bar-container span{font-size: 0.8rem;}
+	.file-field .btn, .file-field .btn-large, .file-field .btn-small, .btn{    font-size: 0.85rem;
+    height: auto;
+    line-height: 1.5rem;
+    min-height: 2.5rem;
+    padding-top: 5px;
+    padding-bottom: 5px;display: inline-flex !important;
+    align-items: center;
+    border-radius: 12px;
+    font-weight: 500;
+    letter-spacing: 0.6px;}
+    
+    .doc_wrapper .file-field{display: block;}
+    .file-field .btn, .file-field .btn-large, .file-field .btn-small{display: block; width: 100%; float: none;}
+    .file-field .file-path-wrapper{ padding: 0; width: 100%;}
+    .file-field .file-path-wrapper input{ width: 94%;}
+	
+	#cartolinaq{width: 100%;}
+	#contratto_save_top{text-indent: -999px;text-align: center;width: 42px; top: 2px;}
+	#contratto_save_top i{    text-indent: 0;
+    margin: 0;
+    /* padding: 0; */
+    position: relative;
+    left: 4px;}
+    
+    #autolettura_gas_banner{right: -100%; width: 98%; top: auto; bottom: 80px;}
+    #notifiche_banner{width: 98%; top: 40%; left: -100%;    padding: 1rem;}
+
+    #notifiche_banner.active{ left: 1%; top: 40%; bottom: initial; transform: none;}
+    .select-wrapper input.select-dropdown{width: 90% !important;}
+    #modal_notifica{width: 94%; max-height: 90%;  top: 5% !important;}
+    body.sticky .video-tutorial-contratto{display: none;}
+    
+    #modal_video{width: 95%;}
+    
+    .dashwall .allegato-g .pbar .tacca:after{display: none;}
+    #hide_wallet{none !important margin: 0;}
+    
+    section > h1 { line-height: 1.2em; font-size: 2.5em;}
+    h2{font-size: 1.3em;}
+    
+    .input-field.address-field > span { width: 1px !important; padding: 0 !important; }
+    
+    .add-to-cart-wrap .input-field select{width: 60px;}
+    
+    .store-home-page .img-box{margin-bottom: 10px;} 
+    
+    footer.page-footer{padding-left: 0; padding-right: 0;margin-top: 0 !important;}
+    footer.page-footer > div { border-radius: 0; padding: 0 1%;}
+    
+    #cartolina_nome{top: 219px; left: 5px;}
+    #cartolina_titolo{ top: 234px; left: 4px;}
+    
+    .ticket-reply .file-field .btn{width: auto;}
+    
+}
+@media screen and (max-width: 480px){
+    .assistenza-wrap{    width: 90%; left: 5%;}
+    
+    .assistenza-wrap header { height: 60px; padding: 15px 4%}   
+    .assistenza-wrap header > div img { height: 25px; }
+    .assistenza-wrap header div.right-wrap{font-size: 1rem;}
+    .assistenza-wrap section { padding: 40px 4%; }
+    .assistenza-wrap h4 {  font-size: 1.9rem; }
+    .primo-livello span.faq-cat-btn{padding: 0.6rem 0.7rem;}
+    .assistenza-wrap p.instructions { font-size: 1.2rem; }
+    .assistenza-wrap .file-field .btn{width: auto;}
+    .assistenza-wrap footer{position: inherit; padding: 10px 1%;}
+    
+    .assistenza-other{margin-bottom: 20px !important;}
+    
+    .ticket-msg{ width: calc(100% - 50px); }
+    .ticket-msg-palla{width: 40px; height: 40px;line-height: 40px;font-size: 1.1rem;}
+    .ticket-msg.ruolo-rete .ticket-msg-palla, .ticket-msg.backoffice .ticket-msg-palla{left: -54px;}
+    .ticket-msg.cliente .ticket-msg-palla { right: -54px;}
+    .ticket-msg.ruolo-rete, .ticket-msg.backoffice{margin-left: 54px;}
+    .ticket-msg.cliente{margin-right: 54px;}
+ 
+}
+@media screen and (max-width: 360px){
+    #top_nav li span{font-size: 0.95rem;}
+	
+}

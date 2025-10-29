@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+
+<html class="" lang="it" xmlns:fb="http://ogp.me/ns/fb#">
+<meta charset="utf-8"/>
+<head>
+<title>Contratti Union Smart</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/logo.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<meta content="#004da1" name="theme-color"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TSK09LKTYN"></script>
+<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-TSK09LKTYN');
+        </script>
+<link href="https://share.unionenergia.it/css/wizard.css" rel="stylesheet"/>
+<!-- Compiled and minified CSS -->
+<link href="https://share.unionenergia.it/js/nouislider/nouislider.min.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/css/materialize.min.css" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/materialize-fix.css?v=1761217611" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/bootstrap-scope.css?v=1761217611" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+<!--Datatable-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.css"/>-->
+<link href="https://share.unionenergia.it/include/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/include/datatables/datatables.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://share.unionenergia.it/css/fixedHeader.dataTables.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js" type="text/javascript"></script>
+<!--<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/b-print-1.6.1/datatables.min.js"></script>-->
+<script src="https://share.unionenergia.it/include/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://share.unionenergia.it/include/datatables/datatables.min.js" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/dataTables.fixedHeader.min.js" type="text/javascript"></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://share.unionenergia.it/js/materialize.min.js"></script>
+<script src="https://share.unionenergia.it/js/select.js"></script>
+<script src="https://share.unionenergia.it/js/nouislider/nouislider.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" media="all" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" type="text/javascript"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/Chart.min.css" media="all" rel="stylesheet"/>
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet" media="all" />-->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" rel="stylesheet"/>
+<link href="https://share.unionenergia.it/css/b.css?v=1761217611" media="all" rel="stylesheet"/>
+<!--<link href="https://share.unionenergia.it/style6.css?v=1.3" type="text/css" rel="stylesheet" media="screen" />-->
+<!--<link href="https://share.unionenergia.it/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" media="screen" />-->
+<link href="https://share.unionenergia.it/css/media-queries.css?v=1761217611" media="all" rel="stylesheet"/>
+<script src="https://share.unionenergia.it/js/global-utils.js?v=1761217611" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/fc-admin/fc-admin_ready.js?v=1761217611" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/ricarica.js?v=1761217611" type="text/javascript"></script>
+<script src="https://share.unionenergia.it/js/note.js?v=1761217611" type="text/javascript"></script>
+<script type="text/javascript">
+        home_url = "https://share.unionenergia.it";
+        ajax_url = "https://share.unionenergia.it/ajax";
+        show_review = false;        $(document).ready(function(){
+            $("#sidenav li.contratti").addClass("active");
+        });
+        role = "7";
+    </script>
+<script referrerpolicy="origin" src="https://cdn.tiny.cloud/1/2les3lkob41251x51q8127r447v02h45jbmz58ecckof4e5e /tinymce/5/tinymce.min.js"></script>
+<!--<script src="https://cdn.tiny.cloud/1/2les3lkob41251x51q8127r447v02h45jbmz58ecckof4e5e/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<!--<script src="https://cdn.tiny.cloud/1/pktnwk7yochtu0e9dhaswzxgbjjifqn3fwoxgn080uv2skm3/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<!--<script src="https://cdn.tiny.cloud/1/qlca83t019cfirtwhd9a4pqhrlel48zu8z23fxgrlbiyjjtn/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>-->
+<script>tinymce.init({
+  selector: 'textarea.editor',
+  menubar: 'edit view',
+  plugins: 'image code imagetools link lists paste table wordcount spellchecker',
+  toolbar: 'undo redo | copy paste pastetext| image | spellchecker | styleselect | bold italic | link | numlist bullist | alignleft aligncenter alignright alignjustify | outdent indent | forecolor backcolor | code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol',
+  spellchecker_languages: 'English=en,German=de,Italian=it,Polish=pl,Portuguese=pt_BR,Spanish=es,Swedish=sv',
+  paste_as_text: true,
+  paste_word_valid_elements: 'b,strong,i,em,h1,h2',
+  paste_webkit_styles: 'color font-size',
+  a11y_advanced_options: true,
+  link_assume_external_targets: true,
+  relative_urls: false,
+  remove_script_host: false,
+  convert_urls: true,
+  width: "80%",
+  height: 500,
+  menubar: false,
+  /* enable title field in the Image dialog*/
+  image_title: true,
+  /* enable automatic uploads of images represented by blob or data URIs*/
+  automatic_uploads: true,
+  init_instance_callback: function (editor) {
+      $(editor.getContainer()).find('button.tox-statusbar__wordcount').click();  // if you use jQuery
+   },
+  /*
+    URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+    images_upload_url: 'postAcceptor.php',
+    here we add custom filepicker only to Image dialog
+  */
+  //images_upload_url: ajax_url + '/postAcceptor.php',
+  //images_upload_base_path: '/archivio/istituti',
+  file_picker_types: 'image, file',
+  /* and here's our custom image picker*/
+  file_picker_callback: function (cb, value, meta) {
+    console.log("cb", cb);
+    console.log("value", value);
+    console.log("meta", meta);
+    
+    var input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*, application/pdf, pdf, application/zip, application/x-zip-compressed, application/ms-excel, application/msexcel, application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel.sheet.macroEnabled.12');
+
+    /*
+      Note: In modern browsers input[type="file"] is functional without
+      even adding it to the DOM, but that might not be the case in some older
+      or quirky browsers like IE, so you might want to add it to the DOM
+      just in case, and visually hide it. And do not forget do remove it
+      once you do not need it anymore.
+    */
+
+    input.onchange = function () {
+      //tinymce.get($("textarea[name=pagina]").attr("id")).uploadImages();  
+      var file = this.files[0];
+      console.log("file", file);  
+        
+      var reader = new FileReader();
+      reader.onload = function () { 
+        
+        var id = 'blobid' + (new Date()).getTime();
+        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+        var base64 = reader.result.split(',')[1];
+        var blobInfo = blobCache.create(id, file, base64);
+        blobCache.add(blobInfo);
+        
+        cb(blobInfo.blobUri(), { title: file.name });
+        
+          
+      };
+      reader.readAsDataURL(file);
+      console.log(file.type);
+      
+      if( file.type == 'application/pdf' || file.type == 'image/png' || file.type == 'image/jpg' || file.type == 'image/jpeg' || file.type == 'application/zip' || file.type == 'application/x-zip-compressed' || file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || file.type == "application/ms-excel" || file.type == "application/msexcel" || file.type == "application/vnd.ms-excel" || file.type == "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" || file.type == 'application/vnd.ms-excel.sheet.macroEnabled.12'){
+          console.log("custom POST");
+          formData = new FormData();
+          formData.append('file', file, file.name );
+          $("button[title=Save]").attr("disabled", "disabled").text("Loading...");
+          $.ajax({
+            type: "POST",
+            data: formData,
+            dataType : 'json',          
+            contentType: false,
+            processData: false, 
+            url: ajax_url + '/postAcceptor.php',
+            //async: false,
+            success: function(json){
+                 console.log(json.location);
+                 console.log(input);
+                 $("input[type=url]").val( "https://share.unionenergia.it" + json.location);
+                 $("button[title=Save]").removeAttr("disabled").text("Save");
+            }
+        });
+        /*
+              xhr = new XMLHttpRequest();
+              xhr.withCredentials = false;
+              xhr.open('POST', '/cms-admin/postAcceptor.php');
+              formData = new FormData();
+              formData.append('file', file, file.name );
+            
+              xhr.send(formData);*/
+          }//end pdf
+          else{
+              
+          }
+    };
+    
+    input.click();
+  },
+  content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                     });
+  </script>
+<!--
+    <script type="text/javascript" src="https://share.unionenergia.it/fc-admin/tiny_mce/jscripts/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+        tinyMCE.init({
+            // General options
+            mode : "specific_textareas",
+            editor_selector : "mceEditor",
+            theme : "advanced",
+            plugins : "imagemanager,safari,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template",
+    
+            // Theme options
+            theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+            theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
+            theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+            theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak",
+            theme_advanced_toolbar_location : "top",
+            theme_advanced_toolbar_align : "left",
+            theme_advanced_statusbar_location : "bottom",
+            theme_advanced_resizing : true,
+            theme_advanced_source_editor_width  : 1090,
+            theme_advanced_source_editor_height  : 1050,
+            relative_urls: false,
+    
+            // Example content CSS (should be your site CSS)
+            content_css : "css/content.css",
+            extended_valid_elements  : "iframe[width|height|src|frameborder|allowfullscreen], p[style]",
+            // Drop lists for link/image/media/template dialogs
+            template_external_list_url : "lists/template_list.js",
+            external_link_list_url : "lists/link_list.js",
+            external_image_list_url : "lists/image_list.js",
+            media_external_list_url : "lists/media_list.js",
+    
+            // Replace values for the template plugin
+            template_replace_values : {
+                username : "Some User",
+                staffid : "991234"
+            }
+        });
+    </script>
+    -->
+<script type="text/javascript">
+        //var interval_contratti = setInterval(getContrattiTbody, 200);
+        
+        jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "num-html-pre": function ( a ) {
+        var x = String(a).replace( /<[\s\S]*?>/g, "" );
+        return parseFloat( x );
+    },
+ 
+    "num-html-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    },
+ 
+    "num-html-desc": function ( a, b ) {
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+    }
+} );
+    
+    var c_table;
+    
+        function getContrattiTbody(){
+                            
+            c_table = $('#contratti-table.contratti-table').dataTable( {
+              "ajax":  ajax_url + "/fc-ajax-contratti-fotovoltaico.php?agente=&canale=",
+              columns: [
+                { type: 'num-html', targets: 0,
+                 data: {
+                    _:    "codice.display",
+                    sort: "codice.sort"
+                } },
+                { data: "cliente" },
+                { data: "sponsor" },
+                { data: "livello" },
+                { data: "edp" },
+                { data: "resp_edp" },
+                                    { data: "area_manager" },
+                                { type: 'num-html', targets: 0,
+                    data: {
+                    _:    "stato.display",
+                    sort: "stato.sort"
+                } },   
+                                    { data: "alert" },
+                                
+                { data: "hashtag" },
+                { data: "studio" },                
+                { data: "listino" },        
+                { data: "prodotto" },        
+                { data: "totale" },      
+                  
+                { data: {
+                    _:    "dt_inserimento.display",
+                    sort: "dt_inserimento.timestamp"
+                } },
+                { data: {
+                    _:    "dt_accettazione_pre_fattibilita.display",
+                    sort: "dt_accettazione_pre_fattibilita.timestamp"
+                } },
+                { data: {
+                    _:    "data_verifica.display",
+                    sort: "data_verifica.timestamp"
+                } },
+                { data: {
+                    _:    "data_prevista_installazione.display",
+                    sort: "data_prevista_installazione.timestamp"
+                } },                               
+                { data: {
+                    _:    "data_collaudo.display",
+                    sort: "data_collaudo.timestamp"
+                } },                
+                { data: "pagamento" },
+                { data: "comune" },
+                { data: "cf" },                
+                { data: "pod" },                
+                { data: "prova" },
+                { data: "apri" },
+                
+            ],
+            "language": { "url": "//cdn.datatables.net/plug-ins/1.10.20/i18n/Italian.json" },
+              "deferRender": true,
+              'createdRow': function(row, data, dataIndex) {
+                  var share_id = $(row).find("input[name=share_id]").val();
+                  console.log(share_id);
+                  $(row).attr("rel", share_id);
+              },
+              order: [[ 0, "desc" ]],
+                "scrollX": true,
+                orderCellsTop: true,
+                //fixedHeader: true,
+                dom: 'Blfrtip',
+                                    buttons: [],
+                              
+                "initComplete": function( settings ) {
+                    $('.tooltipped').tooltip({html: true});
+                 }
+                } );
+                
+                var datatable = c_table.DataTable();
+                $('#contratti-table.contratti-table thead tr').clone(true).appendTo( '#contratti-table.contratti-table thead' );
+                 $('#contratti-table.contratti-table thead tr:eq(1) th').each( function (i) {
+                    var title = $(this).text();
+                    $(this).html( '<input type="text" placeholder="Cerca '+title+'" />' );
+                         
+                    $( 'input', this ).on( 'keyup change', function () {
+                                    if ( datatable.column(i).search() !== this.value ) {
+                                        datatable
+                                            .column(i)
+                                            .search( this.value )
+                                            .draw();
+                                    }
+                                } );
+                            } );
+                            
+                console.log(c_table);
+           }//end function
+        
+    </script>
+<script src="https://share.unionenergia.it/js/contratto_fotovoltaico.js?v=1761217611" type="text/javascript"></script>
+<link href="/mirror/custom.css" rel="stylesheet"/>
+</head>
+<body class="contratti lang_it">
+<div id="overlay"><div class="preloader-wrapper big active">
+<div class="spinner-layer spinner-blue">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-red">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-yellow">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+<div class="spinner-layer spinner-green">
+<div class="circle-clipper left">
+<div class="circle"></div>
+</div><div class="gap-patch">
+<div class="circle"></div>
+</div><div class="circle-clipper right">
+<div class="circle"></div>
+</div>
+</div>
+</div></div>
+<div class="overlay" id="overlay_basic"></div>
+<!--
+<div id="mob_page_title" class="hide_please">
+    <img src="/logo.png" alt="" title="" class="" />
+    <div class="mob-page-title-wrapper">
+        <h1></h1>
+    </div>
+</div>   
+-->
+<header class="r7">
+<nav class="top-nav">
+<div class="padding-container">
+<div class="nav-wrapper">
+<ul class="left" id="top_nav" style="width: 100%;">
+<!--<li><a href="#" data-target="sidenav" class="sidenav-trigger"><i class="material-icons menu-icon">menu</i><span>Menu</span></a></li>-->
+<li class="hide-mobile esci right-li" style="float: right;"><a href="/logout"><i class="material-icons">logout</i><span>Esci</span></a></li>
+<!--
+                    <li style="float: right; width: 1px; height: 22px; vertical-align: middle; margin-top: 13px; background: #fff;"><span></span></li>
+                    <li style="float: right; color: #fff;" class="welcome"><a href="#" style="cursor: normal;">Benvenuto SAMANTHA (Agente)</a></li>-->
+<!--<li style="float: right; width: 1px; height: 22px; vertical-align: middle; margin-top: 13px; background: #fff; margin-left: 1%;"><span></span></li>-->
+<!--<li style="float: right; color: #fff;" id="top_search"><div id="search-wrapper"> 
+                        <form action="#" method="POST" onsubmit="javascript: return null;">
+                            <div>
+                            <input type="text" class="text autocomplete" id="megasearch" name="find" placeholder="Cerca nel portale" />
+                            <button type="submit" class="submit"><i class="material-icons">search</i></button>
+                            <br class="clr" />
+                            </div>
+                        </form>
+                        <div class="progress" id="mega-progress">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </li>-->
+<br class="clr"/>
+</ul>
+</div>
+</div>
+</nav>
+<!--
+    <div id="top_search">
+                <div id="search-wrapper"> 
+                    <form action="https://share.unionenergia.it/search.html" method="POST">
+                        <div>
+                        <input type="text" class="text autocomplete" id="megasearch" name="find" placeholder="Ricerca" />
+                        <button type="submit" class="submit"><i class="material-icons">search</i></button>
+                        <br class="clr" />
+                        </div>
+                    </form>
+                    <div class="progress" id="mega-progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+            </div>
+    -->
+</header>
+<ul class="sidenav" id="sidenav">
+<div class="sidenav-profile-wrap">
+<img alt="" class="logo" src="/logo.png" title=""/>
+<!--<li><div class="divider"></div></li>-->
+<!--<li><a class="subheader">Subheader</a></li>-->
+<div class="avatar-wrap">
+</div>
+<div class="profile-link-wrap">
+</div>
+</div>
+<!--<li class=""><a href="/fv/union-smart"><i class="material-icons left">roofing</i>Union Smart</a></li>-->
+<li class="highlight"><a href="/mirror/"><i class="material-icons left">roofing</i> Contratti</a></li>
+<hr/>
+<li class="documenti-utili-union-smart-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"><img class="u-icon" src="/documenti.png"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"><img class="u-icon" src="/documenti.png"/> Schede Prodotti</a></li>
+<li class="documenti-utili-reddito-energetico"><a href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"><img class="u-icon" src="/documenti.png"/> Incentivi</a></li>
+<li class="documenti-utili-union-smart-finanziamenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"><img class="u-icon" src="/documenti.png"/> Finanziamenti</a></li>
+<li class="documenti-utili-union-smart-formazione-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"><img class="u-icon" src="/documenti.png"/> Formazione Agenti</a></li>
+<li class="documenti-utili-union-smart-marketing-agenti"><a href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"><img class="u-icon" src="/documenti.png"/> Marketing</a></li>
+</ul>
+<span id="sidenav-resize">
+<i class="material-icons left">keyboard_arrow_left</i>
+<i class="material-icons right">keyboard_arrow_right</i>
+</span>
+<div id="delta-fixed"></div>
+<!-- Modal Structure -->
+<div class="modal" id="modal1">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/">Contratti</a>
+</div>
+</div>
+<div class="modal modal-fixed-footer" id="modal_fast_check">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/">Contratti</a>
+</div>
+</div>
+<div class="modal" id="modal_review">
+<div class="modal-content">
+<h4>Sei soddisfatto del servizio offerto e della sharing economy di Union Energia?</h4>
+<div class="modal-msg">
+<div class="row">
+<p class="col s12">Lascia anche tu una recensione.</p>
+<div class="col s12 m6"><a class="review-btn review-google btn waves-effect waves-light" href="https://g.page/r/Cc8Zhb6FtAvnEAE/review" rel="35" style=" background-color: #3578E5;" target="_blank">Scrivi una recensione su Google</a></div>
+<div class="col s12 m6"><a class="review-btn review-fb btn waves-effect waves-light" href="https://it.trustpilot.com/evaluate/www.unionenergia.it" rel="35" style=" background-color: #24b67d;" target="_blank">Scrivi una recensione su Trustpilot</a></div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/" id="review_left">Contratti</a>
+</div>
+</div>
+<div class="modal" id="modal_video">
+<div class="modal-content">
+<h4></h4>
+<p>
+<div class="video-container" style="max-height: 80%;">
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/DW15TfbdeHw" width="560"></iframe>
+</div>
+</p>
+</div>
+<div class="modal-footer">
+<a class="modal-action modal-close waves-effect waves-green btn-flat" href="/mirror/">Contratti</a>
+</div>
+</div>
+<div class="modal" id="modal_posa">
+<div class="modal-content">
+<h4>Attenzione</h4>
+<p>La richiesta di posa contatore va effettuata se non è presente l'impianto, in caso contrario, anche in assenza di contatore, bisogna richiedere un subentro</p>
+</div>
+<div class="modal-footer">
+<a class="btn waves-effect waves-light btn-posa" href="/mirror/" rel="posa">Contratti</a>
+<a class="btn waves-effect waves-light btn-posa" href="/mirror/" rel="subentro">Contratti</a>
+<br class="clr"/>
+</div>
+</div>
+<div class="modal" id="modal_notifica">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/">Contratti</a>
+</div>
+</div>
+<div class="modal" id="modal_tree">
+<div class="modal-content">
+<h4></h4>
+<div class="modal-msg"></div>
+</div>
+<div class="modal-footer">
+<a class="modal-close waves-effect waves-green btn-flat" href="/mirror/">Contratti</a>
+</div>
+</div>
+<div id="wrap">
+<section class="section-bg title">
+<div class="title-wrap">
+<a class="sidenav-trigger hide_please" data-target="sidenav" href="/mirror/"><i class="material-icons menu-icon">menu</i> Contratti</a>
+<a class="hide_please home-link" href="/mirror/fv/contratto-fotovoltaico.html">
+<img alt="" class="page-title-logo" src="/logo.png" title=""/>
+</a>
+<a class="app_mode_on hide_please back_app" href="myunionapp://share.unionenergia.it/deeplink"><i class="material-icons">arrow_back_ios</i></a>
+<a class="app_mode_on hide_please back_carrello" href="/carrello?canale=app"><i class="material-icons">arrow_back_ios</i></a>
+<h1 class="padding-container">
+                Contratti Union Smart                
+</h1>
+</div>
+<div style="    display: inline-flex;">
+</div>
+</section>
+<section class="section padding-container section-bg">
+<a class="btn waves-effect waves-light nuovo-contratto action-command" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico.html" style="/*margin-top: 50px;*/">Nuovo Contratto<i class="material-icons right">post_add</i></a>
+<br class="clr"/>
+</section>
+<section class="padding-container white-bg">
+<div class="legenda-stati" id="stati-section">
+<label class="caption">Legenda stato contratto</label>
+<span class="stato-fv stato-fv-1 tooltipped" data-position="bottom" data-tooltip="Completa tutta la sezione di consulenza per procedere con la pratica">Consulenza</span>
+<span class="stato-fv stato-fv-2 tooltipped" data-position="bottom" data-tooltip="Completa tutta la sezione di checkup Contrattuale, allega tutti i documenti e firma il contratto.">Check up contrattuale</span>
+<span class="stato-fv stato-fv-3 tooltipped" data-position="bottom" data-tooltip="Versa il corrispettivo previsto tramite bonificoe attendi 2-4 giorni lavorativi per la registrazione dell'incasso.">In attesa di versamento corrispettivo</span>
+<span class="stato-fv stato-fv-4 tooltipped" data-position="bottom" data-tooltip="Lo studio tecnico sta verificando il contratto ed emetterà un esito a breve">In verifica tecnica</span>
+<span class="stato-fv stato-fv-5 tooltipped" data-position="bottom" data-tooltip="Lo studio tecnico ha validato il contratto previa verifica al sopralluogo">OK pre-fattibilità</span>
+<span class="stato-fv stato-fv-6 tooltipped" data-position="bottom" data-tooltip="Versa le spese extra previste tramite bonifico e attendi 2-4 giorni lavorativi per la registrazione dell'incasso.">In attesa di pagamento spese extra</span>
+<span class="stato-fv stato-fv-7 tooltipped" data-position="bottom" data-tooltip="Versa l'acconto del 50% previsto e attendi 2-4 giorni lavorativi per la registrazione dell'incasso. oppure, in caso di pagamento tramite finanziaria, attendi l'OK finanziario.">In attesa di ok finanziario</span>
+<span class="stato-fv stato-fv-8 tooltipped" data-position="bottom" data-tooltip="Attendi l'esito da parte degli enti esterni">Autorizzazione enti esterni in corso</span>
+<span class="stato-fv stato-fv-9 tooltipped" data-position="bottom" data-tooltip="Versa le spese per i vincoli autorizzativi tramite bonifico e attendi 2-4 giorni lavorativi per la registrazione dell'incasso.">In attesa di pagamento spese vincoli autorizzativi</span>
+<span class="stato-fv stato-fv-10 tooltipped" data-position="bottom" data-tooltip="Gli enti esterni hanno dato l'OK autorizzativo a procedere.">OK autorizzativo</span>
+<span class="stato-fv stato-fv-11 tooltipped" data-position="bottom" data-tooltip="La progettazione esecutiva è in corso, attendi comunicazioni dallo Studio.">Progettazione esecutiva in corso</span>
+<span class="stato-fv stato-fv-12 tooltipped" data-position="bottom" data-tooltip="Versa il saldo del 50% previsto oppure, in caso di pagamento tramite finanziaria, attendi che ci arrivi l'OK dalla finanziaria">In attesa di saldo</span>
+<span class="stato-fv stato-fv-13 tooltipped" data-position="bottom" data-tooltip="L'impianto è in installazione">In installazione</span>
+<span class="stato-fv stato-fv-14 tooltipped" data-position="bottom" data-tooltip="L'impianto è installato e collaudato, è incorso l'allaccio in rete.">Collaudato, allaccio in rete in corso</span>
+<span class="stato-fv stato-fv-15 tooltipped" data-position="bottom" data-tooltip="E' in corso la pratica al GSE.">Pratica GSE in corso</span>
+<span class="stato-fv stato-fv-16 tooltipped" data-position="bottom" data-tooltip="L'impianto è attivo e funzionante.">Impianto attivo</span>
+<span class="stato-fv stato-fv-20 tooltipped" data-position="bottom" data-tooltip="Contratto annullato">KO</span>
+<span class="stato-fv stato-fv-21 tooltipped" data-position="bottom" data-tooltip="Contratto annullato">KO Consulenza</span>
+</div>
+<!--
+            <div id="stati-fornitura" class="legenda-stati">
+                <label class="caption">Legenda stato fornitura</label>
+                <span class="stato-fornitura-5 tooltipped" data-position="bottom" data-tooltip="L'attivazione della fornitura ha avuto esito negativo.">KO</span>
+                <span class="stato-fornitura-6 tooltipped" data-position="bottom" data-tooltip="Il contratto è in fornitura.">In Fornitura</span>
+                <span class="stato-fornitura-6 depotenziato-1 tooltipped" data-position="bottom" data-tooltip="L'azienda ha richiesto al distributore il distacco della fornitura (se luce), la diminuzione della potenza del contatore (se luce).">Depotenziato</span>
+                <span class="stato-fornitura-7 tooltipped" data-position="bottom" data-tooltip="Il cliente ha richiesto lo switch-out della fornitura.">Switch-out</span>
+                <span class="stato-fornitura-7 salvaguardia-1 tooltipped" data-position="bottom" data-tooltip="L'azienda ha richiesto la salvaguardia della fornitura.">Switch-out salvaguardia</span>
+                <span class="stato-fornitura-9 tooltipped" data-position="bottom" data-tooltip="Il cliente ha richiesto la voltura.">Disattivato Voltura</span>
+            </div>
+            -->
+<!--
+            <div id="stati-pagamenti" class="legenda-stati">
+                <label class="caption">Legenda stato pagamento</label>
+                <span class="stato-pagamento-1 tooltipped" data-position="bottom" data-tooltip="Una o più fatture risultano scadute e non pagate.">Irregolare</span>
+                <span class="stato-pagamento-2 tooltipped" data-position="bottom" data-tooltip="I pagamenti sono regolari.">Regolare</span>
+                <span class="stato-pagamento-3 tooltipped" data-position="bottom" data-tooltip="Lo stato dei pagamenti è in corso di aggiornamento.">Pending</span>
+                <span class="stato-pagamento-4 tooltipped" data-position="bottom" data-tooltip="Una o più fatture sono oggetto di conciliazione">In conciliazione</span>
+            </div>
+                    -->
+<br class="clr"/>
+<table class="contratti-table stripe hover" id="contratti-table">
+<thead>
+<tr>
+<th>Codice contratto</th>
+<th>Cliente</th>
+<th>Agente Sponsor</th>
+<th>Livello rispetto all'agente</th>
+<th>EDP</th>
+<th>Resp EDP</th>
+<th>Area Manager</th>
+<th>Stato contratto</th>
+<th>Alert</th>
+<th>Hashtag</th>
+<th>Studio</th>
+<th>Listino</th>
+<th>Prodotto</th>
+<th>Totale (iva inclusa)</th>
+<th>Data inserimento</th>
+<th>Data accettazione preventivo</th>
+<th>Data OK tecnico</th>
+<th>Data prevista installazione</th>
+<th>Data collaudo</th>
+<th>Modalità pagamento</th>
+<th>Comune</th>
+<th>CF / PIVA</th>
+<th>POD</th>
+<th>Prova</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<script>
+              getContrattiTbody();  
+            </script>
+</section>
+<br class="clr"/>
+<footer class="page-footer">
+</footer>
+</div><!--wrap-->
+</body>
+</html>

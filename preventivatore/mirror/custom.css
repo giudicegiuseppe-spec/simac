@@ -1,0 +1,479 @@
+/* Force tabs to fill full row and split 50/50 */
+#wrap .row > .fv_tabs { padding-left: 0 !important; padding-right: 0 !important; }
+#wrap .fv_tabs > ul.tabs {
+  display: flex !important;
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  /* compensate Materialize .col gutters (0.75rem) to truly fill the row */
+  margin-left: -0.75rem !important;
+  margin-right: -0.75rem !important;
+  width: calc(100% + 1.5rem) !important;
+  max-width: none !important;
+  gap: 0 !important;
+  list-style: none !important;
+}
+#wrap .fv_tabs > ul.tabs > li.tab {
+  width: auto !important;
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+  min-width: 50% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+#wrap .fv_tabs > ul.tabs > li.tab > a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 12px 0 !important;
+  min-width: 0 !important;
+  background: #cbe1ef; /* same base as nav.top-nav */
+  color: #004da1; /* same text as nav links */
+}
+#wrap .fv_tabs > ul.tabs > li.tab > a.active,
+#wrap .fv_tabs > ul.tabs > li.tab > a:focus {
+  background-color: #004da1 !important; /* same hover/active as #top_nav li:hover a */
+  color: #ffffff !important;
+}
+#wrap .fv_tabs > ul.tabs .indicator { background: transparent !important; height: 0 !important; }
+#wrap .fv_tabs > ul.tabs > li.tab:first-child > a { border-right: 1px solid rgba(0,0,0,0.12); }
+#wrap .fv_tabs > ul.tabs > li.tab:last-child > a { border-left: none !important; }
+/* Rimuovi margini/padding residui che creano spazi ai lati */
+#wrap .fv_tabs { padding-left: 0 !important; padding-right: 0 !important; }
+#wrap .fv_tabs .tabs .tab:first-child { margin-left: 0 !important; }
+#wrap .fv_tabs .tabs .tab:last-child { margin-right: 0 !important; }
+/* --- Auth/UI overrides --- */
+#top_nav li.esci.right-li a#logout_link > i.material-icons,
+#top_nav li.esci.right-li a#logout_link > span,
+nav.top-nav #top_nav li.esci.right-li a#logout_link > i.material-icons,
+nav.top-nav #top_nav li.esci.right-li a#logout_link > span {
+  color: #ffffff !important;
+}
+
+/* Spaziatura: 10px sotto il logo, 5px sopra il primo link menu */
+#sidenav .sidenav-profile-wrap { padding-bottom: 0 !important; }
+#sidenav .sidenav-profile-wrap .logo { display:block !important; margin-bottom: 10px !important; }
+#sidenav .sidenav-profile-wrap .auth-user-box { margin-top: 0 !important; margin-bottom: 5px !important; text-align: center !important; }
+#sidenav > li:first-of-type { margin-top: 5px !important; }
+#sidenav > li:nth-of-type(1) { margin-top: 5px !important; }
+
+#sidenav .sidenav-profile-wrap .auth-user-box .user-line,
+.sidenav .sidenav-profile-wrap .auth-user-box .user-line,
+#sidenav > .sidenav-profile-wrap > .auth-user-box .user-line {
+  display: block;
+  color: #00c853 !important; /* Material Green A700 */
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none !important;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  cursor: default;
+  padding: 2px 0;
+}
+
+/* Agente sopra: 2pt piu grande e ancora piu bold */
+#sidenav .sidenav-profile-wrap .auth-user-box .user-line:first-child,
+.sidenav .sidenav-profile-wrap .auth-user-box .user-line:first-child,
+#sidenav > .sidenav-profile-wrap > .auth-user-box .user-line:first-child {
+  font-size: calc(1em + 2pt) !important;
+  font-weight: 800 !important;
+}
+
+/* Forza anche con i selettori esatti richiesti */
+#sidenav > div.sidenav-profile-wrap > div.auth-user-box:nth-of-type(3) > a.user-line:nth-of-type(1) {
+  font-size: calc(1em + 2pt) !important;
+  font-weight: 800 !important;
+  color: #00c853 !important;
+  text-align: center !important;
+}
+
+#sidenav > div.sidenav-profile-wrap > div.auth-user-box:nth-of-type(3) > a.user-line:nth-of-type(2) {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #00c853 !important;
+  text-align: center !important;
+}
+/* Force logo visibility and sizing */
+.page-title-logo { height: 72px !important; width: auto !important; display: inline-block !important; opacity: 1 !important; }
+@media (min-width: 992px){
+  .page-title-logo { height: 96px !important; }
+}
+.sidenav .logo { width: 100% !important; height: auto !important; max-height: 140px !important; display: block !important; }
+/* Avoid hidden on some breakpoints */
+.page-title-logo.hide_please { display: inline-block !important; }
+/* If header uses background image for brand, neutralize it */
+.header-logo, .brand-logo { background: none !important; }
+
+/* Hide menu top label */
+.sidenav .nome_menu_top { display: none !important; }
+
+/* Uniform tab widths and centered titles */
+.fv_tabs .tabs { display: flex; }
+.fv_tabs .tabs .tab { flex: 1 1 0; max-width: 33.333%; }
+.fv_tabs .tabs .tab a { display: block; text-align: center; }
+.fv_tabs .tabs .indicator { left: 0 !important; right: auto !important; width: 33.333% !important; }
+
+/* Align specific labels with input left edge */
+.input-field label[for="fk_agente"],
+.input-field label[for="fk_edp"] {
+  left: 10px !important;
+}
+.input-field label.active[for="fk_agente"],
+.input-field label.active[for="fk_edp"] {
+  left: 10px !important;
+}
+
+/* Force-hide note widgets in Check up tab (fallback if JS re-injects) */
+#checkup_pre_contrattuale .note-wrapper,
+#checkup_pre_contrattuale #add_nota_wrap,
+#checkup_pre_contrattuale .nota-reply,
+#checkup_pre_contrattuale .add_nota,
+#checkup_pre_contrattuale .invia-notifica-aggiornamento-preventivo,
+#checkup_pre_contrattuale .note {
+  display: none !important;
+}
+
+/* =========================
+   Brand colors override
+   Replace blues (#014c9e, #cae1ef) with greens (#01b577, #aac92a)
+   ========================= */
+:root {
+  --brand-primary: #01b577; /* replaces #014c9e */
+  --brand-accent:  #aac92a; /* replaces #cae1ef */
+}
+
+/* Primary backgrounds */
+.btn, .btn-large, .btn-small,
+.sidenav .highlight a,
+.badge, .chip,
+.collection .active,
+.pagination li.active a,
+.progress .indeterminate,
+.switch input:checked + .lever,
+.tabs .indicator {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Hovers/active accents */
+.btn:hover, .btn:focus,
+.pagination li.active a:hover,
+.tabs .tab a.active,
+.tabs .tab a:hover {
+  background-color: var(--brand-accent) !important;
+  color: #fff !important;
+}
+
+/* Links and accents */
+a, a:hover, a:focus,
+.input-field .prefix.active,
+.breadcrumb, .tabs .tab a {
+  color: var(--brand-primary) !important;
+}
+
+/* Form focus states */
+input[type=text]:focus, input[type=number]:focus, input[type=email]:focus,
+textarea:focus, .select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid var(--brand-primary) !important;
+  box-shadow: 0 1px 0 0 var(--brand-primary) !important;
+}
+
+/* Dropdowns and selected items */
+.dropdown-content li:hover, .dropdown-content li.selected,
+.select-dropdown li:hover, .select-dropdown li.selected {
+  background-color: var(--brand-accent) !important;
+  color: #fff !important;
+}
+
+/* Pills, labels, small UI */
+.chip, .badge.new { background-color: var(--brand-primary) !important; }
+.chip .close { color: #fff !important; }
+
+/* Nav bars (when applicable) */
+.top-nav, nav.top-nav, .nav-wrapper {
+  background-color: var(--brand-primary) !important;
+}
+
+/* Exceptions: keep legacy blue (#014c9e) for specific sidenav links */
+.sidenav a[href="/mirror/"],
+.sidenav a[href="/mirror/share.unionenergia.it/fv/contratti-fotovoltaico"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"],
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"] {
+  color: #014c9e !important;
+}
+.sidenav a[href="/mirror/"] .material-icons,
+.sidenav a[href="/mirror/share.unionenergia.it/fv/contratti-fotovoltaico"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"] .material-icons,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"] .material-icons {
+  color: #014c9e !important;
+}
+.sidenav a[href="/mirror/share.unionenergia.it/fv/contratti-fotovoltaico"]:hover,
+.sidenav a[href="/mirror/"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"]:hover,
+.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"]:hover {
+  color: #014c9e !important;
+}
+
+/* Active state: selected sidenav link becomes green */
+.sidenav a.active[href="/mirror/"],
+.sidenav a.active[href="/mirror/share.unionenergia.it/fv/contratti-fotovoltaico"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-agenti"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"],
+.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"] {
+  color: var(--brand-primary) !important;
+}
+.sidenav a.active[href] .material-icons {
+  color: var(--brand-primary) !important;
+}
+
+/* Logout link styling: make icon and text white, anchor itself green accent */
+nav.top-nav a[href="/logout"],
+.top-nav a[href="/logout"],
+a[href="/logout"] {
+  color: #aac92a !important;
+}
+nav.top-nav a[href="/logout"] i.material-icons,
+.top-nav a[href="/logout"] i.material-icons,
+a[href="/logout"] i.material-icons,
+nav.top-nav a[href="/logout"] span,
+.top-nav a[href="/logout"] span,
+a[href="/logout"] span {
+  color: #fff !important;
+}
+/* Preserve on hover/focus */
+nav.top-nav a[href="/logout"]:hover,
+.top-nav a[href="/logout"]:hover,
+a[href="/logout"]:hover,
+nav.top-nav a[href="/logout"]:focus,
+.top-nav a[href="/logout"]:focus,
+a[href="/logout"]:focus {
+  color: #aac92a !important;
+}
+nav.top-nav a[href="/logout"]:hover i.material-icons,
+.top-nav a[href="/logout"]:hover i.material-icons,
+a[href="/logout"]:hover i.material-icons,
+nav.top-nav a[href="/logout"]:focus i.material-icons,
+.top-nav a[href="/logout"]:focus i.material-icons,
+a[href="/logout"]:focus i.material-icons,
+nav.top-nav a[href="/logout"]:hover span,
+.top-nav a[href="/logout"]:hover span,
+a[href="/logout"]:hover span,
+nav.top-nav a[href="/logout"]:focus span,
+.top-nav a[href="/logout"]:focus span,
+a[href="/logout"]:focus span {
+  color: #fff !important;
+}
+
+/* Make the dynamically injected Listini title look like the page H1 */
+h2.listini-title {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  font-size: 2.2rem !important; /* approximate H1 size in theme */
+  line-height: 1.2 !important;
+  margin: 0 0 16px 0 !important;
+  padding-left: 24px !important; /* similar to .padding-container on H1 */
+  color: inherit !important;
+}
+
+/* Form section titles: white text as requested */
+.form-section h2 {
+  color: #fff !important;
+}
+
+/* Editable area styled like an H2 (for Note per Ufficio Tecnico) */
+.editable-h2-like {
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important; /* compact like a small input label/value */
+  line-height: 1.3 !important;
+  margin: 8px 0 16px 0 !important;
+  color: #014c9e !important; /* blue text for visibility */
+  background: #fff !important;
+  border: 1px solid #014c9e !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  outline: none !important;
+  min-height: 38px; /* similar height to input */
+}
+.editable-h2-like:empty:before {
+  content: 'Scrivi qui le note per Ufficio Tecnico';
+  color: rgba(1,76,158,0.6);
+}
+
+/* Situazione Attuale header: same font of <b> (bold, inherit family) */
+.sit-att-header {
+  font-family: inherit !important;
+  font-weight: 700 !important;
+  color: inherit !important;
+}
+
+/* Computed result input style (kWp Impianto FV necessari) */
+#kwp_necessari[readonly] {
+  background: #f2f6fb !important;
+  color: #014c9e !important;
+  border: 1px solid #cfe0f5 !important;
+  cursor: default !important;
+}
+#kwp_necessari[readonly]:focus {
+  box-shadow: none !important;
+}
+
+/* Offset label 'Consumi annui in Kwh' slightly lower */
+.sit-att .sit-att-row p.grey-text.text-darken-1 {
+  margin-top: 8px !important;
+}
+
+/* ===== Benefici Economici ===== */
+.benefici-box {
+  border-radius: 14px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e6f2ef;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  background: #fff;
+}
+.benefici-head {
+  background: #dff6f1;
+  color: #1a7f6b;
+  font-weight: 800;
+  padding: 16px 20px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  letter-spacing: .2px;
+}
+.benefici-grid { margin: 0; }
+.benefici-item {
+  position: relative;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 10px 8px;
+}
+.benefici-item.soft { background: #f3f5f6; }
+.benefici-item.ok { background: #eafaf6; }
+.benefici-label { color: #6b7b88; font-weight: 600; }
+.benefici-value { color: #0d6b5a; font-weight: 800; font-size: 1.22rem; }
+.benefici-ok { position: absolute; right: 12px; top: 12px; color: #16a085; background:#fff; border:2px solid #16a085; border-radius:50%; width:26px; height:26px; display:flex; align-items:center; justify-content:center; font-size:18px; }
+
+/* hide badges on request */
+.benefici-box .benefici-ok { display: none !important; }
+/* show only on Investimento Reale tile */
+.benefici-box .benefici-item.reale .benefici-ok { display: flex !important; }
+
+.benefici-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 8px;
+}
+.benefici-row.highlight { background: #dff6f1; color: #0d6b5a; font-weight: 800; }
+
+/* subtle separators like in mock */
+.benefici-sep { height:1px; background:#e6ebef; margin: 14px 8px; }
+
+.benefici-banner {
+  background: #d1f1eb;
+  border-radius: 12px;
+  text-align: center;
+  padding: 18px 12px;
+  margin: 14px 8px;
+}
+.benefici-banner-title { color: #1a7f6b; font-weight: 600; }
+.benefici-banner-value { color: #16a085; font-size: 2rem; font-weight: 800; }
+
+.benefici-note {
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 6px 8px 14px;
+  color: #795548;
+  border: 1px solid #ffecb3;
+}
+
+.benefici-totali { border-radius: 12px; }
+.benefici-tot-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 8px; border-bottom: 1px solid #e6ebef;
+}
+.benefici-tot-row:last-child { border-bottom: none; }
+.benefici-tot-row.tot span:last-child { font-weight: 900; }
+
+/* spacing between action buttons */
+#genera_preventivo { margin-right: 12px !important; }
+
+/* Make the 'Agente' label text very light in sponsor section (keep layout) */
+#pre_fattibilita section.sponsor .c_agente_autocomplete > label.nowrap,
+#pre_fattibilita section.sponsor .c_agente_autocomplete > label.nowrap.active,
+#pre_fattibilita section.sponsor .c_agente_autocomplete.input-field label.nowrap,
+#pre_fattibilita section.sponsor .c_agente_autocomplete.input-field label.nowrap.active,
+#pre_fattibilita section.sponsor .input-field.c_agente_autocomplete label.nowrap {
+  color: rgba(0,0,0,0.18) !important; /* very light */
+  text-shadow: none !important;
+}
+/* Also tone down by attribute if present */
+#pre_fattibilita section.sponsor .input-field label[for="fk_agente"],
+#pre_fattibilita section.sponsor .input-field label.active[for="fk_agente"] {
+  color: rgba(0,0,0,0.18) !important;
+}
+
+/* Tolleranza badge in Scelta prodotto card */
+.scelta-prod { position: relative; }
+/* Position the Tolleranza input top-right, aligned with inner header */
+.scelta-prod .tolleranza-field.input-field {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  width: 180px;
+  margin: 0 !important;
+}
+.scelta-prod .tolleranza-field.input-field input#tolleranza_input {
+  height: 2.2rem;
+  margin: 0 !important;
+}
+.scelta-prod .tolleranza-field.input-field label[for="tolleranza_input"] {
+  font-size: 0.8rem;
+  top: -18px;
+  color: transparent !important; /* hide blue label */
+  text-shadow: none !important;
+}
+.scelta-prod .tolleranza-field.input-field input#tolleranza_input::placeholder {
+  color: rgba(0,0,0,0.45);
+}
+
+/* Sidenav: make first item link blue on other pages (not Contratto FV) */
+body:not(.Contratto).fv #sidenav > li:nth-of-type(1) > a,
+body:not(.Contratto).fv #sidenav > li:nth-of-type(1) > a i.material-icons {
+  color: #0d47a1 !important; /* blue */
+}
+
+/* Disabled nav link (no click, default cursor, keep layout) */
+#sidenav a.nav-disabled {
+  pointer-events: none !important;
+  cursor: default !important;
+  opacity: 1; /* keep visual weight */
+  text-decoration: none;
+}
