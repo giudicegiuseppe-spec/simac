@@ -56,6 +56,17 @@
 #wrap .title-wrap .home-link .page-title-logo {
   display: none !important;
 }
+
+/* Force 'Esci' button (logout) to be white in the top nav */
+nav.top-nav ul#top_nav li.esci > a,
+nav.top-nav ul#top_nav li.esci > a span,
+nav.top-nav ul#top_nav li.esci > a i {
+  color: #fff !important;
+}
+nav.top-nav ul#top_nav li.esci > a:hover,
+nav.top-nav ul#top_nav li.esci > a:focus {
+  color: #fff !important;
+}
 #top_nav li.esci.right-li a#logout_link > i.material-icons,
 #top_nav li.esci.right-li a#logout_link > span,
 nav.top-nav #top_nav li.esci.right-li a#logout_link > i.material-icons,
