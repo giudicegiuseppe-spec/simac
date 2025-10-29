@@ -148,14 +148,13 @@
       try{ form.setAttribute('data-preventivo-save','1'); }catch(_){ }
       var rec = readFormData(form);
       try{
-        if(window.Auth){
-          var s=Auth.get();
-          if(s){
-            if(s.agente_id||s.email) rec.agente_id = s.agente_id||s.email;
-            if(s.agente) rec.agente = s.agente;
-            if(s.area_manager) rec.area_manager = s.area_manager;
-            if(s.ruolo) rec.ruolo_creatore = s.ruolo;
-          }
+        var s=null; try{ if(window.Auth && Auth.get) s=Auth.get(); }catch(_){ }
+        if(!s){ try{ s=JSON.parse(localStorage.getItem('simac_session_v1')||'{}'); }catch(_){ s=null; } }
+        if(s){
+          if(s.agente_id||s.email) rec.agente_id = (s.agente_id||s.email);
+          if(s.agente) rec.agente = s.agente;
+          if(s.area_manager) rec.area_manager = s.area_manager;
+          if(s.ruolo) rec.ruolo_creatore = s.ruolo;
         }
       }catch(_){ }
       var saved = await savePreventivo(rec);
@@ -202,19 +201,29 @@
 
   function fmtDate(iso){ try{ var d=new Date(iso); return d.toLocaleString(); }catch(_){ return iso||''; } }
 
+  function getSess(){
+    try{ if(window.Auth && Auth.get) return Auth.get(); }catch(_){ }
+    try{ return JSON.parse(localStorage.getItem('simac_session_v1')||'{}'); }catch(_){ return {}; }
+  }
+
   async function mountList(){
     var table = document.getElementById('preventivi_table');
     if(!table) return;
-    var sess = null; try{ if(window.Auth) sess = Auth.get(); }catch(_){ }
-    var rows = await listPreventivi({});
-    // Apply role-based filtering (fallback: if no ruolo, filter by agente_id)
+    var sess = getSess();
+    var email = (sess && (sess.agente_id||sess.email)||'').toLowerCase();
+    var ruolo = String((sess && sess.ruolo)||'').toLowerCase().trim();
+    var am = String((sess && sess.area_manager)||'').trim();
+
+    // Query-time filter when possible
+    var initialFilter = {};
+    if(!ruolo || (ruolo!=='azienda' && ruolo!=='direzione commerciale' && ruolo!=='direzione commerciale ' && ruolo!=='area manager' && ruolo!=='areamanager')){
+      if(email) initialFilter.agente_id = email;
+    }
+    var rows = await listPreventivi(initialFilter);
+    // Apply role-based filtering (server-agnostic safety)
     try{
       if(sess){
-        var ruolo = String(sess.ruolo||'').toLowerCase();
-        var email = (sess.agente_id||sess.email||'').toLowerCase();
-        var am = String(sess.area_manager||'').trim();
         if(!ruolo){
-          // Fallback: treat as agente
           rows = rows.filter(function(r){ return (r.agente_id||'').toLowerCase() === email; });
         } else if(ruolo === 'azienda' || ruolo === 'direzione commerciale' || ruolo === 'direzione commerciale '){
           // see all
