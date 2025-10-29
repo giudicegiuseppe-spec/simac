@@ -302,8 +302,7 @@
       }catch(_){ }
       var blob=new Blob([JSON.stringify(arr,null,2)], {type:'application/json'}); var url=URL.createObjectURL(blob); var a=document.createElement('a'); a.href=url; a.download='preventivi.json'; a.click(); setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
     });
-    document.getElementById('import_json').addEventListener('click', function(){ document.getElementById('import_file').click(); });
-    document.getElementById('import_file').addEventListener('change', async function(ev){ var f=ev.target.files[0]; if(!f) return; var txt=await f.text(); try{ var arr=JSON.parse(txt); if(Array.isArray(arr)){ for(var i=0;i<arr.length;i++){ var r=arr[i]; delete r.id; await savePreventivo(r); } } }catch(e){} mountList(); });
+    // Import JSON rimosso
     mountList();
   }
 
