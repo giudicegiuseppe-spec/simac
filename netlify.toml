@@ -9,9 +9,16 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
 
 [[redirects]]
   from = "/"
   to = "/preventivatore/mirror/"
   status = 301
   force = true
+
+# Ensure extensionless path resolves to the HTML file for contratto page
+[[redirects]]
+  from = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"
+  to = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico.html"
+  status = 200

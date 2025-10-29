@@ -52,6 +52,10 @@
 #wrap .fv_tabs .tabs .tab:first-child { margin-left: 0 !important; }
 #wrap .fv_tabs .tabs .tab:last-child { margin-right: 0 !important; }
 /* --- Auth/UI overrides --- */
+#wrap .section-bg.title .page-title-logo,
+#wrap .title-wrap .home-link .page-title-logo {
+  display: none !important;
+}
 #top_nav li.esci.right-li a#logout_link > i.material-icons,
 #top_nav li.esci.right-li a#logout_link > span,
 nav.top-nav #top_nav li.esci.right-li a#logout_link > i.material-icons,
