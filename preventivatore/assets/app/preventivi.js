@@ -207,13 +207,16 @@
     if(!table) return;
     var sess = null; try{ if(window.Auth) sess = Auth.get(); }catch(_){ }
     var rows = await listPreventivi({});
-    // Apply role-based filtering
+    // Apply role-based filtering (fallback: if no ruolo, filter by agente_id)
     try{
-      if(sess && sess.ruolo){
+      if(sess){
         var ruolo = String(sess.ruolo||'').toLowerCase();
         var email = (sess.agente_id||sess.email||'').toLowerCase();
         var am = String(sess.area_manager||'').trim();
-        if(ruolo === 'azienda' || ruolo === 'direzione commerciale' || ruolo === 'direzione commerciale '){
+        if(!ruolo){
+          // Fallback: treat as agente
+          rows = rows.filter(function(r){ return (r.agente_id||'').toLowerCase() === email; });
+        } else if(ruolo === 'azienda' || ruolo === 'direzione commerciale' || ruolo === 'direzione commerciale '){
           // see all
         } else if(ruolo === 'area manager' || ruolo === 'areamanager'){
           rows = rows.filter(function(r){
