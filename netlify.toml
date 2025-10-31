@@ -27,3 +27,20 @@
   from = "/preventivatore/mirror/fv/contratto-fotovoltaico"
   to = "/preventivatore/mirror/fv/contratto-fotovoltaico.html"
   status = 200
+
+[[headers]]
+  for = "/preventivatore/mirror/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Pragma = "no-cache"
+    Expires = "0"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+  for = "/preventivatore/Simulatore_fotovoltaico.xlsx"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"

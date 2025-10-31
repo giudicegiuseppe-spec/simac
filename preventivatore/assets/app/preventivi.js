@@ -277,7 +277,7 @@
     if(!document.getElementById('preventivi_table')){
       listRoot.innerHTML = '<div id="preventivi_status" style="margin-bottom:8px; color:#2e7d32;">Lista attiva</div>'+
         '<table id="preventivi_table" class="striped responsive-table"><thead><tr><th>Titolo</th><th>Data</th><th>Azioni</th></tr></thead><tbody></tbody></table>'+
-        '<div style="margin-top:12px;"><button id="export_json" class="btn">Export JSON</button> <input id="import_file" type="file" accept="application/json" style="display:none;"/> <button id="import_json" class="btn" style="margin-left:6px;">Import JSON</button></div>';
+        '<div style="margin-top:12px;"><button id="export_json" class="btn">Export JSON</button></div>';
     }
     document.getElementById('export_json').addEventListener('click', async function(){
       var sess = null; try{ if(window.Auth) sess = Auth.get(); }catch(_){ }
