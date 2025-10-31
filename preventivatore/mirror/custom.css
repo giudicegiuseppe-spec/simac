@@ -14,6 +14,25 @@ a.btn[href$="/Simulatore_fotovoltaico.xlsx"] span {
 .collapsible.expandable .collapsible-header {
   cursor: pointer;
 }
+
+/* Schede Prodotti: white text on all file buttons */
+#schede-prodotti a.btn,
+#schede-prodotti a.btn:hover,
+#schede-prodotti a.btn:focus,
+#schede-prodotti a.btn:visited,
+#schede-prodotti a.btn i,
+#schede-prodotti a.btn span {
+  color: #fff !important;
+}
+
+/* Schede Prodotti: bigger, bold section titles */
+#schede-prodotti .collapsible-header {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+#schede-prodotti .collapsible-header i.material-icons {
+  font-size: 22px !important;
+}
 /* Force tabs to fill full row and split 50/50 */
 #wrap .row > .fv_tabs { padding-left: 0 !important; padding-right: 0 !important; }
 #wrap .fv_tabs > ul.tabs {
