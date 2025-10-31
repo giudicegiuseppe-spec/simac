@@ -121,6 +121,103 @@
 </ul><span id="sidenav-resize">
 <i class="material-icons left">keyboard_arrow_left</i>
 <i class="material-icons right">keyboard_arrow_right</i>
-</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/listini.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">Listini</h1></div></section><section class="section padding-container white-bg"><div class="row"><div class="card-panel" style="border-radius:12px; padding:24px; text-align:center;">Pagina Listini in allestimento.</div></div></section></div>
-<!-- version: listini v=2025-10-31-1 -->
+</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/listini.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">Listini</h1></div></section><section class="section padding-container white-bg"><div class="row">
+<div class="card-panel" style="border-radius:12px; padding:16px; width:100%; overflow:auto;">
+  <table id="listini-table" class="display stripe" style="width:100%">
+    <thead>
+      <tr>
+        <th>Listino</th>
+        <th>Fase</th>
+        <th>Potenza</th>
+        <th>Inverter</th>
+        <th>Valore contratto</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+  <div id="listini-empty" style="margin-top:12px; color:#777;">Caricamento dati da Excel…</div>
+  <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    (async function(){
+      var $tbody = document.querySelector('#listini-table tbody');
+      var empty = document.getElementById('listini-empty');
+      function addRow(cells){
+        var tr = document.createElement('tr');
+        cells.forEach(function(text){
+          var td = document.createElement('td');
+          td.textContent = (text==null? '': text);
+          tr.appendChild(td);
+        });
+        $tbody.appendChild(tr);
+      }
+      async function tryFetch(paths){
+        for (const p of paths){
+          try{
+            const res = await fetch(p, {cache:'no-store'});
+            if(res.ok) return res.arrayBuffer();
+          }catch(_){ }
+        }
+        throw new Error('Nessun percorso Excel raggiungibile');
+      }
+      try{
+        empty.textContent = 'Caricamento dati da Excel…';
+        var buf = await tryFetch([
+          '/preventivatore/mirror/data/Listino%20Simac.xlsx',
+          'data/Listino%20Simac.xlsx',
+          './data/Listino%20Simac.xlsx',
+        ]);
+        var wb = XLSX.read(buf, {type:'array'});
+        // Scegli il foglio con più righe utili
+        var best = {name:null, rows:[], count:0};
+        wb.SheetNames.forEach(function(name){
+          var ws = wb.Sheets[name];
+          var rows = XLSX.utils.sheet_to_json(ws, {header:1, raw:true});
+          var cnt = 0;
+          for(var i=1;i<rows.length;i++){
+            var r = rows[i]||[];
+            var vals = [r[0], r[2], r[3], r[5], r[11]];
+            if(vals.some(function(v){return v!=null && v!=='';})) cnt++;
+          }
+          if(cnt>best.count){ best = {name:name, rows:rows, count:cnt}; }
+        });
+        var rows = best.rows;
+        if(!rows || rows.length<=1){
+          empty.textContent = 'Nessun dato trovato nel file Excel.';
+        } else {
+          empty.textContent = 'Foglio: '+best.name+' | righe utili: '+best.count+' (in caricamento…)';
+          for(var i=1;i<rows.length;i++){
+            var r = rows[i] || [];
+            var listino = r[0];
+            var fase = r[2];
+            var potenza = r[3];
+            var inverter = r[5];
+            var valore = r[11];
+            if([listino,fase,potenza,inverter,valore].every(function(v){return v==null || v==="";})) continue;
+            addRow([listino, fase, potenza, inverter, valore]);
+          }
+          if($tbody.children.length>0){ empty.style.display='none'; }
+          else { empty.textContent = 'File Excel caricato ma nessuna riga valida da mostrare.'; }
+        }
+      }catch(e){
+        console.error('Errore caricamento Excel', e);
+        empty.textContent = 'Impossibile caricare i dati dal file Excel.';
+      }finally{
+        try{
+          if(window.$ && $.fn && $.fn.DataTable){
+            $('#listini-table').DataTable({
+              paging: true,
+              searching: true,
+              info: false,
+              language: { emptyTable: "" }
+            });
+          }
+        }catch(_){ }
+      }
+    })();
+  </script>
+</div>
+</div></section></div>
+<!-- version: listini v=2025-10-31-2 -->
 </body></html>
