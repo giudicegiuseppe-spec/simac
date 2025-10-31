@@ -1,3 +1,19 @@
+/* Force 'Scarica Excel' button text/icon to be white */
+a.btn[href$="/Simulatore_fotovoltaico.xlsx"],
+a.btn[href$="/Simulatore_fotovoltaico.xlsx"]:hover,
+a.btn[href$="/Simulatore_fotovoltaico.xlsx"]:focus,
+a.btn[href$="/Simulatore_fotovoltaico.xlsx"] i,
+a.btn[href$="/Simulatore_fotovoltaico.xlsx"] span {
+  color: #fff !important;
+}
+
+/* Ensure collapsible content visible by default (fallback if JS isn't initialized) */
+.collapsible.expandable .collapsible-body {
+  display: block !important;
+}
+.collapsible.expandable .collapsible-header {
+  cursor: pointer;
+}
 /* Force tabs to fill full row and split 50/50 */
 #wrap .row > .fv_tabs { padding-left: 0 !important; padding-right: 0 !important; }
 #wrap .fv_tabs > ul.tabs {
