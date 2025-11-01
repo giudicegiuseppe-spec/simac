@@ -33,6 +33,36 @@ a.btn[href$="/Simulatore_fotovoltaico.xlsx"] span {
 #schede-prodotti .collapsible-header i.material-icons {
   font-size: 22px !important;
 }
+
+/* Incentivi: white text on all links/buttons */
+#incentivi-menu a,
+#incentivi-menu a:hover,
+#incentivi-menu a:focus,
+#incentivi-menu a:visited,
+#incentivi-menu a.btn,
+#incentivi-menu a.btn:hover,
+#incentivi-menu a.btn:focus,
+#incentivi-menu a.btn:visited,
+#incentivi-menu a i,
+#incentivi-menu a span {
+  color: #fff !important;
+}
+
+/* Incentivi: bigger, bold section titles */
+#incentivi-menu .collapsible-header {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+}
+#incentivi-menu .collapsible-header i.material-icons {
+  font-size: 22px !important;
+}
+/* Force white for filenames/links in list */
+#incentivi-menu .collection .collection-item a,
+#incentivi-menu .collection .collection-item a:hover,
+#incentivi-menu .collection .collection-item a:focus,
+#incentivi-menu .collection .collection-item a:visited {
+  color: #fff !important;
+}
 /* Force tabs to fill full row and split 50/50 */
 #wrap .row > .fv_tabs { padding-left: 0 !important; padding-right: 0 !important; }
 #wrap .fv_tabs > ul.tabs {

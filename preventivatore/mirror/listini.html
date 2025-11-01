@@ -145,12 +145,27 @@
       var empty = document.getElementById('listini-empty');
       function addRow(cells){
         var tr = document.createElement('tr');
-        cells.forEach(function(text){
+        cells.forEach(function(text, idx){
           var td = document.createElement('td');
           td.textContent = (text==null? '': text);
+          if(idx === 4){ td.style.textAlign = 'right'; }
           tr.appendChild(td);
         });
         $tbody.appendChild(tr);
+      }
+      function toNumber(v){
+        if(typeof v === 'number') return v;
+        if(typeof v === 'string'){
+          var s = v.replace(/\./g,'').replace(/,/g,'.').replace(/[^0-9.\-]/g,'');
+          var n = parseFloat(s); return isNaN(n)? null : n;
+        }
+        return null;
+      }
+      function formatEuro(v){
+        var num = toNumber(v);
+        if(num===null) return v==null? '': String(v);
+        try{ return new Intl.NumberFormat('it-IT', {style:'currency', currency:'EUR', minimumFractionDigits:2, maximumFractionDigits:2}).format(num); }
+        catch(_){ return '€ '+num.toFixed(2).replace('.',','); }
       }
       async function tryFetch(paths){
         for (const p of paths){
@@ -193,7 +208,7 @@
             var fase = r[2];
             var potenza = r[3];
             var inverter = r[5];
-            var valore = r[11];
+            var valore = formatEuro(r[11]);
             if([listino,fase,potenza,inverter,valore].every(function(v){return v==null || v==="";})) continue;
             addRow([listino, fase, potenza, inverter, valore]);
           }
@@ -206,12 +221,23 @@
       }finally{
         try{
           if(window.$ && $.fn && $.fn.DataTable){
-            $('#listini-table').DataTable({
+            var dt = $('#listini-table').DataTable({
               paging: true,
               searching: true,
               info: false,
               language: { emptyTable: "" }
             });
+            // Normalize 5th column display to Euro after DT render
+            function normalizeEuro(){
+              $('#listini-table tbody tr').each(function(){
+                var $td = $(this).find('td').eq(4);
+                var txt = $td.text();
+                $td.text(formatEuro(txt));
+                $td.css('text-align','right');
+              });
+            }
+            normalizeEuro();
+            dt.on('draw', normalizeEuro);
           }
         }catch(_){ }
       }
@@ -219,5 +245,5 @@
   </script>
 </div>
 </div></section></div>
-<!-- version: listini v=2025-10-31-2 -->
+<!-- version: listini v=2025-10-31-6 -->
 </body></html>

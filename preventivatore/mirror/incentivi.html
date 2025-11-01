@@ -2,6 +2,9 @@
 
 <html lang="it"><head>
 <title>Nuovo Contratto Simac</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="/logo.png" rel="icon" type="image/png"/>
 <link href="/preventivatore/assets/fonts/css/fonts-4615247307143386908.css" rel="stylesheet"/>
@@ -65,10 +68,17 @@
     
 <script src="/preventivatore/assets/share/js/contratto_fotovoltaico.js" type="text/javascript"></script>
 <script src="/preventivatore/assets/app/auth.js"></script>
-<link href="/preventivatore/mirror/custom.css" rel="stylesheet"/><style id="selectionModeStyle">
+<link href="/preventivatore/mirror/custom.css?v=2025-10-31-3" rel="stylesheet"/>
+<style>
+  /* Inline overrides to bypass CDN cache issues */
+  #incentivi-menu .collapsible-header { font-size: 20px !important; font-weight: 700 !important; }
+  #incentivi-menu .collapsible-header i.material-icons { font-size: 22px !important; }
+  #incentivi-menu a, #incentivi-menu a:hover, #incentivi-menu a:focus, #incentivi-menu a:visited,
+  #incentivi-menu .collection .collection-item a { color:#fff !important; }
+</style><style id="selectionModeStyle">
 .selection-mode-toggle{position:fixed;bottom:16px;right:16px;z-index:9999;background:#ff5252;color:#fff;padding:10px 14px;border-radius:8px;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.2); user-select:none}
 .selection-mode-toggle.active{background:#d32f2f}
-</style></head><body class="Contratto fv lang_it"><script>(function(){try{var p=location.pathname;if(p.indexOf('/preventivatore/mirror/share.unionenergia.it/')===0){var np=p.replace('/preventivatore/mirror/share.unionenergia.it/','/preventivatore/mirror/');location.replace(np+location.search+location.hash);return;}if(p==='/preventivatore/mirror/fv/contratto-fotovoltaico'){location.replace(p+'.html'+location.search+location.hash);return;}}catch(e){}})();
+</style></head><body class="Contratto fv lang_it"><script>(function(){try{var p=location.pathname;if(p.indexOf('/preventivatore/mirror/share.unionenergia.it/')===0){var np=p.replace('/preventivatore/mirror/share.unionenergia.it/','/preventivatore/mirror/');location.replace(np+location.search+location.hash);return;}if(p==='/preventivatore/mirror/fv/contratto-fotovoltaico'){location.replace(p+'.html'+location.search+location.hash);return;}if(p==='/preventivatore/mirror/incentivi'){location.replace(p+'.html'+location.search+location.hash);return;}}catch(e){}})();
 (function(){function boot(){try{if(window.Auth){ if(!Auth.require()) return; Auth.renderSidebarUser(); }}catch(_){}} if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot();})();</script><header class="r7">
 <nav class="top-nav">
 <div class="padding-container">
@@ -97,6 +107,7 @@
 </div>
 </div>
 </nav>
+<script>(function(){try{var u=new URL(location.href);if(!u.searchParams.get('vc')){u.searchParams.set('vc', Date.now());location.replace(u.toString());}}catch(e){}})();</script>
 
     
     
@@ -124,32 +135,33 @@
 </span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/incentivi.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">Incentivi</h1></div></section><section class="section padding-container white-bg"><div class="row">
 <ul id="incentivi-menu" class="collapsible expandable" style="border-radius:12px; overflow:hidden;">
   <li>
-    <div class="collapsible-header"><i class="material-icons">groups</i>Comunità Energetiche (CER)</div>
+    <div class="collapsible-header" style="font-size:20px; font-weight:700;"><i class="material-icons" style="font-size:22px;">groups</i>Comunità Energetiche (CER)</div>
     <div class="collapsible-body">
       <ul class="collection">
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Aggiornamento DECRETI_MINISTRO.16-05-2025.pdf" download>Aggiornamento DECRETI_MINISTRO.16-05-2025.pdf</a></li>
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Decreto CER.pdf" download>Decreto CER.pdf</a></li>
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/FAQ - Le Comunità Energetiche Rinnovabili.pdf" download>FAQ - Le Comunità Energetiche Rinnovabili.pdf</a></li>
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/FORMAZIONE GSE per CER.pdf" download>FORMAZIONE GSE per CER.pdf</a></li>
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Regole Operative.pdf" download>Regole Operative.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Aggiornamento DECRETI_MINISTRO.16-05-2025.pdf" download>Aggiornamento DECRETI_MINISTRO.16-05-2025.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Decreto CER.pdf" download>Decreto CER.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/FAQ - Le Comunità Energetiche Rinnovabili.pdf" download>FAQ - Le Comunità Energetiche Rinnovabili.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/FORMAZIONE GSE per CER.pdf" download>FORMAZIONE GSE per CER.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Comunità Energetiche (CER)/Regole Operative.pdf" download>Regole Operative.pdf</a></li>
       </ul>
     </div>
   </li>
   <li>
-    <div class="collapsible-header"><i class="material-icons">assignment</i>Detrazione Irpef Privati</div>
+    <div class="collapsible-header" style="font-size:20px; font-weight:700;"><i class="material-icons" style="font-size:22px;">assignment</i>Detrazione Irpef Privati</div>
     <div class="collapsible-body">
       <ul class="collection">
-        <li class="collection-item"><a class="btn" href="/preventivatore/Incentivi/Detrazione Irpef Privati/Bonifico PARLANTE per detrazione fiscale IRPEF.pdf" download>Bonifico PARLANTE per detrazione fiscale IRPEF.pdf</a></li>
+        <li class="collection-item"><a class="btn" style="color:#fff !important;" href="/preventivatore/Incentivi/Detrazione Irpef Privati/Bonifico PARLANTE per detrazione fiscale IRPEF.pdf" download>Bonifico PARLANTE per detrazione fiscale IRPEF.pdf</a></li>
       </ul>
     </div>
   </li>
   <li>
-    <div class="collapsible-header"><i class="material-icons">map</i>Mappa Cabine Primarie</div>
+    <div class="collapsible-header" style="font-size:20px; font-weight:700;"><i class="material-icons" style="font-size:22px;">map</i>Mappa Cabine Primarie</div>
     <div class="collapsible-body">
-      <a class="btn" href="https://www.gse.it/servizi-per-te/autoconsumo/mappa-interattiva-delle-cabine-primarie" target="_blank" rel="noopener">Apri mappa GSE</a>
+      <a class="btn" style="color:#fff !important;" href="https://www.gse.it/servizi-per-te/autoconsumo/mappa-interattiva-delle-cabine-primarie" target="_blank" rel="noopener">Apri mappa GSE</a>
     </div>
   </li>
 </ul>
 </div></section></div>
 <script>(function(){ try{ var elems=document.querySelectorAll('.collapsible'); if(window.M && M.Collapsible){ M.Collapsible.init(elems,{accordion:false}); } }catch(e){} })();</script>
+<!-- version: incentivi v=2025-10-31-4 -->
 </body></html>
