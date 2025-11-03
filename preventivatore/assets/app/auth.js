@@ -168,14 +168,13 @@
   async function reloadUsers(){ try{ USERS_CACHE = null; if(typeof window!=='undefined'){ window.AUTH_FORCE_RELOAD = true; } return await loadUsers(); }catch(_){ return []; } }
   window.Auth = { setSession:setSession, get:getSession, clear:clearSession, isLogged:isLogged, require:requireAuth, applyAgentToDom:applyAgentToDom, cleanupSponsorSection:cleanupSponsorSection, renderSidebarUser:renderSidebarUser, login:loginWithCredentials, logout:logout, usersInfo:usersInfo, setUsersFromCSV:setUsersFromCSV, reloadUsers:reloadUsers };
 
-  function bindExplicitLogout(){
-    try{
+  function bindExplicitLogout(){ try{
       // anchor with /logout already handled below; also bind icon and span inside top nav
       var icon = document.querySelector('#top_nav > li.hide-mobile.esci.right-li > a > i.material-icons');
       var span = document.querySelector('#top_nav > li.hide-mobile.esci.right-li > a > span');
       var a = document.querySelector('#top_nav li.hide-mobile.esci.right-li a'); if(a){ a.setAttribute('href','#'); a.style.cursor='pointer'; a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); logout(); }, true); }
       [icon, span].forEach(function(el){ if(el){ el.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); logout(); }, true); }});
-    }catch(_){ }
+  }catch(_){ }
   }
   // intercept top logout link if present (anchor, icon, span)
   document.addEventListener('click', function(e){
@@ -183,5 +182,29 @@
     var a2=e.target.closest && e.target.closest('#top_nav li.hide-mobile.esci.right-li a');
     if(a||a2){ e.preventDefault(); e.stopPropagation(); logout(); }
   }, true);
-  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bindExplicitLogout); } else { bindExplicitLogout(); }
+  function injectClearSessionButton(){
+    try{
+      if(document.getElementById('auth-clear-session')) return;
+      // If sidebar exists, we already added the link there; but also add a floating fallback for pages without sidebar (e.g., login)
+      var btn = document.createElement('a');
+      btn.id = 'auth-clear-session';
+      btn.href = '#';
+      btn.textContent = 'Pulisci sessione';
+      btn.style.position = 'fixed';
+      btn.style.bottom = '12px';
+      btn.style.right = '12px';
+      btn.style.zIndex = '9999';
+      btn.style.background = '#00c853';
+      btn.style.color = '#fff';
+      btn.style.padding = '8px 10px';
+      btn.style.borderRadius = '6px';
+      btn.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+      btn.style.fontSize = '12px';
+      btn.style.textDecoration = 'none';
+      btn.addEventListener('click', function(ev){ ev.preventDefault(); try{ localStorage.removeItem('simac_session_v1'); }catch(_){} try{ window.location.href='/preventivatore/mirror/'; }catch(_){ window.location.reload(); } }, true);
+      document.body.appendChild(btn);
+    }catch(_){ }
+  }
+  function bootUI(){ try{ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); }catch(_){ injectClearSessionButton(); } }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bootUI); } else { bootUI(); }
 })();
