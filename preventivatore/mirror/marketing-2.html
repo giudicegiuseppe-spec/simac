@@ -35,6 +35,14 @@
   <script src="/preventivatore/assets/share/js/contratto_fotovoltaico.js"></script>
   <script src="/preventivatore/assets/app/auth.js"></script>
   <link rel="stylesheet" href="/preventivatore/mirror/custom.css?v=2025-10-31-new"/>
+  <style>
+    /* Force white text on all buttons in Marketing-2 */
+    a.btn, a.btn:hover, a.btn:focus, a.btn:visited,
+    .btn, .btn *, .btn i, .btn span { color:#fff !important; }
+    /* PDF preview wrapper: A4 portrait ratio so the whole page is visible */
+    .pdf-preview { position:relative; width:100%; padding-top:141%; background:#fff; border-radius:8px; overflow:hidden; margin-bottom:10px; }
+    .pdf-preview > object { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+  </style>
 </head>
 <body class="Contratto fv lang_it">
   <script>(function(){try{var p=location.pathname;if(p.indexOf('/preventivatore/mirror/share.unionenergia.it/')===0){var np=p.replace('/preventivatore/mirror/share.unionenergia.it/','/preventivatore/mirror/');location.replace(np+location.search+location.hash);return;}}catch(e){}})();
@@ -93,55 +101,47 @@
             <i class="material-icons">article</i>
             <strong>Il nostro Blog</strong>
           </div>
-          <a class="btn" href="https://www.simacsolar.com/blog/" target="_blank" rel="noopener">Vai al Blog</a>
+          <a class="btn" href="https://www.simacsolar.com/blog/" target="_blank" rel="noopener" style="color:#fff !important;">Vai al Blog</a>
         </div>
 
         <div class="row" style="margin:0; width:100%; display:flex; flex-wrap:wrap; gap:16px;">
           <div class="card-panel" style="flex:1 1 220px; max-width:calc(25% - 12px); border-radius:12px; padding:12px; overflow:hidden;">
-            <div style="width:100%; height:260px; background:#fff; border-radius:8px; overflow:hidden; margin-bottom:10px;">
-              <object data="/preventivatore/marketing/Brochure-B2B.pdf#page=1&zoom=120" type="application/pdf" width="100%" height="100%">
-                <div style="padding:16px; text-align:center; color:#666;">Anteprima non disponibile</div>
-              </object>
+            <div class="pdf-preview" style="background:#000;">
+              <img src="/preventivatore/marketing/preview-brochure.png?v=2025-11-03-2" alt="Anteprima Brochure B2B" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain;"/>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
               <span style="font-weight:600;">Brochure B2B</span>
-              <a class="btn" href="/preventivatore/marketing/Brochure-B2B.pdf" download>Scarica</a>
+              <a class="btn" href="/preventivatore/marketing/Brochure-B2B.pdf" download style="color:#fff !important;">Scarica</a>
             </div>
           </div>
 
           <div class="card-panel" style="flex:1 1 220px; max-width:calc(25% - 12px); border-radius:12px; padding:12px; overflow:hidden;">
-            <div style="width:100%; height:260px; background:#fff; border-radius:8px; overflow:hidden; margin-bottom:10px;">
-              <object data="/preventivatore/marketing/Brochure-B2C.pdf#page=1&zoom=120" type="application/pdf" width="100%" height="100%">
-                <div style="padding:16px; text-align:center; color:#666;">Anteprima non disponibile</div>
-              </object>
+            <div class="pdf-preview" style="background:#000;">
+              <img src="/preventivatore/marketing/preview-brochure.png?v=2025-11-03-2" alt="Anteprima Brochure B2C" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain;"/>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
               <span style="font-weight:600;">Brochure B2C</span>
-              <a class="btn" href="/preventivatore/marketing/Brochure-B2C.pdf" download>Scarica</a>
+              <a class="btn" href="/preventivatore/marketing/Brochure-B2C.pdf" download style="color:#fff !important;">Scarica</a>
             </div>
           </div>
 
           <div class="card-panel" style="flex:1 1 220px; max-width:calc(25% - 12px); border-radius:12px; padding:12px; overflow:hidden;">
-            <div style="width:100%; height:260px; background:#fff; border-radius:8px; overflow:hidden; margin-bottom:10px;">
-              <object data="/preventivatore/marketing/Incentivi-e-bonus_Simac.pdf#page=1&zoom=120" type="application/pdf" width="100%" height="100%">
-                <div style="padding:16px; text-align:center; color:#666;">Anteprima non disponibile</div>
-              </object>
+            <div class="pdf-preview">
+              <iframe src="https://docs.google.com/gview?embedded=1&url=https://retesimac.netlify.app/preventivatore/marketing/Incentivi-e-bonus_Simac.pdf" width="100%" height="100%" style="border:0;"></iframe>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
               <span style="font-weight:600;">Incentivi e Bonus</span>
-              <a class="btn" href="/preventivatore/marketing/Incentivi-e-bonus_Simac.pdf" download>Scarica</a>
+              <a class="btn" href="/preventivatore/marketing/Incentivi-e-bonus_Simac.pdf" download style="color:#fff !important;">Scarica</a>
             </div>
           </div>
 
           <div class="card-panel" style="flex:1 1 220px; max-width:calc(25% - 12px); border-radius:12px; padding:12px; overflow:hidden;">
-            <div style="width:100%; height:260px; background:#fff; border-radius:8px; overflow:hidden; margin-bottom:10px;">
-              <object data="/preventivatore/marketing/Portfolio_installazioni.pdf#page=1&zoom=120" type="application/pdf" width="100%" height="100%">
-                <div style="padding:16px; text-align:center; color:#666;">Anteprima non disponibile</div>
-              </object>
+            <div class="pdf-preview">
+              <iframe src="https://docs.google.com/gview?embedded=1&url=https://retesimac.netlify.app/preventivatore/marketing/Portfolio_installazioni.pdf" width="100%" height="100%" style="border:0;"></iframe>
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
               <span style="font-weight:600;">Portfolio Installazioni</span>
-              <a class="btn" href="/preventivatore/marketing/Portfolio_installazioni.pdf" download>Scarica</a>
+              <a class="btn" href="/preventivatore/marketing/Portfolio_installazioni.pdf" download style="color:#fff !important;">Scarica</a>
             </div>
           </div>
         </div>

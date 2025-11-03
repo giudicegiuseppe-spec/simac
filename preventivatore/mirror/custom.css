@@ -300,7 +300,6 @@ textarea:focus, .select-wrapper input.select-dropdown:focus {
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"] .material-icons,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"] .material-icons,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"] .material-icons,
-.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"] .material-icons,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"] .material-icons {
   color: #014c9e !important;
 }
@@ -310,7 +309,6 @@ textarea:focus, .select-wrapper input.select-dropdown:focus {
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"]:hover,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"]:hover,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"]:hover,
-.sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"]:hover,
 .sidenav a[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"]:hover {
   color: #014c9e !important;
 }
@@ -322,13 +320,47 @@ textarea:focus, .select-wrapper input.select-dropdown:focus {
 .sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart"],
 .sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-reddito-energetico"],
 .sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-finanziamenti"],
-.sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-formazione-agenti"],
 .sidenav a.active[href="https://share.unionenergia.it/pagina/documenti-utili-union-smart-marketing-agenti"] {
   color: var(--brand-primary) !important;
 }
 .sidenav a.active[href] .material-icons {
   color: var(--brand-primary) !important;
 }
+
+/* =========================
+   Marketing page helpers
+   ========================= */
+/* Buttons always white inside Marketing page scope */
+#marketing-page a.btn,
+#marketing-page a.btn:hover,
+#marketing-page a.btn:focus,
+#marketing-page a.btn:visited,
+#marketing-page a.btn i,
+#marketing-page a.btn span {
+  color: #fff !important;
+}
+/* PDF preview area with A4 portrait ratio; supports object/iframe */
+#marketing-page .pdf-preview {
+  position: relative;
+  width: 100%;
+  padding-top: 141%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#marketing-page .pdf-preview > iframe,
+#marketing-page .pdf-preview > object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Hide menu item: Formazione Agenti (no contents for now) */
+.documenti-utili-union-smart-formazione-agenti { display: none !important; }
 
 /* Logout link styling: make icon and text white, anchor itself green accent */
 nav.top-nav a[href="/logout"],
@@ -557,3 +589,6 @@ body:not(.Contratto).fv #sidenav > li:nth-of-type(1) > a i.material-icons {
   opacity: 1; /* keep visual weight */
   text-decoration: none;
 }
+
+/* Fallback: force ALL buttons text to white (highest priority) */
+a.btn, .btn, .btn *, .btn i, .btn span { color: #fff !important; }
