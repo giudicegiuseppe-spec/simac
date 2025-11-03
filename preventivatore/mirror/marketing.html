@@ -153,7 +153,6 @@
     <a class="btn" href="https://www.simacsolar.com/blog/" target="_blank" rel="noopener" style="color:#fff !important;">Vai al Blog</a>
   </div>
 
-  <div class="card-panel" style="border-radius:10px; margin-bottom:12px; background:#e3f2fd; color:#0d47a1; width:100%;">Marketing Build: 2025-11-03-VC3f</div>
   <div class="row" style="margin:0; width:100%; display:flex; flex-wrap:wrap; gap:16px;">
     <div class="card-panel" style="flex:1 1 220px; max-width:calc(25% - 12px); border-radius:12px; padding:12px; overflow:hidden;">
       <div class="pdf-preview" style="background:#000;">
@@ -196,25 +195,6 @@
     </div>
   </div>
 
-<script>
-  (function(){
-    try{
-      var scope=document.getElementById('marketing-page');
-      if(!scope) return;
-      // Force white text on all buttons inside the page
-      Array.from(scope.querySelectorAll('a.btn')).forEach(function(b){ b.style.setProperty('color','#fff','important'); });
-      // Cache-bust preview images
-      var ts=Date.now();
-      Array.from(scope.querySelectorAll('.pdf-preview img')).forEach(function(img){
-        try{
-          var u=new URL(img.src, location.origin);
-          u.searchParams.set('vc', ts);
-          img.src=u.toString();
-        }catch(_){ img.src = img.src + (img.src.indexOf('?')>-1?'&':'?') + 'vc='+ts; }
-      });
-    }catch(_){}
-  })();
-  </script>
 </div></section></div>
-<!-- version: marketing v=2025-11-01-5 -->
+<!-- version: marketing final 2025-11-03 -->
 </body></html>
