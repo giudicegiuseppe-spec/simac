@@ -5,6 +5,7 @@
     '/preventivatore/mirror/user.csv'
   ];
   var USERS_CACHE = null;
+  try{ if(typeof window !== 'undefined' && window.AUTH_FORCE_RELOAD == null){ window.AUTH_FORCE_RELOAD = true; } }catch(_){ }
   function setSession(sess){ try{ localStorage.setItem(KEY, JSON.stringify(sess||{})); }catch(_){ } }
   function getSession(){ try{ var s = JSON.parse(localStorage.getItem(KEY)||'{}'); return s && typeof s==='object'? s : {}; }catch(_){ return {}; } }
   function clearSession(){ try{ localStorage.removeItem(KEY); }catch(_){ } }
@@ -45,7 +46,7 @@
   }
   var LAST_LOAD = { url:null, count:0 };
   async function loadUsers(){
-    if(USERS_CACHE) return USERS_CACHE;
+    if(USERS_CACHE && !(typeof window!=='undefined' && window.AUTH_FORCE_RELOAD)) return USERS_CACHE;
     async function tryLoad(url){
       try{
         // Cache-busting: append a version param so CDN/browser always fetch latest CSV
@@ -73,7 +74,7 @@
       LAST_LOAD.url = url; LAST_LOAD.count = list.length;
       if(list.length) break;
     }
-    if(list.length){ USERS_CACHE = list; try{ console.log('[Auth] Utenti caricati:', list.length, 'da', LAST_LOAD.url); }catch(_){ } return USERS_CACHE; }
+    if(list.length){ USERS_CACHE = list; try{ if(typeof window!=='undefined'){ window.AUTH_FORCE_RELOAD = false; } console.log('[Auth] Utenti caricati:', list.length, 'da', LAST_LOAD.url); }catch(_){ } return USERS_CACHE; }
     // No fallback: senza CSV l'elenco utenti è vuoto
     USERS_CACHE = [];
     return USERS_CACHE;
@@ -141,6 +142,14 @@
     // two link-like lines: Agente first, then Ruolo
     box.innerHTML = '<a href="#" class="user-line" onclick="return false;">'+agente+'</a>'+
                     '<a href="#" class="user-line" onclick="return false;">'+(ruolo||'-')+'</a>';
+    // add clear session action
+    var clearA = document.createElement('a');
+    clearA.href = '#';
+    clearA.className = 'user-line';
+    clearA.textContent = 'Pulisci sessione';
+    clearA.style.color = '#00c853';
+    clearA.addEventListener('click', function(e){ e.preventDefault(); try{ localStorage.removeItem('simac_session_v1'); }catch(_){} try{ window.location.href='/preventivatore/mirror/'; }catch(_){ window.location.reload(); } }, true);
+    box.appendChild(clearA);
     side.appendChild(box);
   }catch(_){ }
   async function loginWithCredentials(email, password){
@@ -156,7 +165,8 @@
   // expose
   async function usersInfo(){ try{ var arr=await loadUsers(); return { count: arr.length, emails: arr.slice(0,5).map(function(u){ return u.email; }), url: LAST_LOAD.url }; }catch(e){ return {count:0, emails:[], url: LAST_LOAD.url||null}; } }
   function setUsersFromCSV(text){ try{ USERS_CACHE = parseCSV(text)||[]; LAST_LOAD.url = 'inline'; LAST_LOAD.count = USERS_CACHE.length; }catch(_){ USERS_CACHE = []; } }
-  window.Auth = { setSession:setSession, get:getSession, clear:clearSession, isLogged:isLogged, require:requireAuth, applyAgentToDom:applyAgentToDom, cleanupSponsorSection:cleanupSponsorSection, renderSidebarUser:renderSidebarUser, login:loginWithCredentials, logout:logout, usersInfo:usersInfo, setUsersFromCSV:setUsersFromCSV };
+  async function reloadUsers(){ try{ USERS_CACHE = null; if(typeof window!=='undefined'){ window.AUTH_FORCE_RELOAD = true; } return await loadUsers(); }catch(_){ return []; } }
+  window.Auth = { setSession:setSession, get:getSession, clear:clearSession, isLogged:isLogged, require:requireAuth, applyAgentToDom:applyAgentToDom, cleanupSponsorSection:cleanupSponsorSection, renderSidebarUser:renderSidebarUser, login:loginWithCredentials, logout:logout, usersInfo:usersInfo, setUsersFromCSV:setUsersFromCSV, reloadUsers:reloadUsers };
 
   function bindExplicitLogout(){
     try{
