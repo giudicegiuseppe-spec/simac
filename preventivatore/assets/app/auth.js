@@ -48,7 +48,19 @@
     if(USERS_CACHE) return USERS_CACHE;
     async function tryLoad(url){
       try{
-        var rc = await fetch(url, {cache:'no-cache'});
+        // Cache-busting: append a version param so CDN/browser always fetch latest CSV
+        var fullUrl;
+        try {
+          var u = new URL(url, window.location.origin);
+          // Use explicit version if provided, otherwise timestamp
+          var v = (window.AUTH_CSV_VERSION || Date.now());
+          u.searchParams.set('v', v);
+          fullUrl = u.toString();
+        } catch(_) {
+          var sep = (url.indexOf('?')>-1?'&':'?');
+          fullUrl = url + sep + 'v=' + String(Date.now());
+        }
+        var rc = await fetch(fullUrl, {cache:'no-cache'});
         if(!rc.ok) return [];
         var text = await rc.text();
         return parseCSV(text);
