@@ -1,8 +1,7 @@
 (function(){
   var KEY = 'simac_session_v1';
   var CSV_CANDIDATES = [
-    '/preventivatore/user.csv',
-    '/preventivatore/mirror/user.csv'
+    '/preventivatore/user.csv'
   ];
   var USERS_CACHE = null;
   try{ if(typeof window !== 'undefined' && window.AUTH_FORCE_RELOAD == null){ window.AUTH_FORCE_RELOAD = true; } }catch(_){ }
@@ -205,6 +204,17 @@
       document.body.appendChild(btn);
     }catch(_){ }
   }
-  function bootUI(){ try{ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); }catch(_){ injectClearSessionButton(); } }
+  function maybeClearViaQuery(){
+    try{
+      var qs = new URLSearchParams(window.location.search||'');
+      if(qs.has('clearSession')){
+        try{ localStorage.removeItem('simac_session_v1'); }catch(_){ }
+        try{ window.location.href = '/preventivatore/mirror/'; }catch(_){ window.location.reload(); }
+        return true;
+      }
+    }catch(_){ }
+    return false;
+  }
+  function bootUI(){ try{ if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bootUI); } else { bootUI(); }
 })();

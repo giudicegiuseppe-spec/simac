@@ -241,7 +241,7 @@
     var tbody = table.querySelector('tbody'); if(!tbody){ tbody = document.createElement('tbody'); table.appendChild(tbody); }
     tbody.innerHTML = '';
     if(!rows || !rows.length){
-      var tr=document.createElement('tr'); var td=document.createElement('td'); td.colSpan=3; td.style.textAlign='center'; td.textContent='Nessun preventivo salvato'; tr.appendChild(td); tbody.appendChild(tr);
+      var tr=document.createElement('tr'); var td=document.createElement('td'); td.colSpan=4; td.style.textAlign='center'; td.textContent='Nessun preventivo salvato'; tr.appendChild(td); tbody.appendChild(tr);
       try{ if(window.M && M.toast){ M.toast({html:'Nessun preventivo in archivio', displayLength:1200}); } }catch(_){ }
       return;
     }
@@ -249,12 +249,20 @@
       var tr=document.createElement('tr');
       var tdTitle=document.createElement('td'); tdTitle.textContent = r.title || '-';
       var tdDate=document.createElement('td'); tdDate.textContent = fmtDate(r.created_at);
+      var tdNote=document.createElement('td');
+      try{
+        var raw = (r && r.fields && typeof r.fields.precheck_note!== 'undefined') ? String(r.fields.precheck_note||'') : '';
+        var clean = raw.replace(/\s+/g,' ').trim();
+        var short = clean.length>80 ? (clean.slice(0,77)+'...') : clean;
+        tdNote.textContent = short || '-';
+        if(clean){ tdNote.title = clean; }
+      }catch(_){ tdNote.textContent='-'; }
       var tdActions=document.createElement('td');
       var open=document.createElement('button'); open.className='btn'; open.textContent='Apri'; open.addEventListener('click', function(){ window.location.href='/preventivatore/mirror/fv/contratto-fotovoltaico.html?prevId='+encodeURIComponent(r.id); });
       var dup=document.createElement('button'); dup.className='btn'; dup.style.marginLeft='6px'; dup.textContent='Duplica'; dup.addEventListener('click', async function(){ var c=JSON.parse(JSON.stringify(r)); delete c.id; c.created_at=new Date().toISOString(); await savePreventivo(c); mountList(); });
       var del=document.createElement('button'); del.className='btn red'; del.style.marginLeft='6px'; del.textContent='Elimina'; del.addEventListener('click', async function(){ if(confirm('Eliminare preventivo?')){ await deletePreventivo(r.id); mountList(); }});
       tdActions.appendChild(open); tdActions.appendChild(dup); tdActions.appendChild(del);
-      tr.appendChild(tdTitle); tr.appendChild(tdDate); tr.appendChild(tdActions);
+      tr.appendChild(tdTitle); tr.appendChild(tdDate); tr.appendChild(tdNote); tr.appendChild(tdActions);
       tbody.appendChild(tr);
     });
     // highlight last saved if present
