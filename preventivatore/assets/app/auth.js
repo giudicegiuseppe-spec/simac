@@ -215,6 +215,7 @@
     }catch(_){ }
     return false;
   }
-  function bootUI(){ try{ if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
+  function ensureFavicon(){ try{ var link = document.querySelector('link[rel="icon"]'); if(!link){ link = document.createElement('link'); link.rel='icon'; link.type='image/png'; link.href='/logo.png'; document.head && document.head.appendChild(link); } else { link.type='image/png'; link.href='/logo.png'; } }catch(_){ } }
+  function bootUI(){ try{ ensureFavicon(); if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bootUI); } else { bootUI(); }
 })();
