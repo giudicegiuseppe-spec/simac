@@ -133,6 +133,26 @@
     try{
       var side = document.getElementById('sidenav');
       function isAgendaHref(href){ try{ href=String(href||''); }catch(_){ href=''; } return href.indexOf('/preventivatore/mirror/agenda')>-1; }
+      function ensureAgendaPanel(url){
+        try{
+          var id='agenda-panel';
+          var p=document.getElementById(id);
+          var v='inline-'+Date.now();
+          url = url || '/preventivatore/mirror/agenda.html?v='+v;
+          if(!p){
+            p=document.createElement('div'); p.id=id; p.style.position='fixed'; p.style.left='0'; p.style.top='0'; p.style.right='0'; p.style.bottom='0'; p.style.zIndex='9999'; p.style.background='rgba(0,0,0,0.35)'; p.style.backdropFilter='blur(2px)'; p.style.display='flex'; p.style.alignItems='center'; p.style.justifyContent='center'; p.style.padding='4vh 4vw';
+            var card=document.createElement('div'); card.style.width='min(1200px, 96vw)'; card.style.height='min(88vh, 900px)'; card.style.background='#fff'; card.style.borderRadius='10px'; card.style.boxShadow='0 10px 30px rgba(0,0,0,0.25)'; card.style.position='relative'; card.style.overflow='hidden';
+            var close=document.createElement('button'); close.textContent='×'; close.style.position='absolute'; close.style.top='8px'; close.style.right='12px'; close.style.border='0'; close.style.background='transparent'; close.style.fontSize='28px'; close.style.lineHeight='28px'; close.style.cursor='pointer'; close.addEventListener('click', function(){ p.remove(); }, true);
+            var title=document.createElement('div'); title.textContent='Agenda'; title.style.position='absolute'; title.style.left='16px'; title.style.top='10px'; title.style.fontWeight='700'; title.style.fontSize='16px'; title.style.color='#263238';
+            var iframe=document.createElement('iframe'); iframe.src=url; iframe.style.width='100%'; iframe.style.height='100%'; iframe.style.border='0';
+            card.appendChild(iframe); card.appendChild(close); card.appendChild(title); p.appendChild(card); document.body.appendChild(p);
+          } else {
+            var ifr=p.querySelector('iframe'); if(ifr){ ifr.src=url; }
+            p.style.display='flex';
+          }
+          return true;
+        }catch(_){ return false; }
+      }
       // Normalize existing agenda links to avoid full navigation
       try{
         (Array.prototype.slice.call(document.querySelectorAll('a[href]'))||[]).forEach(function(a){
@@ -145,7 +165,10 @@
       }catch(_){ }
       function openInlineFrom(a){
         var wrap = document.getElementById('wrap');
-        if(!wrap) return false; // container mancante, lascia navigare
+        // Prefer persistent panel so it remains visible across navigations
+        var url = (a && a.dataset && a.dataset.agendaUrl) ? a.dataset.agendaUrl : '/preventivatore/mirror/agenda.html';
+        if(ensureAgendaPanel(url+'?v='+'inline-'+Date.now())){ return true; }
+        if(!wrap) return false; // fallback: container mancante, lascia navigare
         // Build inline view
         var v = 'inline-'+Date.now();
         var header = ''+
@@ -158,7 +181,6 @@
           '    <h1 class="padding-container">Agenda</h1>'+
           '  </div>'+
           '</section>';
-        var url = (a && a.dataset && a.dataset.agendaUrl) ? a.dataset.agendaUrl : '/preventivatore/mirror/agenda.html';
         var content = ''+
           '<section class="section padding-container white-bg">'+
           '  <div class="row">'+
