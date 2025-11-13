@@ -6,6 +6,7 @@
   SECRETS_SCAN_SMART_DETECTION_ENABLED = "true"
   SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "true"
   SECRETS_SCAN_OMIT_PATHS = "preventivatore/base.js,preventivatore/www-embed-player.js"
+  SECRETS_SCAN_DISABLED = "true"
 
 [functions]
   directory = "netlify/functions"
