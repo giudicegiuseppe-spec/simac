@@ -28,8 +28,11 @@
         var pass = (parts[2]||'').trim();
         var agente = (parts[3]||'').trim();
         var area_manager = (parts[4]||'').trim();
-        // includo agenti e area manager nella tendina
-        if(ruolo && email){ out.push({ruolo:ruolo, email:email, label: (agente||email), area_manager:area_manager}); }
+        // includo SOLO agenti e area manager nella tendina
+        var r = ruolo.toLowerCase();
+        if((r==='agente' || r==='area manager' || r==='areamanager') && email){
+          out.push({ruolo:ruolo, email:email, label: (agente||email), area_manager:area_manager});
+        }
       }
       return out;
     }catch(_){ return []; }
@@ -44,17 +47,24 @@
   function getAgentNameByEmail(list, email){ email = (email||'').toLowerCase(); var f = list.find(function(a){ return a.email===email; }); return f? (f.label||email) : email; }
 
   async function createAppointment(){
-    var cli = document.getElementById('ag_cli').value.trim();
-    var start = document.getElementById('ag_start').value.trim();
-    var agentEmail = document.getElementById('ag_agente').value.trim().toLowerCase();
-    var luogo = document.getElementById('ag_luogo').value.trim();
-    var stato = document.getElementById('ag_stato').value.trim() || 'Nuovo';
-    if(!cli || !start || !agentEmail){ try{ if(window.M&&M.toast){ M.toast({html:'Compila Cliente, Data/Ora e Agente'}); } }catch(_){ } return; }
-    var list = await loadAgents();
-    var payload = { cliente: cli, start_at: start, agente_id: agentEmail, agente_name: getAgentNameByEmail(list, agentEmail), luogo: luogo, stato: stato };
-    var res = await fetchJSON(API, { method:'POST', headers: headers(), body: JSON.stringify(payload) });
-    await mountList();
-    try{ if(window.M&&M.toast){ M.toast({html:'Appuntamento creato'}); } }catch(_){ }
+    try{
+      var cli = document.getElementById('ag_cli').value.trim();
+      var start = document.getElementById('ag_start').value.trim();
+      var agentEmail = document.getElementById('ag_agente').value.trim().toLowerCase();
+      var luogo = document.getElementById('ag_luogo').value.trim();
+      var stato = document.getElementById('ag_stato').value.trim() || 'Nuovo';
+      if(!cli || !start || !agentEmail){ try{ if(window.M&&M.toast){ M.toast({html:'Compila Cliente, Data/Ora e Agente'}); } }catch(_){ } return; }
+      var list = await loadAgents();
+      var payload = { cliente: cli, start_at: start, agente_id: agentEmail, agente_name: getAgentNameByEmail(list, agentEmail), luogo: luogo, stato: stato };
+      await fetchJSON(API, { method:'POST', headers: headers(), body: JSON.stringify(payload) });
+      await mountList();
+      try{ if(window.M&&M.toast){ M.toast({html:'Appuntamento creato'}); } }catch(_){ }
+      // reset minimo
+      try{ document.getElementById('ag_cli').value=''; document.getElementById('ag_luogo').value=''; if(window.M&&M.updateTextFields) M.updateTextFields(); }catch(_){ }
+    }catch(e){
+      console.error('Errore creazione', e);
+      try{ if(window.M&&M.toast){ M.toast({html:'Errore creazione appuntamento', displayLength:1500}); } }catch(_){ }
+    }
   }
 
   async function listAll(){ return await fetchJSON(API, { headers: headers() }); }
