@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Agenda | Simac</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/logo.png" type="image/png" />
+  <link rel="stylesheet" href="/preventivatore/assets/share/css/materialize.min.css" />
+  <link rel="stylesheet" href="/preventivatore/assets/share/css/materialize-fix.css" />
+  <link rel="stylesheet" href="/preventivatore/mirror/custom.css" />
+  <script src="/preventivatore/assets/share/js/materialize.min.js"></script>
+  <script src="/preventivatore/assets/app/auth.js"></script>
+  <style>
+    .agenda-form .row { margin-bottom: 0; }
+    .chip.status { background: #e0e0e0; margin: 0; }
+    .chip.status.nuovo { background:#e3f2fd; }
+    .chip.status.annullato { background:#ffebee; }
+    .chip.status.spostato { background:#fff8e1; }
+    .chip.status.trattativa { background:#e8f5e9; }
+    .chip.status.ko { background:#ffebee; }
+    .chip.status.chiuso { background:#ede7f6; }
+    .agenda-actions .btn { margin-right: 6px; }
+    .nowrap { white-space: nowrap; }
+  </style>
+</head>
+<body class="Contratto fv lang_it">
+  <script>(function(){function boot(){try{if(window.Auth){ if(!Auth.require()) return; Auth.renderSidebarUser(); }}catch(_){}} if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot();})();</script>
+  <header class="r7">
+    <section class="section-bg title">
+      <div class="title-wrap">
+        <a class="hide_please home-link" href="/preventivatore/mirror/"><img src="/logo.png" class="page-title-logo" alt="" title=""/></a>
+        <h1 class="padding-container">Agenda</h1>
+      </div>
+    </section>
+  </header>
+
+  <section class="section padding-container white-bg">
+    <div class="row">
+      <div class="col s12">
+        <div id="agenda-form-wrap" class="card-panel agenda-form" style="display:none;">
+          <h5 style="margin-top:0;">Nuovo appuntamento</h5>
+          <div class="row">
+            <div class="input-field col m4 s12">
+              <input id="ag_cli" type="text" />
+              <label for="ag_cli">Cliente</label>
+            </div>
+            <div class="input-field col m4 s12">
+              <input id="ag_start" type="datetime-local" />
+              <label class="active" for="ag_start">Data e Ora</label>
+            </div>
+            <div class="input-field col m4 s12">
+              <select id="ag_agente"></select>
+              <label>Agente assegnato</label>
+            </div>
+            <div class="input-field col m8 s12">
+              <input id="ag_luogo" type="text" />
+              <label for="ag_luogo">Luogo (indirizzo, linkabile Google Maps)</label>
+            </div>
+            <div class="input-field col m4 s12">
+              <select id="ag_stato">
+                <option value="Nuovo" selected>Nuovo</option>
+                <option value="Annullato">Annullato</option>
+                <option value="Spostato">Spostato</option>
+                <option value="Trattativa">Trattativa</option>
+                <option value="Ko">Ko</option>
+                <option value="Chiuso">Chiuso</option>
+              </select>
+              <label>Stato</label>
+            </div>
+          </div>
+          <div class="row" style="margin-top:6px;">
+            <div class="col s12 right-align">
+              <button id="ag_save" class="btn">Crea</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12">
+        <div class="card-panel">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <h5 style="margin:0;">Appuntamenti</h5>
+            <div>
+              <select id="flt_stato" class="browser-default" style="max-width:220px; display:inline-block;">
+                <option value="">Filtra per stato</option>
+                <option>Nuovo</option>
+                <option>Annullato</option>
+                <option>Spostato</option>
+                <option>Trattativa</option>
+                <option>Ko</option>
+                <option>Chiuso</option>
+              </select>
+            </div>
+          </div>
+          <div class="responsive-table" style="margin-top:12px;">
+            <table id="agenda_table" class="striped">
+              <thead>
+                <tr>
+                  <th>Cliente</th>
+                  <th>Data/Ora</th>
+                  <th>Agente</th>
+                  <th>Luogo</th>
+                  <th>Stato</th>
+                  <th>Feedback</th>
+                  <th class="nowrap">Azioni</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <div id="agenda_empty" style="margin-top:8px; color:#777;">Caricamento…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/preventivatore/assets/app/agenda.js"></script>
+</body>
+</html>

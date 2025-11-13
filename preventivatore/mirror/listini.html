@@ -143,6 +143,9 @@
     (async function(){
       var $tbody = document.querySelector('#listini-table tbody');
       var empty = document.getElementById('listini-empty');
+      function getParam(name){ try{ return new URLSearchParams(location.search).get(name); }catch(_){ return null; } }
+      var VERSION = getParam('v') || window.LISTINO_VERSION || Date.now();
+      var SRC_USED = null; // diagnostics
       function addRow(cells){
         var tr = document.createElement('tr');
         cells.forEach(function(text, idx){
@@ -167,41 +170,101 @@
         try{ return new Intl.NumberFormat('it-IT', {style:'currency', currency:'EUR', minimumFractionDigits:2, maximumFractionDigits:2}).format(num); }
         catch(_){ return '€ '+num.toFixed(2).replace('.',','); }
       }
+      function withVersion(u){
+        try{ var url=new URL(u, location.origin); url.searchParams.set('v', VERSION); return url.toString(); }
+        catch(_){ return u + (u.indexOf('?')>-1?'&':'?') + 'v=' + VERSION; }
+      }
       async function tryFetch(paths){
         for (const p of paths){
           try{
-            const res = await fetch(p, {cache:'no-store'});
-            if(res.ok) return res.arrayBuffer();
+            const url = withVersion(p);
+            const res = await fetch(url, {cache:'no-store'});
+            if(res.ok){ SRC_USED = url; return res.arrayBuffer(); }
           }catch(_){ }
         }
         throw new Error('Nessun percorso Excel raggiungibile');
+      }
+      async function tryFetchText(paths){
+        for (const p of paths){
+          try{
+            const res = await fetch(withVersion(p), {cache:'no-store'});
+            if(res.ok) return { text: await res.text(), src: p };
+          }catch(_){ }
+        }
+        throw new Error('Nessun percorso CSV raggiungibile');
+      }
+      function parseCSV(text){
+        try{
+          text = String(text||'').replace(/\uFEFF/g,'').replace(/\r\n/g,'\n').replace(/\r/g,'\n');
+          var lines = text.split('\n').filter(function(l){ return l!=null && l!==''; });
+          var delim = (function(sample){ var semi=(sample.match(/;/g)||[]).length, comma=(sample.match(/,/g)||[]).length, tab=(sample.match(/\t/g)||[]).length; if(tab>=semi && tab>=comma) return '\t'; return semi>comma?';':','; })(lines[0]||'');
+          return lines.map(function(l){ var out=[],cur='',inq=false; for(var i=0;i<l.length;i++){ var c=l[i]; if(c==='"'){ inq=!inq; } else if(c===delim && !inq){ out.push(cur); cur=''; } else { cur+=c; } } out.push(cur); return out; });
+        }catch(_){ return []; }
+      }
+      function loadFromCSV(){
+        return (async function(){
+          empty.textContent = 'Caricamento dati da CSV…';
+          var csv = await tryFetchText([
+            '/preventivatore/mirror/data/Listino%20Simac.csv',
+            '/preventivatore/data/Listino%20Simac.csv',
+            '/preventivatore/Backup2/data/Listino%20Simac.csv',
+            'data/Listino%20Simac.csv',
+            './data/Listino%20Simac.csv'
+          ]);
+          var rows = parseCSV(csv.text);
+          if(!rows || rows.length<=1){ empty.textContent='Nessun dato trovato nel file CSV.'; return false; }
+          for(var i=1;i<rows.length;i++){
+            var r = rows[i]||[];
+            var listino = r[0];
+            var fase    = r[2];
+            var potenza = r[3];
+            var inverter= r[5];
+            var valore  = formatEuro(r[11]);
+            if([listino,fase,potenza,inverter,valore].every(function(v){return v==null || v==='';})) continue;
+            addRow([listino, fase, potenza, inverter, valore]);
+          }
+          if($tbody.children.length>0){ empty.style.display='none'; return true; }
+          empty.textContent='CSV caricato ma nessuna riga valida da mostrare.'; return false;
+        })();
       }
       try{
         empty.textContent = 'Caricamento dati da Excel…';
         var buf = await tryFetch([
           '/preventivatore/mirror/data/Listino%20Simac.xlsx',
+          '/preventivatore/data/Listino%20Simac.xlsx',
+          '/preventivatore/Backup2/data/Listino%20Simac.xlsx',
           'data/Listino%20Simac.xlsx',
           './data/Listino%20Simac.xlsx',
         ]);
         var wb = XLSX.read(buf, {type:'array'});
-        // Scegli il foglio con più righe utili
-        var best = {name:null, rows:[], count:0};
-        wb.SheetNames.forEach(function(name){
-          var ws = wb.Sheets[name];
-          var rows = XLSX.utils.sheet_to_json(ws, {header:1, raw:true});
-          var cnt = 0;
-          for(var i=1;i<rows.length;i++){
-            var r = rows[i]||[];
-            var vals = [r[0], r[2], r[3], r[5], r[11]];
-            if(vals.some(function(v){return v!=null && v!=='';})) cnt++;
-          }
-          if(cnt>best.count){ best = {name:name, rows:rows, count:cnt}; }
-        });
-        var rows = best.rows;
-        if(!rows || rows.length<=1){
-          empty.textContent = 'Nessun dato trovato nel file Excel.';
+        var rows = [];
+        var chosenName = null;
+        // Forza 'Foglio1' se presente, altrimenti fallback al foglio con più righe utili
+        if(wb.SheetNames.indexOf('Foglio1')>-1){
+          chosenName = 'Foglio1';
+          rows = XLSX.utils.sheet_to_json(wb.Sheets[chosenName], {header:1, raw:true});
         } else {
-          empty.textContent = 'Foglio: '+best.name+' | righe utili: '+best.count+' (in caricamento…)';
+          var best = {name:null, rows:[], count:0};
+          wb.SheetNames.forEach(function(name){
+            var ws = wb.Sheets[name];
+            var rws = XLSX.utils.sheet_to_json(ws, {header:1, raw:true});
+            var cnt = 0;
+            for(var i=1;i<rws.length;i++){
+              var r = rws[i]||[];
+              var vals = [r[0], r[2], r[3], r[5], r[11]];
+              if(vals.some(function(v){return v!=null && v!=='';})) cnt++;
+            }
+            if(cnt>best.count){ best = {name:name, rows:rws, count:cnt}; }
+          });
+          chosenName = best.name;
+          rows = best.rows;
+        }
+        if(!rows || rows.length<=1){
+          // Fallback CSV
+          var ok = await loadFromCSV();
+          if(!ok){ empty.textContent = 'Nessun dato trovato nel file Excel.'; }
+        } else {
+          empty.textContent = 'Sorgente: '+(SRC_USED||'-')+' | Foglio: '+(chosenName||'-')+' (caricamento…)';
           for(var i=1;i<rows.length;i++){
             var r = rows[i] || [];
             var listino = r[0];
@@ -217,7 +280,11 @@
         }
       }catch(e){
         console.error('Errore caricamento Excel', e);
-        empty.textContent = 'Impossibile caricare i dati dal file Excel.';
+        // Prova fallback CSV
+        try{
+          var ok2 = await loadFromCSV();
+          if(!ok2){ empty.textContent = 'Impossibile caricare i dati dal file Excel.'; }
+        }catch(_){ empty.textContent = 'Impossibile caricare i dati dal file Excel.'; }
       }finally{
         try{
           if(window.$ && $.fn && $.fn.DataTable){
@@ -239,6 +306,15 @@
             normalizeEuro();
             dt.on('draw', normalizeEuro);
           }
+        }catch(_){ }
+        // Append diagnostics + download link for verifica
+        try{
+          var diag = document.createElement('div');
+          diag.style.marginTop = '8px';
+          diag.style.color = '#607d8b';
+          var href = withVersion('/preventivatore/mirror/data/Listino%20Simac.xlsx');
+          diag.innerHTML = 'Sorgente Excel: <a href="'+href+'" target="_blank" rel="noopener">Scarica sorgente</a>' + (SRC_USED? ' • Usato: '+SRC_USED : '');
+          document.querySelector('#listini-table').parentNode.appendChild(diag);
         }catch(_){ }
       }
     })();
