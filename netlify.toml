@@ -2,6 +2,15 @@
   command = ""
   publish = "."
 
+[build.environment]
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "true"
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "true"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@netlify/blobs"]
+
 # Opzionale: forza headers basilari (disattivabili)
 [[headers]]
   for = "/*"
