@@ -106,6 +106,68 @@
         }
       }
     }catch(_){ }
+  // Ensure an 'Agenda' link exists in the sidebar above 'Listini'
+  function ensureAgendaLink(){
+    try{
+      var side = document.getElementById('sidenav');
+      if(!side) return;
+      // Already present?
+      if(side.querySelector('a[href="/preventivatore/mirror/agenda.html"]')) return;
+      // Find Listini item to insert before
+      var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
+      var li = document.createElement('li');
+      li.className = 'agenda-link';
+      li.innerHTML = '<a href="/preventivatore/mirror/agenda.html"><i class="material-icons left">event</i> Agenda</a>';
+      if(listiniA && listiniA.parentNode){
+        listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
+      } else {
+        // Fallback: insert after the divider if found, else append near top
+        var firstLi = side.querySelector('li');
+        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(li, firstLi.nextSibling); }
+        else { side.appendChild(li); }
+      }
+    }catch(_){ }
+  }
+  // Intercept click on Agenda to open inline within #wrap using an iframe
+  function wireAgendaInline(){
+    try{
+      var side = document.getElementById('sidenav'); if(!side) return;
+      side.addEventListener('click', function(e){
+        var a = e.target && (e.target.closest? e.target.closest('a[href="/preventivatore/mirror/agenda.html"]') : null);
+        if(!a) return;
+        var wrap = document.getElementById('wrap');
+        if(!wrap) return; // allow normal navigation on pages without container
+        e.preventDefault();
+        // Build inline view
+        var v = 'inline-'+Date.now();
+        var header = ''+
+          '<section class="section-bg title">'+
+          '  <div class="title-wrap">'+
+          '    <a class="sidenav-trigger hide_please" data-target="sidenav" href="#"><i class="material-icons menu-icon">menu</i></a>'+
+          '    <a class="hide_please home-link" href="#">'+
+          '      <img alt="" class="page-title-logo" src="/logo.png" title="">'+
+          '    </a>'+
+          '    <h1 class="padding-container">Agenda</h1>'+
+          '  </div>'+
+          '</section>';
+        var content = ''+
+          '<section class="section padding-container white-bg">'+
+          '  <div class="row">'+
+          '    <div class="col s12">'+
+          '      <iframe src="/preventivatore/mirror/agenda.html?v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
+          '    </div>'+
+          '  </div>'+
+          '</section>';
+        wrap.innerHTML = header + content;
+        try{ window.scrollTo({top:0, behavior:'smooth'}); }catch(_){ }
+        // Mark active
+        try{
+          side.querySelectorAll('a').forEach(function(n){ n.classList.remove('active'); });
+          a.classList.add('active');
+        }catch(_){ }
+      }, true);
+    }catch(_){ }
+  }
     // Agente: label che contiene "Agente" e input collegato
     try{
       var agLabel = Array.from(document.querySelectorAll('label')).find(function(l){ return /agente/i.test(l.textContent||''); });
@@ -216,6 +278,6 @@
     return false;
   }
   function ensureFavicon(){ try{ var link = document.querySelector('link[rel="icon"]'); if(!link){ link = document.createElement('link'); link.rel='icon'; link.type='image/png'; link.href='/logo.png'; document.head && document.head.appendChild(link); } else { link.type='image/png'; link.href='/logo.png'; } }catch(_){ } }
-  function bootUI(){ try{ ensureFavicon(); if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
+  function bootUI(){ try{ ensureFavicon(); if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); ensureAgendaLink(); wireAgendaInline(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bootUI); } else { bootUI(); }
 })();

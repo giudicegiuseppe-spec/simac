@@ -162,9 +162,10 @@
 <div id="auth_user_box" class="auth-user-box" style="margin-top:8px;color:#fff;"></div>
 </div>
 <li class=""><a href="/preventivatore/mirror/fv/contratto-fotovoltaico.html"><i class="material-icons left">roofing</i>Contratto</a></li><li><a href="/preventivatore/mirror/i-miei-preventivi.html"><i class="material-icons">folder</i> I miei preventivi</a></li>
-<li><div class="divider"></div></li>
-<hr/>
-<li class="documenti-utili-union-smart-agenti"><a href="/preventivatore/mirror/listini.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="/preventivatore/mirror/schede-prodotti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Schede Prodotti</a></li>
+  <li><div class="divider"></div></li>
+  <hr/>
+  <li class="agenda-link"><a href="/preventivatore/mirror/agenda.html"><i class="material-icons left">event</i> Agenda</a></li>
+  <li class="documenti-utili-union-smart-agenti"><a href="/preventivatore/mirror/listini.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="/preventivatore/mirror/schede-prodotti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Schede Prodotti</a></li>
 <li class="documenti-utili-reddito-energetico"><a href="/preventivatore/mirror/incentivi.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Incentivi</a></li>
 <li class="documenti-utili-union-smart-finanziamenti"><a href="/preventivatore/mirror/finanziamenti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Finanziamenti</a></li>
 <li class="documenti-utili-union-smart-formazione-agenti"><a href="/preventivatore/mirror/formazione-agenti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Formazione Agenti</a></li>
@@ -2526,5 +2527,40 @@
     }catch(_){ }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', applyForcedStyles); else applyForcedStyles();
+})();</script><script id="agendaInlineLoader">(function(){
+  function mountAgenda(){
+    try{
+      var wrap=document.getElementById('wrap'); if(!wrap) return;
+      var v='inline-'+Date.now();
+      var header = ''+
+        '<section class="section-bg title">'+
+        '  <div class="title-wrap">'+
+        '    <a class="sidenav-trigger hide_please" data-target="sidenav" href="/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"><i class="material-icons menu-icon">menu</i></a>'+
+        '    <a class="hide_please home-link" href="/mirror/fv/contratto-fotovoltaico.html">'+
+        '      <img alt="" class="page-title-logo" src="/logo.png" title="">'+
+        '    </a>'+
+        '    <h1 class="padding-container">Agenda</h1>'+
+        '  </div>'+
+        '</section>';
+      var content = ''+
+        '<section class="section padding-container white-bg">'+
+        '  <div class="row">'+
+        '    <div class="col s12">'+
+        '      <iframe src="/preventivatore/mirror/agenda.html?v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
+        '    </div>'+
+        '  </div>'+
+        '</section>';
+      wrap.innerHTML = header + content;
+      window.scrollTo({top:0,behavior:'smooth'});
+    }catch(_){ }
+  }
+  function wire(){
+    try{
+      var a=document.querySelector('#sidenav a[href="/preventivatore/mirror/agenda.html"]');
+      if(!a) return;
+      a.addEventListener('click', function(e){ e.preventDefault(); mountAgenda(); });
+    }catch(_){ }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', wire); else wire();
 })();</script></body>
 </html>
