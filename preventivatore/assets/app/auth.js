@@ -112,12 +112,12 @@
       var side = document.getElementById('sidenav');
       if(!side) return;
       // Already present?
-      if(side.querySelector('a[href="/preventivatore/mirror/agenda.html"]')) return;
+      if(side.querySelector('a[href="/preventivatore/mirror/agenda"]') || side.querySelector('a[href="/preventivatore/mirror/agenda.html"]')) return;
       // Find Listini item to insert before
       var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
       var li = document.createElement('li');
       li.className = 'agenda-link';
-      li.innerHTML = '<a href="/preventivatore/mirror/agenda.html"><i class="material-icons left">event</i> Agenda</a>';
+      li.innerHTML = '<a href="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
       if(listiniA && listiniA.parentNode){
         listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
       } else {
@@ -131,13 +131,21 @@
   // Intercept click on Agenda to open inline within #wrap using an iframe
   function wireAgendaInline(){
     try{
-      var side = document.getElementById('sidenav'); if(!side) return;
-      side.addEventListener('click', function(e){
-        var a = e.target && (e.target.closest? e.target.closest('a[href="/preventivatore/mirror/agenda.html"]') : null);
-        if(!a) return;
+      var side = document.getElementById('sidenav');
+      function isAgendaHref(href){ try{ href=String(href||''); }catch(_){ href=''; } return href.indexOf('/preventivatore/mirror/agenda')>-1; }
+      // Normalize existing agenda links to avoid full navigation
+      try{
+        (Array.prototype.slice.call(document.querySelectorAll('a[href]'))||[]).forEach(function(a){
+          var hrefAttr=a.getAttribute('href'); var hrefAbs=a.href;
+          if(isAgendaHref(hrefAttr) || isAgendaHref(hrefAbs)){
+            if(!a.dataset.agendaUrl){ a.dataset.agendaUrl = hrefAttr || hrefAbs; }
+            a.setAttribute('href', '#');
+          }
+        });
+      }catch(_){ }
+      function openInlineFrom(a){
         var wrap = document.getElementById('wrap');
-        if(!wrap) return; // allow normal navigation on pages without container
-        e.preventDefault();
+        if(!wrap) return false; // container mancante, lascia navigare
         // Build inline view
         var v = 'inline-'+Date.now();
         var header = ''+
@@ -150,21 +158,29 @@
           '    <h1 class="padding-container">Agenda</h1>'+
           '  </div>'+
           '</section>';
+        var url = (a && a.dataset && a.dataset.agendaUrl) ? a.dataset.agendaUrl : '/preventivatore/mirror/agenda.html';
         var content = ''+
           '<section class="section padding-container white-bg">'+
           '  <div class="row">'+
           '    <div class="col s12">'+
-          '      <iframe src="/preventivatore/mirror/agenda.html?v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
+          '      <iframe src="'+url+'?v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
           '    </div>'+
           '  </div>'+
           '</section>';
         wrap.innerHTML = header + content;
         try{ window.scrollTo({top:0, behavior:'smooth'}); }catch(_){ }
-        // Mark active
-        try{
-          side.querySelectorAll('a').forEach(function(n){ n.classList.remove('active'); });
-          a.classList.add('active');
-        }catch(_){ }
+        try{ if(side){ side.querySelectorAll('a').forEach(function(n){ n.classList.remove('active'); }); a.classList.add('active'); } }catch(_){ }
+        return true;
+      }
+      // Delegato: intercetta click ovunque (sidebar e non) sul link Agenda
+      document.addEventListener('click', function(e){
+        var closest = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if(!closest) return;
+        var hrefAttr = closest.getAttribute('href');
+        var hrefAbs = closest.href;
+        if(!(isAgendaHref(hrefAttr) || isAgendaHref(hrefAbs))) return;
+        var handled = openInlineFrom(closest);
+        if(handled){ e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation && e.stopImmediatePropagation(); }
       }, true);
     }catch(_){ }
   }

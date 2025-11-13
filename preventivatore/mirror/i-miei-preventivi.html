@@ -98,7 +98,7 @@
 <li class=""><a href="/preventivatore/mirror/fv/contratto-fotovoltaico.html"><i class="material-icons left">roofing</i>Contratto</a></li><li><a href="/preventivatore/mirror/i-miei-preventivi.html"><i class="material-icons">folder</i> I miei preventivi</a></li>
 <li><div class="divider"></div></li>
 <hr/>
-<li class="agenda-link"><a href="/preventivatore/mirror/agenda.html"><i class="material-icons left">event</i> Agenda</a></li>
+<li class="agenda-link"><a href="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a></li>
 <li class="documenti-utili-union-smart-agenti"><a href="/preventivatore/mirror/listini.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="/preventivatore/mirror/schede-prodotti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Schede Prodotti</a></li>
 <li class="documenti-utili-reddito-energetico"><a href="/preventivatore/mirror/incentivi.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Incentivi</a></li>
 <li class="documenti-utili-union-smart-finanziamenti"><a href="/preventivatore/mirror/finanziamenti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Finanziamenti</a></li>
@@ -107,7 +107,7 @@
 </ul><span id="sidenav-resize">
 <i class="material-icons left">keyboard_arrow_left</i>
 <i class="material-icons right">keyboard_arrow_right</i>
-</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/i-miei-preventivi.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">I miei preventivi</h1></div></section><section class="section padding-container white-bg"><div class="row"><div id="i-miei-preventivi-root" class="col s12"></div></div></section></div><script src="/preventivatore/assets/app/auth.js"></script><script>(function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })();</script>
+</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/i-miei-preventivi.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">I miei preventivi</h1></div></section><section class="section padding-container white-bg"><div class="row"><div id="i-miei-preventivi-root" class="col s12"></div></div></section></div><script src="/preventivatore/assets/app/auth.js?v=agenda-side-4"></script><script>(function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })();</script>
 <script>(function(){
   function setActive(href){ try{ document.querySelectorAll('#sidenav a').forEach(function(a){ a.classList.remove('active'); }); var a=document.querySelector('#sidenav a[href="'+href+'"]'); if(a) a.classList.add('active'); }catch(_){} }
   function openAgendaInline(){
@@ -136,9 +136,16 @@
     }catch(_){ }
   }
   function wire(){
-    var a = document.querySelector('#sidenav a[href="/preventivatore/mirror/agenda.html"]');
+    var a = document.querySelector('#sidenav .agenda-link a');
     if(!a) return;
-    a.addEventListener('click', function(e){ e.preventDefault(); setActive('/preventivatore/mirror/agenda.html'); openAgendaInline(); });
+    a.addEventListener('click', function(e){ e.preventDefault(); setActive('/preventivatore/mirror/agenda'); openAgendaInline(); });
+    // auto-open if query asks for it
+    try{
+      var qs = new URLSearchParams(location.search||'');
+      if(qs.get('open')==='agenda'){
+        setTimeout(function(){ setActive('/preventivatore/mirror/agenda'); openAgendaInline(); }, 50);
+      }
+    }catch(_){ }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', wire); else wire();
 })();</script>
