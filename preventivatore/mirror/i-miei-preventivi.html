@@ -98,8 +98,8 @@
 <li class=""><a href="/preventivatore/mirror/fv/contratto-fotovoltaico.html"><i class="material-icons left">roofing</i>Contratto</a></li><li><a href="/preventivatore/mirror/i-miei-preventivi.html"><i class="material-icons">folder</i> I miei preventivi</a></li>
 <li><div class="divider"></div></li>
 <hr/>
-<li class="documenti-utili-union-smart-agenti"><a href="/preventivatore/mirror/listini.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="/preventivatore/mirror/schede-prodotti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Schede Prodotti</a></li>
 <li class="agenda-link"><a href="/preventivatore/mirror/agenda.html"><i class="material-icons left">event</i> Agenda</a></li>
+<li class="documenti-utili-union-smart-agenti"><a href="/preventivatore/mirror/listini.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Listini</a></li><li class="documenti-utili-union-smart"><a href="/preventivatore/mirror/schede-prodotti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Schede Prodotti</a></li>
 <li class="documenti-utili-reddito-energetico"><a href="/preventivatore/mirror/incentivi.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Incentivi</a></li>
 <li class="documenti-utili-union-smart-finanziamenti"><a href="/preventivatore/mirror/finanziamenti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Finanziamenti</a></li>
 <li class="documenti-utili-union-smart-formazione-agenti"><a href="/preventivatore/mirror/formazione-agenti.html"><img alt="Documento" class="u-icon" src="/preventivatore/doc_icon.png" style="width:20px; height:20px"/> Formazione Agenti</a></li>
@@ -107,4 +107,39 @@
 </ul><span id="sidenav-resize">
 <i class="material-icons left">keyboard_arrow_left</i>
 <i class="material-icons right">keyboard_arrow_right</i>
-</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/i-miei-preventivi.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">I miei preventivi</h1></div></section><section class="section padding-container white-bg"><div class="row"><div id="i-miei-preventivi-root" class="col s12"></div></div></section></div><script src="/preventivatore/assets/app/auth.js"></script><script>(function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })();</script><script src="/preventivatore/assets/app/preventivi.js"></script></body></html>
+</span><div id="delta-fixed"></div><div id="wrap"><section class="section-bg title"><div class="title-wrap"><a class="hide_please home-link" href="/preventivatore/mirror/i-miei-preventivi.html"><img alt="" class="page-title-logo" src="/logo.png" title=""/></a><h1 class="padding-container">I miei preventivi</h1></div></section><section class="section padding-container white-bg"><div class="row"><div id="i-miei-preventivi-root" class="col s12"></div></div></section></div><script src="/preventivatore/assets/app/auth.js"></script><script>(function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })();</script>
+<script>(function(){
+  function setActive(href){ try{ document.querySelectorAll('#sidenav a').forEach(function(a){ a.classList.remove('active'); }); var a=document.querySelector('#sidenav a[href="'+href+'"]'); if(a) a.classList.add('active'); }catch(_){} }
+  function openAgendaInline(){
+    try{
+      var wrap=document.getElementById('wrap'); if(!wrap) return;
+      var v = 'inline-'+Date.now();
+      var header = ''+
+        '<section class="section-bg title">'+
+        '  <div class="title-wrap">'+
+        '    <a class="hide_please home-link" href="/preventivatore/mirror/i-miei-preventivi.html">'+
+        '      <img class="page-title-logo" src="/logo.png" alt="" title="" />'+
+        '    </a>'+
+        '    <h1 class="padding-container">Agenda</h1>'+
+        '  </div>'+
+        '</section>';
+      var content = ''+
+        '<section class="section padding-container white-bg">'+
+        '  <div class="row">'+
+        '    <div class="col s12">'+
+        '      <iframe src="/preventivatore/mirror/agenda.html?v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px; background:#fff;"></iframe>'+
+        '    </div>'+
+        '  </div>'+
+        '</section>';
+      wrap.innerHTML = header + content;
+      window.scrollTo({top:0, behavior:'smooth'});
+    }catch(_){ }
+  }
+  function wire(){
+    var a = document.querySelector('#sidenav a[href="/preventivatore/mirror/agenda.html"]');
+    if(!a) return;
+    a.addEventListener('click', function(e){ e.preventDefault(); setActive('/preventivatore/mirror/agenda.html'); openAgendaInline(); });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', wire); else wire();
+})();</script>
+<script src="/preventivatore/assets/app/preventivi.js"></script></body></html>
