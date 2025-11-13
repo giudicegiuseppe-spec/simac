@@ -1,0 +1,10 @@
+{
+  "name": "simac-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site with Netlify Functions",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@netlify/blobs": "^6.4.0"
+  }
+}
