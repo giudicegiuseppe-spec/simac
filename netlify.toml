@@ -41,7 +41,7 @@
 
 [[redirects]]
   from = "/preventivatore/mirror/agenda"
-  to = "/preventivatore/mirror/i-miei-preventivi.html?open=agenda"
+  to = "/preventivatore/mirror/agenda.html"
   status = 200
 
 [[headers]]
