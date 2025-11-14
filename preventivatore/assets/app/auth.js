@@ -106,86 +106,7 @@
         }
       }
     }catch(_){ }
-  // Ensure an 'Agenda' link exists in the sidebar above 'Listini'
-  function ensureAgendaLink(){
-    try{
-      var side = document.getElementById('sidenav');
-      if(!side) return;
-      // If present already, retrofit handler and exit
-      var existing = side.querySelector('a[href="/preventivatore/mirror/agenda"], a[href="/preventivatore/mirror/agenda.html"]');
-      if(existing){
-        try{ existing.dataset.agendaUrl = existing.getAttribute('href'); existing.setAttribute('href','#'); existing.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl; } }, true); }catch(_){ }
-        return;
-      }
-      // Find Listini item to insert before
-      var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
-      var li = document.createElement('li');
-      li.className = 'agenda-link';
-      li.innerHTML = '<a href="#" data-agenda-url="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
-      try{
-        var a = li.querySelector('a');
-        a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl||'/preventivatore/mirror/agenda.html'; } }, true);
-      }catch(_){ }
-      if(listiniA && listiniA.parentNode){
-        listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
-      } else {
-        // Fallback: insert after the divider if found, else append near top
-        var firstLi = side.querySelector('li');
-        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(li, firstLi.nextSibling); }
-        else { side.appendChild(li); }
-      }
-    }catch(_){ }
-  }
-  // Intercept click on Agenda to open inline within #wrap using an iframe
-  function wireAgendaInline(){
-    try{
-      var side = document.getElementById('sidenav');
-      function isAgendaHref(href){ try{ href=String(href||''); }catch(_){ href=''; } return href.indexOf('/preventivatore/mirror/agenda')>-1; }
-      window.wireAgendaInlineOpen = function(a){
-        var wrap = document.getElementById('wrap');
-        if(!wrap) return false; // no container: allow normal navigation
-        var url = (a && (a.dataset && a.dataset.agendaUrl)) || (a && a.getAttribute('href')) || (a && a.href) || '/preventivatore/mirror/agenda.html';
-        // Build inline view
-        var v = 'inline-'+Date.now();
-        var header = ''+
-          '<section class="section-bg title">'+
-          '  <div class="title-wrap">'+
-          '    <a class="sidenav-trigger hide_please" data-target="sidenav" href="#"><i class="material-icons menu-icon">menu</i></a>'+
-          '    <a class="hide_please home-link" href="#">'+
-          '      <img alt="" class="page-title-logo" src="/logo.png" title="">'+
-          '    </a>'+
-          '    <h1 class="padding-container">Agenda</h1>'+
-          '  </div>'+
-          '</section>';
-        var content = ''+
-          '<section class="section padding-container white-bg">'+
-          '  <div class="row">'+
-          '    <div class="col s12">'+
-          '      <iframe src="'+url+(url.indexOf('?')>-1?'&':'?')+'v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
-          '    </div>'+
-          '  </div>'+
-          '</section>';
-        wrap.innerHTML = header + content;
-        try{ window.scrollTo({top:0, behavior:'smooth'}); }catch(_){ }
-        // Mark active
-        try{
-          side && side.querySelectorAll('a').forEach(function(n){ n.classList.remove('active'); });
-          a.classList.add('active');
-        }catch(_){ }
-        return true;
-      }
-      // Delegato: intercetta click ovunque (sidebar e non) sul link Agenda
-      document.addEventListener('click', function(e){
-        var closest = e.target && e.target.closest ? e.target.closest('a[href]') : null;
-        if(!closest) return;
-        var hrefAttr = closest.getAttribute('href');
-        var hrefAbs = closest.href;
-        if(!(isAgendaHref(hrefAttr) || isAgendaHref(hrefAbs))) return;
-        var handled = window.wireAgendaInlineOpen(closest);
-        if(handled){ e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation && e.stopImmediatePropagation(); }
-      }, true);
-    }catch(_){ }
-  }
+  // (moved) ensureAgendaLink and wireAgendaInline are now defined at top-level scope
     // Agente: label che contiene "Agente" e input collegato
     try{
       var agLabel = Array.from(document.querySelectorAll('label')).find(function(l){ return /agente/i.test(l.textContent||''); });
@@ -246,6 +167,88 @@
   function setUsersFromCSV(text){ try{ USERS_CACHE = parseCSV(text)||[]; LAST_LOAD.url = 'inline'; LAST_LOAD.count = USERS_CACHE.length; }catch(_){ USERS_CACHE = []; } }
   async function reloadUsers(){ try{ USERS_CACHE = null; if(typeof window!=='undefined'){ window.AUTH_FORCE_RELOAD = true; } return await loadUsers(); }catch(_){ return []; } }
   window.Auth = { setSession:setSession, get:getSession, clear:clearSession, isLogged:isLogged, require:requireAuth, applyAgentToDom:applyAgentToDom, cleanupSponsorSection:cleanupSponsorSection, renderSidebarUser:renderSidebarUser, login:loginWithCredentials, logout:logout, usersInfo:usersInfo, setUsersFromCSV:setUsersFromCSV, reloadUsers:reloadUsers };
+
+  // Ensure an 'Agenda' link exists in the sidebar above 'Listini'
+  function ensureAgendaLink(){
+    try{
+      var side = document.getElementById('sidenav');
+      if(!side) return;
+      // If present already, retrofit handler and exit
+      var existing = side.querySelector('a[href="/preventivatore/mirror/agenda"], a[href="/preventivatore/mirror/agenda.html"]');
+      if(existing){
+        try{ existing.dataset.agendaUrl = existing.getAttribute('href'); existing.setAttribute('href','#'); existing.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl; } }, true); }catch(_){ }
+        return;
+      }
+      // Find Listini item to insert before
+      var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
+      var li = document.createElement('li');
+      li.className = 'agenda-link';
+      li.innerHTML = '<a href="#" data-agenda-url="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
+      try{
+        var a = li.querySelector('a');
+        a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl||'/preventivatore/mirror/agenda.html'; } }, true);
+      }catch(_){ }
+      if(listiniA && listiniA.parentNode){
+        listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
+      } else {
+        // Fallback: insert after the divider if found, else append near top
+        var firstLi = side.querySelector('li');
+        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(li, firstLi.nextSibling); }
+        else { side.appendChild(li); }
+      }
+    }catch(_){ }
+  }
+
+  // Intercept click on Agenda to open inline within #wrap using an iframe
+  function wireAgendaInline(){
+    try{
+      var side = document.getElementById('sidenav');
+      function isAgendaHref(href){ try{ href=String(href||''); }catch(_){ href=''; } return href.indexOf('/preventivatore/mirror/agenda')>-1; }
+      window.wireAgendaInlineOpen = function(a){
+        var wrap = document.getElementById('wrap');
+        if(!wrap) return false; // no container: allow normal navigation
+        var url = (a && (a.dataset && a.dataset.agendaUrl)) || (a && a.getAttribute('href')) || (a && a.href) || '/preventivatore/mirror/agenda.html';
+        // Build inline view
+        var v = 'inline-'+Date.now();
+        var header = ''+
+          '<section class="section-bg title">'+
+          '  <div class="title-wrap">'+
+          '    <a class="sidenav-trigger hide_please" data-target="sidenav" href="#"><i class="material-icons menu-icon">menu</i></a>'+
+          '    <a class="hide_please home-link" href="#">'+
+          '      <img alt="" class="page-title-logo" src="/logo.png" title="">'+
+          '    </a>'+
+          '    <h1 class="padding-container">Agenda</h1>'+
+          '  </div>'+
+          '</section>';
+        var content = ''+
+          '<section class="section padding-container white-bg">'+
+          '  <div class="row">'+
+          '    <div class="col s12">'+
+          '      <iframe src="'+url+(url.indexOf('?')>-1?'&':'?')+'v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe>'+
+          '    </div>'+
+          '  </div>'+
+          '</section>';
+        wrap.innerHTML = header + content;
+        try{ window.scrollTo({top:0, behavior:'smooth'}); }catch(_){ }
+        // Mark active
+        try{
+          side && side.querySelectorAll('a').forEach(function(n){ n.classList.remove('active'); });
+          a.classList.add('active');
+        }catch(_){ }
+        return true;
+      }
+      // Delegato: intercetta click ovunque (sidebar e non) sul link Agenda
+      document.addEventListener('click', function(e){
+        var closest = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if(!closest) return;
+        var hrefAttr = closest.getAttribute('href');
+        var hrefAbs = closest.href;
+        if(!(isAgendaHref(hrefAttr) || isAgendaHref(hrefAbs))) return;
+        var handled = window.wireAgendaInlineOpen(closest);
+        if(handled){ e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation && e.stopImmediatePropagation(); }
+      }, true);
+    }catch(_){ }
+  }
 
   function bindExplicitLogout(){ try{
       // anchor with /logout already handled below; also bind icon and span inside top nav
