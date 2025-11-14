@@ -21,7 +21,23 @@
     try{ return JSON.parse(text||'{}'); }catch(_){ return {}; }
   }
 
-  function fmtDT(dt){ try{ return new Date(dt).toLocaleString(); }catch(_){ return dt||''; } }
+  function pad(n){ return (n<10? '0'+n : String(n)); }
+  function fmtDisplay(dt){
+    try{
+      var d = new Date(dt);
+      if(isNaN(d.getTime())) return String(dt||'');
+      return pad(d.getDate())+'-'+pad(d.getMonth()+1)+'-'+d.getFullYear()+' - '+pad(d.getHours())+':'+pad(d.getMinutes());
+    }catch(_){ return dt||''; }
+  }
+  function toISOFromLocal(inputValue){
+    // input type=datetime-local yields 'YYYY-MM-DDTHH:mm'
+    try{
+      if(!inputValue) return inputValue;
+      var d = new Date(inputValue);
+      if(!isNaN(d.getTime())) return d.toISOString();
+      return inputValue;
+    }catch(_){ return inputValue; }
+  }
   function gmapsLink(q){ if(!q) return ''; return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q); }
 
   async function loadAgents(){
@@ -86,7 +102,7 @@
   function renderRow(rec){
     var tr = document.createElement('tr');
     var tdCliente = document.createElement('td'); tdCliente.textContent = rec.cliente||'-';
-    var tdDT = document.createElement('td'); tdDT.textContent = fmtDT(rec.start_at);
+    var tdDT = document.createElement('td'); tdDT.textContent = fmtDisplay(rec.start_at);
     var tdAg = document.createElement('td'); tdAg.textContent = rec.agente_name||rec.agente_id||'-';
     var tdLuogo = document.createElement('td'); var a=document.createElement('a'); a.href=gmapsLink(rec.luogo); a.target='_blank'; a.rel='noopener'; a.textContent=rec.luogo||'-'; tdLuogo.appendChild(a);
     var tdStato = document.createElement('td'); var chip=document.createElement('div'); chip.className='chip status '+String(rec.stato||'').toLowerCase(); chip.textContent=rec.stato||'Nuovo'; tdStato.appendChild(chip);
@@ -108,25 +124,83 @@
     return tr;
   }
 
+  function ensureEsitaModal(){
+    if(document.getElementById('esita_modal')) return;
+    var html = ''+
+      '<div id="esita_modal" class="modal">'+
+      '  <div class="modal-content">'+
+      '    <h5 style="margin-top:0">Esita appuntamento</h5>'+
+      '    <div class="row" style="margin-bottom:0">'+
+      '      <div class="input-field col s12 m6">'+
+      '        <select id="esita_stato" class="browser-default">'+
+      '          <option value="Annullato">Annullato</option>'+
+      '          <option value="Spostato">Spostato</option>'+
+      '          <option value="Trattativa">Trattativa</option>'+
+      '          <option value="Ko">Ko</option>'+
+      '          <option value="Chiuso">Chiuso</option>'+
+      '        </select>'+
+      '        <label style="left:0; transform:none; font-size:0.9rem; color:#9e9e9e;">Stato</label>'+
+      '      </div>'+
+      '      <div class="input-field col s12 m6" id="esita_dt_wrap" style="display:none;">'+
+      '        <input type="datetime-local" id="esita_dt" />'+
+      '        <label class="active" for="esita_dt">Nuova data/ora</label>'+
+      '      </div>'+
+      '      <div class="input-field col s12">'+
+      '        <textarea id="esita_feedback" class="materialize-textarea" placeholder="Feedback"></textarea>'+
+      '        <label class="active" for="esita_feedback">Feedback</label>'+
+      '      </div>'+
+      '    </div>'+
+      '  </div>'+
+      '  <div class="modal-footer">'+
+      '    <a href="#" id="esita_cancel" class="modal-close btn-flat">Annulla</a>'+
+      '    <a href="#" id="esita_save" class="btn">Salva</a>'+
+      '  </div>'+
+      '</div>';
+    var div = document.createElement('div'); div.innerHTML = html; document.body.appendChild(div.firstChild);
+    try{ if(window.M && M.Modal){ M.Modal.init(document.getElementById('esita_modal')); } }catch(_){ }
+  }
+
   function openEsita(rec){
-    var stato = prompt('Stato (Nuovo, Annullato, Spostato, Trattativa, Ko, Chiuso):', rec.stato||'Nuovo'); if(stato==null) return;
-    var feedback = prompt('Feedback:', rec.feedback||''); if(feedback==null) return;
-    // Spostato richiede nuova data
-    var start_at = rec.start_at;
-    if(/^spostato$/i.test(stato)){
-      var nd = prompt('Nuova data/ora (YYYY-MM-DDTHH:mm):', rec.start_at||''); if(nd==null) return; start_at = nd;
-      // Crea un nuovo appuntamento con stessi dati, nuova data, stato 'Nuovo'
-      (async function(){
-        try{
-          var payload = { cliente: rec.cliente, start_at: start_at, agente_id: rec.agente_id, agente_name: rec.agente_name, luogo: rec.luogo, stato: 'Nuovo' };
-          await fetchJSON('/.netlify/functions/agenda', { method:'POST', headers: headers(), body: JSON.stringify(payload) });
-        }catch(_){ }
-        // Marca l'attuale come Spostato con feedback
-        await updateAppointment(rec.id, { stato: 'Spostato', feedback: feedback });
-      })();
-      return;
-    }
-    updateAppointment(rec.id, { stato: stato, feedback: feedback, start_at: start_at });
+    ensureEsitaModal();
+    var modalEl = document.getElementById('esita_modal');
+    var sel = document.getElementById('esita_stato');
+    var fb = document.getElementById('esita_feedback');
+    var dtWrap = document.getElementById('esita_dt_wrap');
+    var dt = document.getElementById('esita_dt');
+    // default values
+    sel.value = 'Annullato';
+    fb.value = rec.feedback||'';
+    try{ if(window.M&&M.updateTextFields) M.updateTextFields(); }catch(_){ }
+    // show/hide datetime on change
+    function updateDt(){ dtWrap.style.display = (/^Spostato$/i.test(sel.value)? 'block':'none'); }
+    sel.onchange = updateDt; updateDt();
+    // wire save
+    var saving = false;
+    var saveBtn = document.getElementById('esita_save');
+    var onSave = async function(e){ e.preventDefault(); if(saving) return; saving=true;
+      try{
+        var stato = sel.value;
+        var feedback = fb.value||'';
+        if(/^Spostato$/i.test(stato)){
+          var ndLocal = dt.value && dt.value.trim();
+          if(!ndLocal){ saving=false; try{ if(window.M&&M.toast){ M.toast({html:'Seleziona la nuova data'}); } }catch(_){ } return; }
+          var ndISO = toISOFromLocal(ndLocal);
+          // crea nuovo appuntamento duplicato con nuova data, stato Nuovo
+          try{
+            var payload = { cliente: rec.cliente, start_at: ndISO, agente_id: rec.agente_id, agente_name: rec.agente_name, luogo: rec.luogo, stato: 'Nuovo' };
+            await fetchJSON('/.netlify/functions/agenda', { method:'POST', headers: headers(), body: JSON.stringify(payload) });
+          }catch(_){ }
+          // marca quello attuale come Spostato + feedback
+          await updateAppointment(rec.id, { stato: 'Spostato', feedback: feedback });
+        } else {
+          await updateAppointment(rec.id, { stato: stato, feedback: feedback });
+        }
+        try{ var inst = (window.M&&M.Modal)? M.Modal.getInstance(modalEl) : null; if(inst){ inst.close(); } else { modalEl.style.display='none'; } }catch(_){ }
+      }finally{ saving=false; }
+    };
+    saveBtn.onclick = onSave;
+    // open
+    try{ var inst2 = (window.M&&M.Modal)? M.Modal.getInstance(modalEl) : null; if(inst2){ inst2.open(); } else { modalEl.style.display='block'; } }catch(_){ modalEl.style.display='block'; }
   }
 
   function openModifica(rec){

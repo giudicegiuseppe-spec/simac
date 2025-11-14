@@ -173,28 +173,35 @@
     try{
       var side = document.getElementById('sidenav');
       if(!side) return;
-      // If present already, retrofit handler and exit
-      var existing = side.querySelector('a[href="/preventivatore/mirror/agenda"], a[href="/preventivatore/mirror/agenda.html"]');
-      if(existing){
-        try{ existing.dataset.agendaUrl = existing.getAttribute('href'); existing.setAttribute('href','#'); existing.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl; } }, true); }catch(_){ }
-        return;
+      // Reuse existing LI if present; ensure correct placement before Listini
+      var existingLi = side.querySelector('li.agenda-link');
+      var agendaA = side.querySelector('a[href="/preventivatore/mirror/agenda"], a[href="/preventivatore/mirror/agenda.html"], li.agenda-link > a');
+      if(!existingLi){
+        var li = document.createElement('li');
+        li.className = 'agenda-link';
+        li.innerHTML = '<a href="#" data-agenda-url="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
+        existingLi = li;
       }
+      // Retrofit click handler every time to be safe
+      try{
+        var a = (existingLi && existingLi.querySelector('a')) || agendaA;
+        if(a){
+          a.dataset.agendaUrl = a.getAttribute('data-agenda-url') || a.getAttribute('href') || '/preventivatore/mirror/agenda';
+          a.setAttribute('href','#');
+          if(!a.__agendaBound){
+            a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=window.wireAgendaInlineOpen? wireAgendaInlineOpen(this) : false; if(!ok){ window.location.href=this.dataset.agendaUrl||'/preventivatore/mirror/agenda.html'; } }, true);
+            a.__agendaBound = true;
+          }
+        }
+      }catch(_){ }
       // Find Listini item to insert before
       var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
-      var li = document.createElement('li');
-      li.className = 'agenda-link';
-      li.innerHTML = '<a href="#" data-agenda-url="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
-      try{
-        var a = li.querySelector('a');
-        a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl||'/preventivatore/mirror/agenda.html'; } }, true);
-      }catch(_){ }
       if(listiniA && listiniA.parentNode){
-        listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
+        listiniA.parentNode.parentNode.insertBefore(existingLi, listiniA.parentNode);
       } else {
-        // Fallback: insert after the divider if found, else append near top
         var firstLi = side.querySelector('li');
-        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(li, firstLi.nextSibling); }
-        else { side.appendChild(li); }
+        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(existingLi, firstLi.nextSibling); }
+        else { side.appendChild(existingLi); }
       }
     }catch(_){ }
   }
@@ -299,6 +306,39 @@
     return false;
   }
   function ensureFavicon(){ try{ var link = document.querySelector('link[rel="icon"]'); if(!link){ link = document.createElement('link'); link.rel='icon'; link.type='image/png'; link.href='/logo.png'; document.head && document.head.appendChild(link); } else { link.type='image/png'; link.href='/logo.png'; } }catch(_){ } }
+  function setupSidebarObservers(){
+    try{
+      if(!window.MutationObserver) return;
+      // Observe current sidenav for internal mutations
+      var side = document.getElementById('sidenav');
+      if(side){
+        try{
+          if(!side.__agendaObs){
+            side.__agendaObs = new MutationObserver(function(){ ensureAgendaLink(); });
+            side.__agendaObs.observe(side, { childList:true, subtree:true });
+          }
+        }catch(_){ }
+      }
+      // Observe document for full replacement of #sidenav
+      if(!document.__agendaRootObs){
+        document.__agendaRootObs = new MutationObserver(function(muts){
+          try{
+            var hasNewSide = false;
+            muts.forEach(function(m){
+              m.addedNodes && m.addedNodes.forEach(function(n){
+                if(n && n.nodeType===1){
+                  if(n.id === 'sidenav' || (n.querySelector && n.querySelector('#sidenav'))){ hasNewSide = true; }
+                }
+              });
+            });
+            if(hasNewSide){ ensureAgendaLink(); setupSidebarObservers(); }
+          }catch(_){ }
+        });
+        document.__agendaRootObs.observe(document.documentElement || document.body, { childList:true, subtree:true });
+      }
+    }catch(_){ }
+  }
+
   function bootUI(){
     try{
       ensureFavicon();
@@ -307,13 +347,10 @@
         renderSidebarUser();
         ensureAgendaLink();
         wireAgendaInline();
-        // Re-ensure Agenda on sidebar DOM changes
+        setupSidebarObservers();
+        // Timed retries: some pages rebuild sidebar shortly after load
         try{
-          var side = document.getElementById('sidenav');
-          if(side && window.MutationObserver){
-            var obs = new MutationObserver(function(){ ensureAgendaLink(); });
-            obs.observe(side, { childList:true, subtree:true });
-          }
+          [150, 400, 1000, 2000].forEach(function(ms){ setTimeout(function(){ try{ ensureAgendaLink(); }catch(_){ } }, ms); });
         }catch(_){ }
         injectClearSessionButton();
       }
