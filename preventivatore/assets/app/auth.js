@@ -18,6 +18,9 @@
     if(tab>=semi && tab>=comma) return '\t';
     return semi>comma?';':',';
   }
+
+  try{ window.ensureAgendaLink = ensureAgendaLink; }catch(_){ }
+  try{ window.wireAgendaInline = wireAgendaInline; }catch(_){ }
   function splitCSVLine(line, delim){ var res=[], cur='', inq=false; for(var i=0;i<line.length;i++){ var c=line[i]; if(c==='"'){ inq=!inq; /* non append quote to cur */ } else if(c===delim && !inq){ res.push(cur); cur=''; } else { cur+=c; } } res.push(cur); return res; }
   function cleanField(v){ return String(v==null? '': v).replace(/^\uFEFF/, '').replace(/^\s+|\s+$/g,''); }
   function parseCSV(text){
@@ -194,14 +197,30 @@
           }
         }
       }catch(_){ }
-      // Find Listini item to insert before
-      var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
+      // Primary: insert before 'Listini' item (robust selector)
+      var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"], a[href="/preventivatore/mirror/listini"], a[href^="/preventivatore/mirror/listini?"]');
+      if(!listiniA){
+        // try by link text contains 'Listini'
+        var cand = Array.from(side.querySelectorAll('a')).find(function(x){ return (x.textContent||'').trim().toLowerCase().indexOf('listini')>-1; });
+        if(cand) listiniA = cand;
+      }
       if(listiniA && listiniA.parentNode){
         listiniA.parentNode.parentNode.insertBefore(existingLi, listiniA.parentNode);
       } else {
-        var firstLi = side.querySelector('li');
-        if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(existingLi, firstLi.nextSibling); }
-        else { side.appendChild(existingLi); }
+        // Fallback: inject right after the profile block, or as the very first LI
+        try{
+          // Remove duplicates to avoid multiple items
+          Array.from(side.querySelectorAll('li.agenda-link')).forEach(function(n){ if(n!==existingLi && n.parentNode===side){ n.parentNode.removeChild(n); } });
+        }catch(_){ }
+        var profile = side.querySelector('.sidenav-profile-wrap');
+        if(profile && profile.parentNode===side){
+          var after = profile.nextElementSibling; // may be first LI or null
+          side.insertBefore(existingLi, after || side.firstChild);
+        } else {
+          var firstLi = side.querySelector('li');
+          if(firstLi && firstLi.parentNode){ firstLi.parentNode.insertBefore(existingLi, firstLi); }
+          else { side.appendChild(existingLi); }
+        }
       }
     }catch(_){ }
   }

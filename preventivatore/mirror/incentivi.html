@@ -161,7 +161,27 @@
     </div>
   </li>
 </ul>
-</div></section></div>
-<script>(function(){ try{ var elems=document.querySelectorAll('.collapsible'); if(window.M && M.Collapsible){ M.Collapsible.init(elems,{accordion:false}); } }catch(e){} })();</script>
+ </div></section></div>
+ <script>(function(){ try{ var elems=document.querySelectorAll('.collapsible'); if(window.M && M.Collapsible){ M.Collapsible.init(elems,{accordion:false}); } }catch(e){} })();</script>
+ <script>
+ (function(){
+   function kick(){ try{ if(window.ensureAgendaLink){ ensureAgendaLink(); } }catch(_){ }
+     setTimeout(function(){ try{ if(window.ensureAgendaLink){ ensureAgendaLink(); } }catch(_){ } }, 250);
+   }
+   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', kick); } else { kick(); }
+   // Resilient download: if link fails (spaces/accenti), retry with encodeURI
+   document.addEventListener('click', function(e){
+     var a = e.target && e.target.closest && e.target.closest('#incentivi-menu a[download]');
+     if(!a) return;
+     try{
+       var href = a.getAttribute('href'); if(!href) return;
+       fetch(href, { method:'HEAD' }).then(function(res){
+         if(!res.ok){ var enc = encodeURI(href); if(enc!==href){ a.setAttribute('href', enc); }
+         }
+       }).catch(function(){ var enc = encodeURI(href); if(enc!==href){ a.setAttribute('href', enc); } });
+     }catch(_){ }
+   }, true);
+ })();
+ </script>
 <!-- version: incentivi v=2025-10-31-4 -->
 </body></html>
