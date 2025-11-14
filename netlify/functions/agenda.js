@@ -28,17 +28,14 @@ function parseUser(headers){
 }
 
 function newStore(){
-  try{
-    // Try implicit config first (on Netlify this should work automatically)
-    return getStore(STORE_NAME);
-  }catch(_){ /* fallthrough */ }
-  // Explicit config via env vars (for preview/local or if implicit fails)
+  // Prefer explicit config via env vars if available
   const siteId = process.env.NETLIFY_BLOBS_SITE_ID || process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
   const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
   if(siteId && token){
-    return getStore({ name: STORE_NAME, siteId, token });
+    // Pass both siteID and siteId to maximize compatibility with package versions
+    return getStore({ name: STORE_NAME, siteID: siteId, siteId: siteId, token });
   }
-  // Last resort: still try implicit (will throw with clear message)
+  // Otherwise rely on implicit Netlify environment configuration
   return getStore(STORE_NAME);
 }
 
