@@ -299,6 +299,25 @@
     return false;
   }
   function ensureFavicon(){ try{ var link = document.querySelector('link[rel="icon"]'); if(!link){ link = document.createElement('link'); link.rel='icon'; link.type='image/png'; link.href='/logo.png'; document.head && document.head.appendChild(link); } else { link.type='image/png'; link.href='/logo.png'; } }catch(_){ } }
-  function bootUI(){ try{ ensureFavicon(); if(!maybeClearViaQuery()){ bindExplicitLogout(); renderSidebarUser(); ensureAgendaLink(); wireAgendaInline(); injectClearSessionButton(); } }catch(_){ injectClearSessionButton(); } }
+  function bootUI(){
+    try{
+      ensureFavicon();
+      if(!maybeClearViaQuery()){
+        bindExplicitLogout();
+        renderSidebarUser();
+        ensureAgendaLink();
+        wireAgendaInline();
+        // Re-ensure Agenda on sidebar DOM changes
+        try{
+          var side = document.getElementById('sidenav');
+          if(side && window.MutationObserver){
+            var obs = new MutationObserver(function(){ ensureAgendaLink(); });
+            obs.observe(side, { childList:true, subtree:true });
+          }
+        }catch(_){ }
+        injectClearSessionButton();
+      }
+    }catch(_){ injectClearSessionButton(); }
+  }
   if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', bootUI); } else { bootUI(); }
 })();

@@ -41,12 +41,37 @@ function newStore(){
 
 async function readAll(){
   const store = newStore();
-  const data = await store.getJSON(KEY);
-  return Array.isArray(data) ? data : (data ? data : []);
+  try{
+    const data = await store.get(KEY, { type: 'json' });
+    return Array.isArray(data) ? data : (data ? data : []);
+  }catch(e){
+    // REST fallback
+    const siteId = process.env.NETLIFY_BLOBS_SITE_ID || process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+    const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+    if(!(siteId && token)) throw e;
+    const url = `https://api.netlify.com/api/v1/blobs/${encodeURIComponent(STORE_NAME)}/${encodeURIComponent(KEY)}?site_id=${encodeURIComponent(siteId)}`;
+    const rc = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
+    if(rc.status === 404) return [];
+    if(!rc.ok) throw new Error(`REST get failed: ${rc.status}`);
+    const json = await rc.json();
+    return Array.isArray(json) ? json : (json ? json : []);
+  }
 }
 async function writeAll(arr){
   const store = newStore();
-  await store.setJSON(KEY, arr || []);
+  const body = JSON.stringify(arr || []);
+  try{
+    await store.set(KEY, body, { contentType: 'application/json' });
+    return;
+  }catch(e){
+    // REST fallback
+    const siteId = process.env.NETLIFY_BLOBS_SITE_ID || process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+    const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+    if(!(siteId && token)) throw e;
+    const url = `https://api.netlify.com/api/v1/blobs/${encodeURIComponent(STORE_NAME)}/${encodeURIComponent(KEY)}?site_id=${encodeURIComponent(siteId)}`;
+    const rc = await fetch(url, { method: 'PUT', headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body });
+    if(!rc.ok) throw new Error(`REST put failed: ${rc.status}`);
+  }
 }
 
 function genId(){ return Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,8); }
