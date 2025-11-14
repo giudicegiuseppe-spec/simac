@@ -2,10 +2,24 @@
   var API = '/.netlify/functions/agenda';
 
   function sess(){ try{ if(window.Auth&&Auth.get) return Auth.get(); }catch(_){ } try{ return JSON.parse(localStorage.getItem('simac_session_v1')||'{}'); }catch(_){ return {}; } }
-  function headers(){ var s=sess()||{}; return { 'Content-Type':'application/json', 'x-simac-email': (s.agente_id||s.email||''), 'x-simac-role': (s.ruolo||''), 'x-simac-agente': (s.agente||''), 'x-simac-areamanager': (s.area_manager||'') }; }
+  function canonRole(r){ r=String(r||'').trim().toLowerCase();
+    if(r==='direzione'||r==='direzione  '||r==='dir' || r==='d.commerciale') return 'direzione commerciale';
+    if(r==='area manager'||r==='area-manager'||r==='area_manager') return 'area manager';
+    if(r==='areamanager') return 'areamanager';
+    if(r==='azienda') return 'azienda';
+    if(r==='agente') return 'agente';
+    return r; }
+  function headers(){ var s=sess()||{}; return { 'Content-Type':'application/json', 'x-simac-email': (s.agente_id||s.email||''), 'x-simac-role': canonRole(s.ruolo||''), 'x-simac-agente': (s.agente||''), 'x-simac-areamanager': (s.area_manager||'') }; }
   function isElevated(){ var r=String((sess().ruolo||'')).toLowerCase(); return r==='azienda'||r==='direzione commerciale'||r==='direzione commerciale '||r==='area manager'||r==='areamanager'; }
 
-  async function fetchJSON(url, opts){ var res = await fetch(url, opts||{}); if(!res.ok) throw new Error('HTTP '+res.status); return await res.json(); }
+  async function fetchJSON(url, opts){
+    var res = await fetch(url, opts||{});
+    var text = await res.text();
+    if(!res.ok){
+      try{ var j=JSON.parse(text||'{}'); throw new Error(j.error || ('HTTP '+res.status)); }catch(_){ throw new Error(text || ('HTTP '+res.status)); }
+    }
+    try{ return JSON.parse(text||'{}'); }catch(_){ return {}; }
+  }
 
   function fmtDT(dt){ try{ return new Date(dt).toLocaleString(); }catch(_){ return dt||''; } }
   function gmapsLink(q){ if(!q) return ''; return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q); }
@@ -63,7 +77,7 @@
       try{ document.getElementById('ag_cli').value=''; document.getElementById('ag_luogo').value=''; if(window.M&&M.updateTextFields) M.updateTextFields(); }catch(_){ }
     }catch(e){
       console.error('Errore creazione', e);
-      try{ if(window.M&&M.toast){ M.toast({html:'Errore creazione appuntamento', displayLength:1500}); } }catch(_){ }
+      try{ if(window.M&&M.toast){ M.toast({html:'Errore creazione: '+(e&&e.message?e.message:e), displayLength:2500}); } }catch(_){ }
     }
   }
 

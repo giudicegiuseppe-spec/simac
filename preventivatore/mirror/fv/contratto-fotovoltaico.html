@@ -2380,13 +2380,18 @@
   function wire(){ var b=document.getElementById('genera_preventivo'); if(!b) return; b.addEventListener('click', function(e){ e.preventDefault(); handle(); }); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', wire); else wire();
 })();
-</script><script src="/preventivatore/assets/share/js/pdf-lib.min.js"></script><script src="/preventivatore/assets/app/auth.js?v=agenda-side-9"></script><script> (function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; Auth.applyAgentToDom(); } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })(); </script>
-<script id="agendaOverlayLocal">(function(){
-  function ensurePanel(url){ try{ var id='agenda-panel'; var p=document.getElementById(id); var v='inline-'+Date.now(); url=url||('/preventivatore/mirror/agenda.html?v='+v); if(!p){ p=document.createElement('div'); p.id=id; p.style.cssText='position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.35);backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;padding:4vh 4vw;'; var card=document.createElement('div'); card.style.cssText='width:min(1200px,96vw);height:min(88vh,900px);background:#fff;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative;overflow:hidden;'; var close=document.createElement('button'); close.textContent='×'; close.style.cssText='position:absolute;top:8px;right:12px;border:0;background:transparent;font-size:28px;line-height:28px;cursor:pointer;z-index:1;'; close.addEventListener('click', function(){ try{ p.remove(); }catch(_){ } }, true); var title=document.createElement('div'); title.textContent='Agenda'; title.style.cssText='position:absolute;left:16px;top:10px;font-weight:700;font-size:16px;color:#263238;z-index:1;'; var iframe=document.createElement('iframe'); iframe.src=url; iframe.style.cssText='width:100%;height:100%;border:0;'; card.appendChild(iframe); card.appendChild(close); card.appendChild(title); p.appendChild(card); document.body.appendChild(p); } else { var ifr=p.querySelector('iframe'); if(ifr){ ifr.src=url; } p.style.display='flex'; } return true; }catch(e){ return false; } }
-  function onClick(e){ var a=e.target && e.target.closest && e.target.closest('a[href]'); if(!a) return; var href=a.getAttribute('href')||a.href||''; if(!/\/preventivatore\/mirror\/agenda(\.html)?(\b|\?|#)/.test(href)) return; e.preventDefault(); e.stopPropagation(); var orig=a.dataset && a.dataset.agendaUrl ? a.dataset.agendaUrl : href; ensurePanel(orig);
+</script><script src="/preventivatore/assets/share/js/pdf-lib.min.js"></script><script src="/preventivatore/assets/app/auth.js?v=agenda-side-13"></script><script> (function(){ function boot(){ try{ if(window.Auth){ if(!Auth.require()) return; Auth.applyAgentToDom(); } }catch(_){} } if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot(); })(); </script>
+<script id="inlineAnyMirrorPage">(function(){
+  function openInline(href){ try{ var wrap=document.getElementById('wrap'); if(!wrap) return false; var v='inline-'+Date.now(); var header='<section class="section-bg title"><div class="title-wrap"><a class="sidenav-trigger hide_please" data-target="sidenav" href="#"><i class="material-icons menu-icon">menu</i></a><a class="hide_please home-link" href="#"><img class="page-title-logo" src="/logo.png" alt="" title=""></a><h1 class="padding-container"></h1></div></section>'; var content='<section class="section padding-container white-bg"><div class="row"><div class="col s12"><iframe src="'+href+(href.indexOf('?')>-1?'&':'?')+'v='+v+'" style="width:100%;height:85vh;border:0;border-radius:8px;background:#fff;"></iframe></div></div></section>'; wrap.innerHTML=header+content; window.scrollTo({top:0,behavior:'smooth'}); return true; }catch(_){ return false; } }
+  function onClick(e){
+    var a=e.target && e.target.closest && e.target.closest('#sidenav a[href]'); if(!a) return;
+    var href=a.getAttribute('href')||'';
+    if(!/^\/preventivatore\/mirror\/.+\.html(\b|\?|#)/.test(href)) return;
+    if(href.indexOf('/preventivatore/mirror/fv/contratto-fotovoltaico.html')===0) return; // keep self
+    if(href.indexOf('/preventivatore/mirror/i-miei-preventivi.html')===0) return; // let it navigate
+    e.preventDefault(); e.stopPropagation(); openInline(href);
   }
-  function boot(){ document.addEventListener('click', onClick, true); }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded', function(){ document.addEventListener('click', onClick, true); }); } else { document.addEventListener('click', onClick, true); }
 })();</script>
 <script src="/preventivatore/assets/app/preventivi.js"></script><script id="tolleranzaHelper">
 (function(){
