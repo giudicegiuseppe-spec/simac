@@ -2386,7 +2386,8 @@
   function onClick(e){
     var a=e.target && e.target.closest && e.target.closest('#sidenav a[href]'); if(!a) return;
     var href=a.getAttribute('href')||'';
-    if(!/^\/preventivatore\/mirror\/.+\.html(\b|\?|#)/.test(href)) return;
+    // Intercetta sia *.html sia link senza estensione come /preventivatore/mirror/agenda
+    if(!(/^\/preventivatore\/mirror\/.+\.html(\b|\?|#)/.test(href) || /^\/preventivatore\/mirror\/agenda(\b|\?|#)/.test(href))) return;
     if(href.indexOf('/preventivatore/mirror/fv/contratto-fotovoltaico.html')===0) return; // keep self
     if(href.indexOf('/preventivatore/mirror/i-miei-preventivi.html')===0) return; // let it navigate
     e.preventDefault(); e.stopPropagation(); openInline(href);

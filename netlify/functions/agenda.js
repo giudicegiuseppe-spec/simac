@@ -8,7 +8,7 @@
 // Headers attesi dal client:
 //   x-simac-email, x-simac-role, x-simac-areamanager, x-simac-agente (nome)
 
-const { blobs } = require('@netlify/blobs');
+const { getStore } = require('@netlify/blobs');
 
 const STORE_NAME = 'agenda';
 const KEY = 'appointments.json';
@@ -28,13 +28,12 @@ function parseUser(headers){
 }
 
 async function readAll(){
-  const store = blobs({ name: STORE_NAME });
-  const text = await store.getText(KEY);
-  if(!text) return [];
-  try{ return JSON.parse(text); }catch(_){ return []; }
+  const store = getStore(STORE_NAME);
+  const data = await store.getJSON(KEY);
+  return Array.isArray(data) ? data : (data ? data : []);
 }
 async function writeAll(arr){
-  const store = blobs({ name: STORE_NAME });
+  const store = getStore(STORE_NAME);
   await store.setJSON(KEY, arr || []);
 }
 

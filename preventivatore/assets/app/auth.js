@@ -111,13 +111,21 @@
     try{
       var side = document.getElementById('sidenav');
       if(!side) return;
-      // Already present?
-      if(side.querySelector('a[href="/preventivatore/mirror/agenda"]') || side.querySelector('a[href="/preventivatore/mirror/agenda.html"]')) return;
+      // If present already, retrofit handler and exit
+      var existing = side.querySelector('a[href="/preventivatore/mirror/agenda"], a[href="/preventivatore/mirror/agenda.html"]');
+      if(existing){
+        try{ existing.dataset.agendaUrl = existing.getAttribute('href'); existing.setAttribute('href','#'); existing.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl; } }, true); }catch(_){ }
+        return;
+      }
       // Find Listini item to insert before
       var listiniA = side.querySelector('a[href="/preventivatore/mirror/listini.html"]');
       var li = document.createElement('li');
       li.className = 'agenda-link';
-      li.innerHTML = '<a href="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
+      li.innerHTML = '<a href="#" data-agenda-url="/preventivatore/mirror/agenda"><i class="material-icons left">event</i> Agenda</a>';
+      try{
+        var a = li.querySelector('a');
+        a.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); var ok=wireAgendaInlineOpen(this); if(!ok){ window.location.href=this.dataset.agendaUrl||'/preventivatore/mirror/agenda.html'; } }, true);
+      }catch(_){ }
       if(listiniA && listiniA.parentNode){
         listiniA.parentNode.parentNode.insertBefore(li, listiniA.parentNode);
       } else {
@@ -133,10 +141,10 @@
     try{
       var side = document.getElementById('sidenav');
       function isAgendaHref(href){ try{ href=String(href||''); }catch(_){ href=''; } return href.indexOf('/preventivatore/mirror/agenda')>-1; }
-      function openInlineFrom(a){
+      window.wireAgendaInlineOpen = function(a){
         var wrap = document.getElementById('wrap');
         if(!wrap) return false; // no container: allow normal navigation
-        var url = (a && a.getAttribute('href')) || (a && a.href) || '/preventivatore/mirror/agenda.html';
+        var url = (a && (a.dataset && a.dataset.agendaUrl)) || (a && a.getAttribute('href')) || (a && a.href) || '/preventivatore/mirror/agenda.html';
         // Build inline view
         var v = 'inline-'+Date.now();
         var header = ''+
@@ -173,7 +181,7 @@
         var hrefAttr = closest.getAttribute('href');
         var hrefAbs = closest.href;
         if(!(isAgendaHref(hrefAttr) || isAgendaHref(hrefAbs))) return;
-        var handled = openInlineFrom(closest);
+        var handled = window.wireAgendaInlineOpen(closest);
         if(handled){ e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation && e.stopImmediatePropagation(); }
       }, true);
     }catch(_){ }
