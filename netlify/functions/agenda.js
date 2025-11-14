@@ -27,13 +27,28 @@ function parseUser(headers){
   return { role, email, agente, area_manager, elevated };
 }
 
+function newStore(){
+  try{
+    // Try implicit config first (on Netlify this should work automatically)
+    return getStore(STORE_NAME);
+  }catch(_){ /* fallthrough */ }
+  // Explicit config via env vars (for preview/local or if implicit fails)
+  const siteId = process.env.NETLIFY_BLOBS_SITE_ID || process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+  if(siteId && token){
+    return getStore({ name: STORE_NAME, siteId, token });
+  }
+  // Last resort: still try implicit (will throw with clear message)
+  return getStore(STORE_NAME);
+}
+
 async function readAll(){
-  const store = getStore(STORE_NAME);
+  const store = newStore();
   const data = await store.getJSON(KEY);
   return Array.isArray(data) ? data : (data ? data : []);
 }
 async function writeAll(arr){
-  const store = getStore(STORE_NAME);
+  const store = newStore();
   await store.setJSON(KEY, arr || []);
 }
 
