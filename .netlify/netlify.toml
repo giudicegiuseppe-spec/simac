@@ -1,0 +1,175 @@
+functionsDirectory = "/Users/giuseppe/CascadeProjects/utenze-easy-page/netlify/functions"
+functionsDirectoryOrigin = "config"
+headersOrigin = "config"
+redirectsOrigin = "config"
+plugins = []
+
+[build]
+publish = "/Users/giuseppe/CascadeProjects/utenze-easy-page"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "node scripts/sanitize-secrets.js || true"
+functions = "/Users/giuseppe/CascadeProjects/utenze-easy-page/netlify/functions"
+
+[build.environment]
+SECRETS_SCAN_SMART_DETECTION_ENABLED = "true"
+SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "true"
+SECRETS_SCAN_OMIT_PATHS = "preventivatore/base.js,preventivatore/www-embed-player.js"
+SECRETS_SCAN_DISABLED = "true"
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+external_node_modules = ["@netlify/blobs"]
+node_bundler = "esbuild"
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Cache-Control = "no-store, no-cache, must-revalidate, max-age=0"
+
+[[headers]]
+for = "/preventivatore/mirror/*"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+Pragma = "no-cache"
+Expires = "0"
+
+[[headers]]
+for = "/*.html"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+for = "/preventivatore/Simulatore_fotovoltaico.xlsx"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+for = "/preventivatore/*.csv"
+
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+for = "/preventivatore/mirror/*.csv"
+
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[redirects]]
+from = "/"
+to = "/preventivatore/mirror/"
+status = 301.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico"
+to = "/preventivatore/mirror/share.unionenergia.it/fv/contratto-fotovoltaico.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/fv/contratto-fotovoltaico"
+to = "/preventivatore/mirror/fv/contratto-fotovoltaico.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/agenda"
+to = "/preventivatore/mirror/agenda.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/listini"
+to = "/preventivatore/mirror/listini.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/schede-prodotti"
+to = "/preventivatore/mirror/schede-prodotti.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/finanziamenti"
+to = "/preventivatore/mirror/finanziamenti.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/preventivatore/mirror/"
+to = "/preventivatore/mirror/login.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
