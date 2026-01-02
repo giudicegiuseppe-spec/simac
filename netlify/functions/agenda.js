@@ -34,7 +34,8 @@ let LAST_WRITE_MODE = 'none';
 let FORCE_CONTEXT = null; // retained only for diag, no effect in SDK-only
 
 function haveGist(){
-  try{ return !!(process.env.GIST_ID && process.env.GIST_TOKEN); }catch(_){ return false; }
+  // Disabilitato: usiamo solo Netlify Blobs per lo storage
+  return false;
 }
 
 async function gistReadText(){
